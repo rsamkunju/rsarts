@@ -561,7 +561,7 @@ nav ul li a:hover::after {
 
 .lightning-effect {
   position: absolute;
-  top: 125%;
+  top: 190%;
   right: -155px; /* Adjust this to make it stick out more or less to the right */
   transform: translateY(-50%);
   width: 400px; /* Adjust size to match your image scale */
