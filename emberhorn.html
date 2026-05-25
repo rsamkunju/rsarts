@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+	<script src="filter.js" defer></script>
+	<script src="scroll.js" defer></script>
+	<script src="name.js" defer></script>
+	<script src="transition.js" defer></script>
+<script>
+function toggleAdobe() {
+  document.getElementById("adobe-tools").classList.toggle("open");
+}
+</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <script>function openLightbox(element) {
+    // Target the primary image specifically
+    const primaryImg = element.querySelector('.img-primary');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    
+    if (primaryImg && lightbox && lightboxImg) {
+        lightboxImg.src = primaryImg.src; // Use the original image source
+        lightbox.style.display = 'flex';  // Show the modal
+    }
+}
+
+// Close lightbox on 'Esc' key
+document.addEventListener('keydown', function(e) {
+    if (e.key === "Escape") {
+        document.getElementById('lightbox').style.display = 'none';
+    }
+});
+</script>
+</head>
+<body>
+	<nav>
+		<div class="nav-left">
+		  <ul>
+			<li><a href="index.html">About</a></li>
+			<li><a href="index.html">Services</a></li>
+		  </ul>
+		</div>
+	  
+		<div class="logo">
+		  <a href="index.html"><img src="images/RS12.png" alt="Logo" /></a>
+		</div>
+		<div class="nav-right">
+		  <ul>
+			<li><a href="index.html">Portfolio</a></li>
+			<li><a href="index.html">Resume</a></li>
+		  </ul>
+		</div>
+	  </nav>
+   <main class="project-page">
+    <!-- Fixed Side Bull (The one cut off on the left) -->
+    <img src="images/WHITEBULL.png" class="side-bull-bg" alt="">
+
+    <!-- 1. Centered Project Logo -->
+    <section class="project-top">
+        <div class="project-main-logo">
+            <img src="images/EMBERHORNFULLLOGO.png" alt="Emberhorn Logo">
+        </div>
+    </section>
+
+    <!-- 2. Final Showcase Section -->
+     <section class="showcase-section">
+            <div class="showcase-grid">
+                <!-- Group 1 -->
+                <div class="grid-item large" onclick="openLightbox(this)">
+                    <img src="images/emberthumb.png" class="img-primary" alt="">
+                    <img src="images/redtablegray.jpg" class="img-hover" alt="Material View">
+                </div>
+                <div class="grid-item small-top" onclick="openLightbox(this)">
+                    <img src="images/emberfront.png" class="img-primary" alt="">
+                    <img src="images/emberhorngray.jpg" class="img-hover" alt="Material View">
+                </div>
+                <div class="grid-item tall" onclick="openLightbox(this)">
+                    <img src="images/embertable.png" class="img-primary" alt="">
+                    <img src="images/emberhorngray2.jpg" class="img-hover" alt="Material View">
+                </div>
+                <div class="grid-item small-bottom" onclick="openLightbox(this)">
+                    <img src="images/GooeyPole.jpg" class="img-primary" alt="">
+                </div>
+
+                <!-- Break -->
+                <div class="grid-item full-width" onclick="openLightbox(this)">
+                    <img src="images/gooey-long-banner.jpg" class="img-primary" alt="">
+                </div>
+
+                <!-- Group 2 -->
+                <div class="grid-item large" onclick="openLightbox(this)">
+                    <img src="images/gooey-image-5.jpg" class="img-primary" alt="">
+                </div>
+                <div class="grid-item small-top" onclick="openLightbox(this)">
+                    <img src="images/gooey-image-6.jpg" class="img-primary" alt="">
+                </div>
+                <div class="grid-item tall" onclick="openLightbox(this)">
+                    <img src="images/gooey-image-7.jpg" class="img-primary" alt="">
+                </div>
+                <div class="grid-item small-bottom" onclick="openLightbox(this)">
+                    <img src="images/gooey-image-8.jpg" class="img-primary" alt="">
+                </div>
+            </div>
+        </section>
+    <!-- 3. Info Section -->
+    <section class="info-section">
+        <div class="info-grid">
+            <div class="ember-desc card">
+                <h2>THE GOAL</h2>
+                <h1>Reinventing Connection</h1>
+                <p>EMBERHORN is a bold blend of smoky bourbon barbecue and rich homemade flavor, 
+                crafted for people who take their grilling seriously. Built with deep charred sweetness, subtle heat, and a slow-cooked taste, 
+                it brings a fire-kissed finish to everything from ribs and burgers to wings and pulled pork. 
+                Whether you’re smoking low and slow or grilling over open flame, Emberhorn delivers the perfect 
+                balance of sweet heat and smoky intensity.</p>
+            </div>
+            <div class="ember-specs card">
+                <span class="label">SPECS</span>
+                <div class="spec-row"><strong>CLIENT:</strong> <span>Date Hop</span></div>
+                <div class="spec-row"><strong>YEAR:</strong> <span>2025</span></div>
+                <div class="spec-row"><strong>TOOLS:</strong> <span>Figma, Illustrator, Photoshop</span></div>
+                <div class="spec-row"><strong>ROLE:</strong> <span>Lead Brand Designer</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Technical Breakdown -->
+    <section class="tech-section">
+        <div class="black-header-box">
+            <h4>Technical Breakdown</h4>
+        </div>
+        <div class="tech-grid">
+            <div class="tech-card">
+                <span class="label">TYPOGRAPHY</span>
+                <div class="font-preview">
+                    <h1>Aa</h1>
+                    <p>Open Sans - Extra Bold / Regular</p>
+                </div>
+            </div>
+            <div class="tech-card">
+                <span class="label">COLOR PALETTE</span>
+                <div class="color-swatches">
+                    <div class="swatch" style="background: #e5ff00;"></div>
+                    <div class="swatch" style="background: #1a1a1a; border: 1px solid #333;"></div>
+                    <div class="swatch" style="background: #ffffff;"></div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <span class="label">CORE Mood/Brand Keywords</span>
+                <img src="images/phone-mock.png" class="tech-mockup" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Concept Work -->
+    <section class="concept-section">
+        <h2 class="concept-title">CONCEPT WORK</h2>
+        <div class="concept-gallery">
+            <img src="images/openbox.png" alt="">
+            <img src="images/emberbox.png" alt="">
+            <img src="images/boxember.png" alt="">
+            <img src="images/EMBERLABEL3.png" alt="">
+            <img src="images/FlamingBullks.png" alt="">
+            <img src="images/BULLSKETCH.png" alt="">
+
+        </div>
+        <div class="wireframe-box">
+            <img src="images/box-wireframe.png" alt="">
+        </div>
+    </section>
+</main>
+
+    <footer class="brutalist-footer">
+  <div class="footer-frame">
+    <!-- Big impact text -->
+    <div class="footer-main">
+      <h2 class="footer-logo-text">RYAN <br>SAMKUNJU</h2>
+      <div class="footer-contact">
+        <p class="tech-label">[ CONTACT_ME ]</p>
+        <a href="mailto:your@email.com" class="footer-link">@RYANSAMKUNJUNHP</a>
+      </div>
+    </div>
+
+    <!-- Bottom metadata bar -->
+    <div class="footer-bottom">
+      <div class="footer-meta">
+        <p>VERSION: 2.1.0</p>
+        <p>&copy; 2026 ALL RIGHTS RESERVED</p>
+        <p>STATUS: OPEN_FOR_WORK</p>
+      </div>
+
+      <!-- Scroll to Top Button -->
+      <div class="scroll-container">
+        <a href="#top" class="brutalist-scroll-btn">
+          <span class="arrow">↑</span>
+          <span class="btn-text">TOP</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="slideshow.js"></script>
+    <div id="lightbox" class="lightbox" onclick="this.style.display='none'">
+    <span class="close-lightbox">&times;</span>
+    <img id="lightbox-img" src="" alt="Full View">
+</div>
+</body>
+</html>
+</body>
+</html>
