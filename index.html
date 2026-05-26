@@ -50,7 +50,7 @@ function toggleAdobe() {
     <div class="hero-socials">
       <a href="#" target="_blank" class="hero-social-link"><i class="fa-brands fa-instagram"></i></a>
       <a href="#" target="_blank" class="hero-social-link"><i class="fa-brands fa-behance"></i></a>
-      <a href="#" target="_blank" class="hero-social-link"><i class="fa-brands fa-artstation"></i></a>
+      <a href="https://www.artstation.com/ryansamarts" target="_blank" class="hero-social-link"><i class="fa-brands fa-artstation"></i></a>
     </div>
 
     <!-- These create the gaps in the top border for your logo -->
@@ -66,21 +66,24 @@ function toggleAdobe() {
 </h1>
         <p class="hero-description">
           A creative designer with over six years of experience specializing in visual design, branding, animation, and 3D graphics. Skilled in developing compelling visuals across digital and print media, 
-          combining strong design fundamentals with creative problem-solving and attention to detail. 
+          combining strong design fundamentals with creative problem solving and attention to detail. 
           Known for delivering polished, impactful results while working seamlessly both independently and within creative teams.
       </div>
 
       <!-- Right Side: View My Work CTA -->
-      <div class="hero-cta-side">
-        <a href="#portfolio" class="brutalist-resume-btn">
-          <span class="btn-text">VIEW MY WORK</span>
-          <span class="btn-arrow">→</span>
-        </a>
-        
-        <div class="lightning-effect">
-          <img src="images/spikes.png" alt="spikes">
-        </div>
-      </div>
+    <div class="hero-cta-side">
+  <a href="#portfolio" class="brutalist-resume-btn">
+    <span class="btn-text">VIEW MY WORK</span>
+    <span class="btn-arrow">→</span>
+    <!-- Animated Red Circle -->
+    <svg class="circle-effect" viewBox="0 0 420 150">
+      <path d="M55 80 
+               C70 10, 330 5, 370 65 
+               C410 125, 110 150, 50 95 
+               C25 75, 35 50, 80 35" />
+    </svg>
+  </a>
+</div>
     </div>
   </div>
 </section>
@@ -92,52 +95,59 @@ function toggleAdobe() {
   <div class="main-frame">
     
     <!-- MAIN HEADER (Sits on Top Border) -->
-    <h2 class="master-title">SERVICES</h2>
+    <h2 class="master-title">TOOLKIT</h2>
 
     <!-- TOP SECTION: SERVICES -->
     <div class="services-wrapper">
       <div class="services-container">
         
         <!-- Panel 1 -->
-        <div class="service-panel" style="background-image: url('images/');">
+        <div class="service-panel" style="background-image: url('images/Illustratortest.png');">
           <div class="panel-content">
             <span class="service-number">01</span>
-            <h2 class="service-title">Illustration</h2>
+            <h2 class="service-title">Illustrator</h2>
             <div class="service-details">
-              <p>Creating custom vector and digital illustrations through Illustrator and Photoshop.</p>
+              <p>[ VECTOR GRAPHICS ]<br>[ IDENTITY SYSTEMS ]<br>[ TYPOGRAPHY ]</p>
             </div>
           </div>
         </div>
 
         <!-- Panel 2 -->
-        <div class="service-panel" style="background-image: url('images/branding.jpg');">
+        <div class="service-panel" style="background-image: url('images/Phototest.png');">
           <div class="panel-content">
             <span class="service-number">02</span>
-            <h2 class="service-title">Branding</h2>
+            <h2 class="service-title">PHOTOSHOP</h2>
             <div class="service-details">
-              <p>Strategic identity design, logo creation, and brand guidelines through Illustrator, Photoshop, and Aftereffects.</p>
+              <p>[ DIGITAL ART ]<br>
+[ VISUAL DESIGN ]<br>
+[ BRAND SYSTEMS ]</p>
             </div>
           </div>
         </div>
 
         <!-- Panel 3 -->
-        <div class="service-panel" style="background-image: url('images/packaging.jpg');">
+        <div class="service-panel" style="background-image: url('images/effectstest.png');">
           <div class="panel-content">
             <span class="service-number">03</span>
-            <h2 class="service-title">Packaging</h2>
+            <h2 class="service-title">AFTER EFFECTS</h2>
             <div class="service-details">
-              <p>Physical product design that stands out on the shelf through Illustrator and Photoshop.</p>
+              <p>[ MOTION GRAPHICS ]<br>
+[ VIDEO EDITING ]<br>
+[ VISUAL EFFECTS ]</p>
             </div>
           </div>
         </div>
 
         <!-- Panel 4 -->
-        <div class="service-panel" style="background-image: url('images/sky.png');">
+        <div class="service-panel" style="background-image: url('images/blendertest.png');">
           <div class="panel-content">
             <span class="service-number">04</span>
-            <h2 class="service-title">3D Design</h2>
+            <h2 class="service-title">BLENDER</h2>
             <div class="service-details">
-              <p>High-end 3D visualization, modeling, and cinematic rendering through Blender, Cinema 4D, and Maya.</p>
+              <p>[ 3D MODELING ]<br>
+[ PRODUCT VISUALIZATION ]<br>
+[ CINEMATIC RENDERING ]
+            </p>
             </div>
           </div>
         </div>
@@ -287,24 +297,22 @@ function toggleAdobe() {
 <!-- Portfolio Section -->
 
     <!-- Resume Section -->
-<div class="resume-wrapper">
-  <section id="resume" class="resume-section">
-    <!-- Technical Label -->
-    <div class="resume-header-group">
-      <p class="resume-tech-label">[ ACCESS_DOCUMENT ]</p>
-      <h2 class="resume-main-title">RESUME</h2>
-    </div>
-
-    <!-- Download Box -->
+    <!-- Download Area -->
     <div class="resume-content-box">
-      <p class="resume-file-info">FILE_TYPE: PDF // SIZE: 204KB // VER: 2026_RESUME</p>
-      
-      <a href="/images/RyanSamkunju_Resume.pdf" download class="brutalist-resume-btn">
-        <span class="btn-text">DOWNLOAD_FILE</span>
-        <span class="btn-arrow">↓</span>
-      </a>
-    </div>
-  </section>
+
+  <p class="resume-file-info">
+    FILE_TYPE: PDF // SIZE: 204KB // VER: 2026_RESUME
+  </p>
+
+  <a href="/images/RyanSamkunjuResume.pdf"
+     download
+     class="brutalist-resume-btn">
+
+    <span class="btn-text">DOWNLOAD_FILE</span>
+    <span class="btn-arrow">↓</span>
+
+  </a>
+
 </div>
 
  <!-- Resume Section -->
