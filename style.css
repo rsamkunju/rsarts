@@ -17,7 +17,18 @@ html{
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'GothamBlack';
+  src: url('fonts/GothamBlack.woff2') format('woff2'),
+       url('fonts/GothamBlack.woff') format('woff'),
+       url('fonts/GothamBlack.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 /* Use the font in your styles */
+p {
+  font-family: 'voye', Arial, sans-serif;
+}
 h2 {
  font-family: "GothamBlack";
  text-align: center;
@@ -182,6 +193,41 @@ nav ul li a:hover::after {
 @media (max-width: 1100px) {
   nav ul li { margin: 0 20px; }
   nav ul li a { font-size: 22px; }
+}
+@media (max-width: 768px) {
+  nav {
+    height: auto;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .nav-left,
+  .nav-right {
+    justify-content: center;
+    width: 100%;
+  }
+
+  nav ul {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+    padding: 15px 10px;
+  }
+
+  nav ul li {
+    margin: 8px 12px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+    padding-top: 0;
+  }
+
+  .logo img {
+    height: 120px;
+  }
 }
 /* Button Styles */
 /* Button Styles */
@@ -960,10 +1006,13 @@ nav ul li a:hover::after {
    Responsive
 ================================ */
 @media (max-width: 768px) {
-.portfolio-item {
-  width: calc(50% - 1rem);
-}
+  .portfolio-item {
+    width: 100%;
+  }
 
+  .portfolio-container {
+    padding: 0 20px;
+  }
 
   .portfolio-overlay h3 {
     font-size: 1.2rem;
@@ -1610,7 +1659,7 @@ footer {
 
 .project-main-logo img {
     /* Adjust these values to your liking */
-    width: 110%;          /* Allows it to be large on all screens */
+    width: 100%;          /* Allows it to be large on all screens */
     max-width: 500px;    /* Increased from 350px to 700px */
     height: auto;
     display: block;
@@ -1713,6 +1762,27 @@ footer {
     height: 100%;
     width: 100%;
 }
+@media (max-width: 768px) {
+  .showcase-grid,
+  .showcase-grid.velocyte-grid {
+    grid-template-columns: 1fr !important;
+    padding: 20px;
+  }
+
+  .grid-item.large,
+  .grid-item.small-top,
+  .grid-item.small-bottom,
+  .grid-item.tall,
+  .grid-item.full-width {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    height: auto !important;
+  }
+
+  .velocyte-grid .grid-item {
+    height: auto !important;
+  }
+}
 /* VELOCYTE END */
 /* VELOCYTE END */
 /* VELOCYTE END */
@@ -1763,7 +1833,12 @@ footer {
     background:black;     /* Match your existing card background color */
     border: 1px solid #333;  /* Optional visual border */
 }
-
+@media (max-width: 768px) {
+  .tech-card {
+    min-width: 0;
+    width: 100%;
+  }
+}
 .font-preview h1 { 
     font-family: "Open Sans"; 
     font-weight: 800; 
