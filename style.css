@@ -19,11 +19,22 @@ html{
 }
 @font-face {
   font-family: 'GothamBlack';
-  src: url('fonts/GothamBlack.woff2') format('woff2'),
-       url('fonts/GothamBlack.woff') format('woff'),
-       url('fonts/GothamBlack.ttf') format('truetype');
+  src: url('/fonts/GothamBlack.woff2') format('woff2'),
+       url('/fonts/GothamBlack.woff') format('woff'),
+       url('/fonts/GothamBlack.ttf') format('truetype'),
+       url('/fonts/GothamBlack.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+nav ul li a,
+.brutalist-btn,
+.brutalist-resume-btn,
+.portfolio-filter button,
+.footer-link,
+.btn-text {
+  font-family: 'GothamBlack', Arial, sans-serif !important;
+  font-weight: 900;
 }
 /* Use the font in your styles */
 p {
@@ -191,42 +202,83 @@ nav ul li a:hover::after {
 
 /* Responsive */
 @media (max-width: 1100px) {
-  nav ul li { margin: 0 20px; }
-  nav ul li a { font-size: 22px; }
+  nav {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  nav ul li {
+    margin: 0 16px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  .logo img {
+    height: 130px;
+  }
 }
+
 @media (max-width: 768px) {
   nav {
-    height: auto;
-    flex-direction: column;
-    padding: 20px;
+    height: 160px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 6px;
+    gap: 0;
   }
 
   .nav-left,
   .nav-right {
-    justify-content: center;
-    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-left {
+    justify-content: flex-end;
+  }
+
+  .nav-right {
+    justify-content: flex-start;
   }
 
   nav ul {
-    height: auto;
-    flex-wrap: wrap;
-    justify-content: center;
+    height: 58px;
+    padding: 0 6px;
+    flex-wrap: nowrap;
     border-top: 4px solid white;
     border-bottom: 4px solid white;
-    padding: 15px 10px;
   }
 
   nav ul li {
-    margin: 8px 12px;
+    margin: 0 8px;
   }
 
   nav ul li a {
-    font-size: 16px;
-    padding-top: 0;
+    font-size: 12px;
+    padding-top: 4px;
+    white-space: nowrap;
   }
 
   .logo img {
-    height: 120px;
+    height: 115px;
+  }
+}
+
+@media (max-width: 390px) {
+  nav ul li {
+    margin: 0 3px;
+  }
+
+  nav ul li a {
+    font-size: 11px;
+  }
+
+  .logo img {
+    height: 78px;
   }
 }
 /* Button Styles */
@@ -513,7 +565,18 @@ nav ul li a:hover::after {
   border: 1px solid red;
   transform: translateY(-2px);
 }
+@media (max-width: 768px) {
 
+  .hero-socials {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: auto;
+  }
+
+}
 /* Ensure the hero-frame allows absolute positioning */
 .hero-frame {
   position: relative;
@@ -1151,18 +1214,44 @@ nav ul li a:hover::after {
 
 /* RESPONSIVE: Stack them vertically on mobile */
 @media (max-width: 768px) {
+
   .services-container {
     flex-direction: column;
-    height: auto;
+    height: auto !important;
+    padding: 0;
+    gap: 15px;
   }
+
   .service-panel {
-    height: 250px;
-    flex: none;
+    flex: none !important;
+    width: 100%;
+    height: 300px;
+    min-height: 300px;
   }
+
   .service-panel:hover {
-    flex: none;
-    height: 350px;
+    flex: none !important;
+    height: 300px;
   }
+
+  .panel-content {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .service-title {
+    font-size: 28px;
+    white-space: normal;
+  }
+
+  /* Show content on mobile since there is no hover */
+  .service-details {
+    max-height: none;
+    opacity: 1;
+    margin-top: 15px;
+  }
+
 }
 /* ================================
   SERVICES SECTION
@@ -1210,13 +1299,10 @@ nav ul li a:hover::after {
 
 /* FILE INFO */
 .resume-file-info {
-  margin-top: 45px;
-  margin-bottom: 35px;
-
+  margin-top: 0px;
   color: rgba(255,255,255,0.45);
-
   font-size: 14px;
-  font-family: monospace;
+  font-family: voye;
   letter-spacing: 1px;
 }
 
