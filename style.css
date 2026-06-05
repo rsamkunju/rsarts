@@ -686,7 +686,7 @@ nav ul li a:hover::after {
 .portfolio-overlay p,
 .portfolio-item .portfolio-overlay p {
   margin: 0;
-  font-family: 'Open Sans';
+  font-family: 'GothamBlack';
   font-size: 14px;
 }
 
@@ -1393,6 +1393,145 @@ footer {
 /* =========================================================
    PROJECT PAGES
 ========================================================= */
+/* Brutalist Container */
+.brutalist-technical-grid {
+    border-top: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+    background: #000;
+    margin-top: 50px;
+}
+
+/* Rows */
+.b-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; /* Desktop: Main content wider than sidebar */
+    width: 100%;
+}
+
+.split-border {
+    border-top: 4px solid #fff;
+}
+
+/* Blocks */
+.b-block {
+    padding: 40px;
+    border-right: 4px solid #fff;
+    position: relative;
+}
+
+.b-block:last-child {
+    border-right: none;
+}
+
+/* Labels */
+.b-label {
+    font-family: 'voye';
+    font-size: 13px;
+    color: white;
+    display: block;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+/* Typography */
+.b-title {
+    font-size: clamp(2.5rem, 6vw, 5rem); /* Scales based on screen size */
+    line-height: 0.9;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.b-subtitle {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: #fff;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+.b-body {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 1100px;
+    color: #ccc;
+    text-align: center;
+}
+
+/* Specs Table */
+.b-spec-list {
+    font-family: 'voye'
+}
+
+.b-spec-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #333;
+}
+
+/* Color Bars - Full Bleed */
+.b-color-bars {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 200px;
+    margin: 0 -40px -40px -40px; /* Bleeds bars to the edges of the box */
+}
+
+.b-bar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: bold;
+    mix-blend-mode: difference; /* Text color adapts to background */
+    transition: flex 0.3s ease;
+}
+
+.b-bar:hover { flex: 2; }
+
+/* Font Image */
+.b-type-img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 900px) {
+    .b-row {
+        grid-template-columns: 1fr; /* Stack elements vertically */
+    }
+
+    .b-block {
+        border-right: none; /* Remove vertical divider */
+        border-bottom: 4px solid #fff; /* Add horizontal divider between sections */
+    }
+
+    .b-block:last-child {
+        border-bottom: none;
+    }
+
+    .b-title {
+        font-size: 3rem; /* Control size on small mobile */
+    }
+
+    .b-color-bars {
+        height: 300px; /* Ensure colors are visible on mobile */
+    }
+}
+
+
+
+
+
+
+
+
+
+
 .side-bull-bg,
 .side-gooey-bg {
   position: fixed;

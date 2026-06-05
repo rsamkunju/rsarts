@@ -3,14 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Gooey Project</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Only keep essential scripts for this page -->
-    <script src="scroll.js" defer></script>
-    <script src="name.js" defer></script>
-    <script src="transition.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <title>Gooey Cookies | Project</title>
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
     <nav>
@@ -32,7 +26,7 @@
     </nav>
 
     <main class="project-page">
-        <!-- Fixed Side Bull -->
+        <!-- Background Asset -->
         <img src="images/sidetest.png" class="side-gooey-bg" alt="">
 
         <section class="project-top">
@@ -41,9 +35,9 @@
             </div>
         </section>
 
+        <!-- SHOWCASE GRID -->
         <section class="showcase-section">
             <div class="showcase-grid">
-                <!-- Group 1 -->
                 <div class="grid-item large" onclick="openLightbox(this)">
                     <img src="images/gooeybanner.jpg" class="img-primary" alt="">
                 </div>
@@ -56,15 +50,11 @@
                 <div class="grid-item small-bottom" onclick="openLightbox(this)">
                     <img src="images/GooeyPole.jpg" class="img-primary" alt="">
                 </div>
-
-                <!-- Break -->
                 <div class="grid-item full-width" onclick="openLightbox(this)">
                     <img src="images/bannergoey.jpg" class="img-primary" alt="">
                 </div>
-
-                <!-- Group 2 -->
                 <div class="grid-item large" onclick="openLightbox(this)">
-                    <img src="images/gooeybox2.png" class="img-primary" alt="">
+                    <img src="images/gooeyboxopen.png" class="img-primary" alt="">
                 </div>
                 <div class="grid-item small-top" onclick="openLightbox(this)">
                     <img src="images/gooeyclose.png" class="img-primary" alt="">
@@ -73,108 +63,99 @@
                     <img src="images/cookieeat.gif" class="img-primary" alt="">
                 </div>
                 <div class="grid-item small-bottom" onclick="openLightbox(this)">
-                    <img src="images/gooeytray.png" class="img-primary" alt="">
+                    <img src="images/gooeycookie.png" class="img-primary" alt="">
                 </div>
             </div>
         </section>
 
-        <section class="info-section">
-            <div class="info-grid">
-                <div class="ember-desc card">
-                    <h2>GOOEY COOKIES</h2>
-                    <h1>BRANDING AND PACKAGE DESIGN</h1>
-                    <p>Gooey is a conceptual cookie branding and package design project built around the idea of warm,
+        <!-- BRUTALIST TECHNICALS SECTION -->
+        <section class="brutalist-technical-grid">
+            
+            <!-- ROW 1: OVERVIEW & SPECS -->
+            <div class="b-row">
+                <div class="b-block main-info">
+                    <span class="b-label">[ 01_PROJECT_DATA ]</span>
+                    <h1 class="b-title">GOOEY COOKIES</h1>
+                    <h2 class="b-subtitle">BRANDING & PACKAGE DESIGN</h2>
+                    <p class="b-body">
+                        Gooey is a conceptual cookie branding and package design project built around the idea of warm,
                         melted-center cookies and playful dessert visuals. The branding combines custom display typography, 
-                        dripping chocolate-inspired graphics, and modern bakery-inspired visuals to create an
-                        identity that feels both playful and indulgent. Designed to capture the comforting and crave worthy feeling of
-                         freshly baked cookies.</p>
+                        dripping chocolate-inspired graphics, and modern bakery-inspired visuals.
+                    </p>
                 </div>
-                <div class="ember-specs card">
-                    <h2>SPECS</h2>
-                    <div class="spec-row"><strong>CLIENT:</strong> <span>Gooey</span></div>
-                    <div class="spec-row"><strong>CATEGORY:</strong> <span>Branding / Package Design</span></div>
-                    <div class="spec-row"><strong>YEAR:</strong> <span>2025</span></div>
-                    <div class="spec-row"><strong>TOOLS:</strong> <span>Illustrator, Photoshop, AfterEffects</span></div>
-                    <div class="spec-row"><strong>DIRECTION:</strong> <span>Warm / Indulgent</span></div>
+                <div class="b-block specs">
+                    <span class="b-label">[ 02_SYSTEM_SPECS ]</span>
+                    <div class="b-spec-list">
+                        <div class="b-spec-item"><strong>CLIENT</strong> <span>Gooey</span></div>
+                        <div class="b-spec-item"><strong>CAT.</strong> <span>Branding / Package</span></div>
+                        <div class="b-spec-item"><strong>YEAR</strong> <span>2025</span></div>
+                        <div class="b-spec-item"><strong>TOOLS</strong> <span>AI / PS / AE</span></div>
+                        <div class="b-spec-item"><strong>DIR.</strong> <span>Warm / Indulgent</span></div>
+                    </div>
                 </div>
             </div>
+
+            <!-- ROW 2: TYPE & COLOR -->
+            <div class="b-row split-border">
+                <div class="b-block typography">
+                    <span class="b-label">[ 03_TYPEFACE_SPECIMEN ]</span>
+                    <div class="b-type-container">
+                        <p class="b-tiny">CUSTOM DISPLAY FONT - GOOEY</p>
+                        <img src="images/GOOEYALPHA.png" alt="Font Alpha" class="b-type-img">
+                    </div>
+                </div>
+                <div class="b-block colors">
+                    <span class="b-label">[ 04_COLOR_VALUES ]</span>
+                    <div class="b-color-bars">
+                        <div class="b-bar" style="background:#2A160D"><span>#2A160D</span></div>
+                        <div class="b-bar" style="background:#5A2E16"><span>#5A2E16</span></div>
+                        <div class="b-bar" style="background:#C97A3D"><span>#C97A3D</span></div>
+                        <div class="b-bar" style="background:#D9B38C"><span>#D9B38C</span></div>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
-     <section class="tech-section">
-    <h2 class="concept-title">TECHNICALS</h2>
-    <div class="tech-grid">
-        <!-- Typography Card -->
-        <div class="tech-card">
-            <h2>TYPOGRAPHY</h2>
-            <div class="font-preview">
-                <p>CUSTOM DISPLAY FONT - GOOEY</p>
-                <img src="images/GOOEYALPHA.png" alt="Aa Typography" class="font-img">
-            </div>
-        </div>
-
-        <!-- Color Palette Card -->
-        <div class="tech-card">
-            <h2>COLOR</h2>
-            <div class="color-swatches">
-                <div class="color-item">
-                    <div class="swatch" style="background: #2A160D;"></div>
-                    <span class="hex-code">#2A160D</span>
-                </div>
-                <div class="color-item">
-                    <div class="swatch" style="background: #5A2E16;"></div>
-                    <span class="hex-code">#5A2E16</span>
-                </div>
-                <div class="color-item">
-                    <div class="swatch" style="background: #C97A3D;"></div>
-                    <span class="hex-code">#C97A3D</span>
-                </div>
-                 <div class="color-item">
-                    <div class="swatch" style="background: #D9B38C;"></div>
-                    <span class="hex-code">#D9B38C</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
+        <!-- CONCEPT GALLERY -->
         <section class="concept-section">
             <h2 class="concept-title">CONCEPT WORK</h2>
             <div class="concept-gallery">
                 <img src="images/GooeyColors.png" alt="">
                 <img src="images/Gooeyconcept1.png" alt="">
-                  <img src="images/boxmeasure1.png" alt="">
+                <img src="images/boxmeasure1.png" alt="">
             </div>
         </section>
     </main>
 
-   <footer class="brutalist-footer">
-  <div class="footer-frame">
-    <div class="footer-main">
-      <h2 class="footer-logo-text">RYAN <br>SAMKUNJU</h2>
-      <div class="footer-contact">
-        <p class="tech-label">[ CONTACT_ME ]</p>
-        <a href="mailto:your@email.com" class="footer-link">@RYANSAMKUNJUNHP</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-meta">
-        <p>VERSION: 2.1.0</p>
-        <p>&copy; 2026 ALL RIGHTS RESERVED</p>
-        <p>STATUS: OPEN_FOR_WORK</p>
-      </div>
-      <div class="project-nav-container">
-        <a href="index.html" class="brutalist-nav-btn">
-          <span class="arrow">←</span>
-          <span class="btn-text">HOME</span>
-        </a>
-        <a href="velocyte.html" class="brutalist-nav-btn">
-          <span class="arrow">→</span>
-          <span class="btn-text">NEXT</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</footer>
+    <footer class="brutalist-footer">
+        <div class="footer-frame">
+          <div class="footer-main">
+            <h2 class="footer-logo-text">RYAN <br>SAMKUNJU</h2>
+            <div class="footer-contact">
+              <p class="tech-label">[ CONTACT_ME ]</p>
+              <a href="mailto:your@email.com" class="footer-link">@RYANSAMKUNJUNHP</a>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="footer-meta">
+              <p>VERSION: 2.1.0</p>
+              <p>&copy; 2026 ALL RIGHTS RESERVED</p>
+              <p>STATUS: OPEN_FOR_WORK</p>
+            </div>
+            <div class="project-nav-container">
+              <a href="index.html" class="brutalist-nav-btn">
+                <span class="arrow">←</span>
+                <span class="btn-text">HOME</span>
+              </a>
+              <a href="velocyte.html" class="brutalist-nav-btn">
+                <span class="arrow">→</span>
+                <span class="btn-text">NEXT</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
 
     <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox" onclick="this.style.display='none'">
@@ -182,7 +163,6 @@
         <img id="lightbox-img" src="" alt="Full View">
     </div>
 
-    <!-- Lightbox Script -->
     <script>
         function openLightbox(element) {
             const primaryImg = element.querySelector('.img-primary');
