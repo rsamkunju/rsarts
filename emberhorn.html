@@ -10,6 +10,7 @@
 	<script src="scroll.js" defer></script>
 	<script src="name.js" defer></script>
 	<script src="transition.js" defer></script>
+    <script src="gallery-slider.js"></script>
 <script>
 function toggleAdobe() {
   document.getElementById("adobe-tools").classList.toggle("open");
@@ -18,26 +19,6 @@ function toggleAdobe() {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-
-    <script>function openLightbox(element) {
-    // Target the primary image specifically
-    const primaryImg = element.querySelector('.img-primary');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    
-    if (primaryImg && lightbox && lightboxImg) {
-        lightboxImg.src = primaryImg.src; // Use the original image source
-        lightbox.style.display = 'flex';  // Show the modal
-    }
-}
-
-// Close lightbox on 'Esc' key
-document.addEventListener('keydown', function(e) {
-    if (e.key === "Escape") {
-        document.getElementById('lightbox').style.display = 'none';
-    }
-});
-</script>
 </head>
 <body>
 	<nav>
@@ -71,103 +52,145 @@ document.addEventListener('keydown', function(e) {
 
     <!-- 2. Final Showcase Section -->
      <section class="showcase-section">
-            <div class="showcase-grid">
-                <!-- Group 1 -->
-                <div class="grid-item large" onclick="openLightbox(this)">
-                    <img src="images/emberthumb.png" class="img-primary" alt="">
-                    <img src="images/redtablegray.jpg" class="img-hover" alt="Material View">
-                </div>
-                <div class="grid-item small-top" onclick="openLightbox(this)">
-                    <img src="images/emberfront.png" class="img-primary" alt="">
-                    <img src="images/emberhorngray.jpg" class="img-hover" alt="Material View">
-                </div>
-                <div class="grid-item tall" onclick="openLightbox(this)">
-                    <img src="images/embertable.png" class="img-primary" alt="">
-                    <img src="images/emberhorngray2.jpg" class="img-hover" alt="Material View">
-                </div>
-                <div class="grid-item small-bottom" onclick="openLightbox(this)">
-                    <img src="images/" class="img-primary" alt="">
-                </div>
-
-                <!-- Break -->
-                <div class="grid-item full-width" onclick="openLightbox(this)">
-                    <img src="images/gooey-long-banner.jpg" class="img-primary" alt="">
-                </div>
-
-                <!-- Group 2 -->
-                <div class="grid-item large" onclick="openLightbox(this)">
-                    <img src="images/gooey-image-5.jpg" class="img-primary" alt="">
-                </div>
-                <div class="grid-item small-top" onclick="openLightbox(this)">
-                    <img src="images/gooey-image-6.jpg" class="img-primary" alt="">
-                </div>
-                <div class="grid-item tall" onclick="openLightbox(this)">
-                    <img src="images/gooey-image-7.jpg" class="img-primary" alt="">
-                </div>
-                <div class="grid-item small-bottom" onclick="openLightbox(this)">
-                    <img src="images/gooey-image-8.jpg" class="img-primary" alt="">
-                </div>
-            </div>
-        </section>
-    <!-- 3. Info Section -->
-    <section class="info-section">
-        <div class="info-grid">
-            <div class="ember-desc card">
-                <h2>EMBERHORN</h2>
-                <h1>Branding and Package Design</h1>
-                <p>EMBERHORN is a conceptual barbecue sauce brand built around smoky bourbon flavor and a subtle spicy kick. 
-                    Inspired by slow-cooked barbecue and open flame grilling, the brand focuses on rich smoke, deep sweetness, 
-                    and bold heat to create a strong fire-inspired identity. 
-                    From the packaging to the visual system, Emberhorn blends rustic barbecue culture with a modern, premium aesthetic.</p>
-            </div>
-             <div class="ember-specs card">
-                    <h2>SPECS</h2>
-                    <div class="spec-row"><strong>CLIENT:</strong> <span>EMBERHORN</span></div>
-                    <div class="spec-row"><strong>CATEGORY:</strong> <span>Branding / Package Design / 3D</span></div>
-                    <div class="spec-row"><strong>YEAR:</strong> <span>2025</span></div>
-                    <div class="spec-row"><strong>TOOLS:</strong> <span>Illustrator, Photoshop, Blender</span></div>
-                    <div class="spec-row"><strong>DIRECTION:</strong> <span>Southern Heat / Rustic</span></div>
-                </div>
+    <div class="showcase-grid">
+        <!-- Group 1 -->
+        <div class="grid-item large" onclick="openLightbox(this)">
+            <img src="images/emberthumb.png" class="img-primary" alt="">
+            <img src="images/redtablegray.jpg" class="img-hover" alt="Material View">
         </div>
-    </section>
-
-    <!-- 4. Technical Breakdown -->
-    <section class="tech-section">
-    <h2 class="concept-title">TECHNICALS</h2>
-    <div class="tech-grid">
-        <!-- Typography Card -->
-        <div class="tech-card">
-            <h2>TYPOGRAPHY</h2>
-            <div class="font-preview">
-                <p>CUSTOM DISPLAY FONT - EMBERHORN</p>
-                <img src="images/" alt="Aa Typography" class="font-img">
-            </div>
+        <div class="grid-item small-top" onclick="openLightbox(this)">
+            <img src="images/emberfront.png" class="img-primary" alt="">
+            <img src="images/emberhorngray.jpg" class="img-hover" alt="Material View">
+        </div>
+        <div class="grid-item tall" onclick="openLightbox(this)">
+            <img src="images/embertable.png" class="img-primary" alt="">
+            <img src="images/emberhorngray2.jpg" class="img-hover" alt="Material View">
+        </div>
+        <div class="grid-item small-bottom" onclick="openLightbox(this)">
+            <!-- Note: You had an empty image path here in your snippet -->
+            <img src="images/emberthumb.png" class="img-primary" alt=""> 
         </div>
 
-        <!-- Color Palette Card -->
-        <div class="tech-card">
-            <h2>COLOR</h2>
-            <div class="color-swatches">
-                <div class="color-item">
-                    <div class="swatch" style="background: #E0A106;"></div>
-                    <span class="hex-code">#E0A106</span>
-                </div>
-                <div class="color-item">
-                    <div class="swatch" style="background: #8B1E1E;"></div>
-                    <span class="hex-code">#8B1E1E</span>
-                </div>
-                <div class="color-item">
-                    <div class="swatch" style="background: #FF5A1F;"></div>
-                    <span class="hex-code">#FF5A1F</span>
-                </div>
-                 <div class="color-item">
-                    <div class="swatch" style="background: #0F0F0F;"></div>
-                    <span class="hex-code">#0F0F0F</span>
-                </div>
-            </div>
+        <!-- Break -->
+        <div class="grid-item full-width" onclick="openLightbox(this)">
+            <img src="images/emberhornbottlesbox52.png" class="img-primary" alt="">
+            <img src="images/emberboxbottlesgray21.png" class="img-hover" alt="Material View">
+        </div>
+
+        <!-- Group 2 -->
+        <div class="grid-item large" onclick="openLightbox(this)">
+            <img src="images/emberbox5.jpg" class="img-primary" alt="">
+            <img src="images/embergraybox2.jpg" class="img-hover" alt="Material View">
+        </div>
+        <div class="grid-item small-top" onclick="openLightbox(this)">
+            <img src="images/gooey-image-6.jpg" class="img-primary" alt="">
+            <img src="images/emberboxbottlesgray21.png" class="img-hover" alt="Material View">
+        </div>
+        <div class="grid-item tall" onclick="openLightbox(this)">
+            <img src="images/emberlightbox214.png" class="img-primary" alt="">
+            <img src="images/emberboxsidewaysgray2.jpg" class="img-hover" alt="Material View">
+        </div>
+        <div class="grid-item small-bottom" onclick="openLightbox(this)">
+            <img src="images/gooey-image-8.jpg" class="img-primary" alt="">
+            <img src="images/emberboxbottlesgray21.png" class="img-hover" alt="Material View">
         </div>
     </div>
 </section>
+    <!-- 3. Info Section -->
+    <section class="brutalist-technical-grid">
+
+            
+
+            <!-- ROW 1: OVERVIEW & SPECS -->
+
+            <div class="b-row">
+
+                <div class="b-block main-info">
+
+                    <span class="b-label">[ 01 ] PROJECT INFORMATION </span>
+
+                    <h1 class="b-title">EMBERHORN HOT BBQ</h1>
+
+                    <h2 class="b-subtitle">BRANDING & PACKAGE DESIGN</h2>
+
+                    <p class="b-body">
+
+                       EMBERHORN is a conceptual barbecue sauce brand built around smoky bourbon flavor and a subtle spicy kick. 
+
+                    Inspired by slow-cooked barbecue and open flame grilling, the brand focuses on rich smoke, deep sweetness, 
+
+                    and bold heat to create a strong fire-inspired identity. 
+
+                    From the packaging to the visual system, Emberhorn blends rustic barbecue culture with a modern, premium aesthetic.
+
+                    </p>
+
+                </div>
+
+                <div class="b-block specs">
+
+                    <span class="b-label">[ 02 ] PROJECT SPECS</span>
+
+                    <div class="b-spec-list">
+
+                        <div class="b-spec-item"><strong>CLIENT</strong> <span>EMBERHORN</span></div>
+
+                        <div class="b-spec-item"><strong>CATEGORY</strong> <span>BRANDING / PACKAGE</span></div>
+
+                        <div class="b-spec-item"><strong>YEAR</strong> <span>2025</span></div>
+
+                        <div class="b-spec-item"><strong>TOOLS</strong> <span>ILLUSTRATOR / PHOTOSHOP / BLENDER</span></div>
+
+                        <div class="b-spec-item"><strong>DIRECTION</strong> <span>SOUTHERN HEAT / RUSTIC</span></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ROW 2: TYPE & COLOR -->
+
+            <div class="b-row split-border">
+
+                <div class="b-block typography">
+
+                    <span class="b-label">[ 03 ] TYPOGRAPHY</span>
+
+                    <div class="b-type-container">
+
+
+                        <img src="images/EMBERALPHA2.png" alt="Font Alpha" class="b-type-img">
+
+                    </div>
+
+                </div>
+
+                <div class="b-block colors">
+
+                    <span class="b-label">[ 04 ] COLOR VALUES</span>
+
+                    <div class="b-color-bars">
+
+                        <div class="b-bar" style="background:#E0A106"><span>#E0A106</span></div>
+
+                        <div class="b-bar" style="background:#8B1E1E"><span>#8B1E1E</span></div>
+
+                        <div class="b-bar" style="background:#FF5A1F"><span>#FF5A1F</span></div>
+
+                        <div class="b-bar" style="background:#0F0F0F"><span>#0F0F0F</span></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </section>
 
     <!-- 5. Concept Work -->
     <section class="concept-section">
@@ -179,6 +202,8 @@ document.addEventListener('keydown', function(e) {
             <img src="images/EMBERLABEL3.png" alt="">
             <img src="images/FlamingBullks.png" alt="">
             <img src="images/BULLSKETCH.png" alt="">
+            <img src="images/boxdetailsflat.png" alt="">
+            <img src="images/PEPPERSCOLOR.png" alt="">
 
         </div>
         <div class="wireframe-box">
@@ -217,11 +242,24 @@ document.addEventListener('keydown', function(e) {
   </div>
 </footer>
 
-    <script src="slideshow.js"></script>
-    <div id="lightbox" class="lightbox" onclick="this.style.display='none'">
-    <span class="close-lightbox">&times;</span>
-    <img id="lightbox-img" src="" alt="Full View">
+   <!-- Lightbox Structure -->
+   <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close-btn">&times;</span>
+    <div class="slider-wrapper" onclick="event.stopPropagation()">
+        <div class="comparison-slider">
+            <img id="img-after" src="" alt="">
+            <div id="img-before-wrap">
+                <img id="img-before" src="" alt="">
+            </div>
+            
+            <!-- THE HANDLE MUST BE HERE -->
+            <div id="slider-handle" class="slider-handle"></div> 
+
+            <input type="range" min="0" max="100" value="50" class="slider-input" id="slider-range">
+        </div>
+    </div>
 </div>
+
 </body>
 </html>
 </body>
