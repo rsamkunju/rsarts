@@ -1462,7 +1462,7 @@ footer {
 
 /* Specs Table */
 .b-spec-list {
-    font-family: 'voye'
+    font-family: 'voye';
 }
 
 .b-spec-item {
@@ -1486,9 +1486,8 @@ footer {
     display: flex;
     align-items: center;
     padding-left: 20px;
-    font-family: monospace;
-    font-size: 14px;
-    font-weight: bold;
+    font-family: "voye";
+    font-size: 18px;
     mix-blend-mode: difference; /* Text color adapts to background */
     transition: flex 0.3s ease;
 }
