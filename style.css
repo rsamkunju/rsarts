@@ -115,6 +115,34 @@ h4 {
 /* =========================================================
    NAVIGATION
 ========================================================= */
+/* =========================================================
+   INDEPENDENT SOCIALS (Top Right)
+========================================================= */
+.top-right-socials {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  display: flex;
+  gap: 20px;
+  z-index: 1000;
+}
+
+.top-right-socials a {
+  color: #fff;
+  font-size: 1.2rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.top-right-socials a:hover {
+  opacity: 1;
+  color: #ff3c00;
+}
+
+/* =========================================================
+   NAVIGATION (Kept Your Original Styles)
+========================================================= */
+
 nav {
   display: flex;
   align-items: center;
@@ -127,28 +155,14 @@ nav {
   gap: 0;
 }
 
-.nav-left,
-.nav-right {
+.nav-left, .nav-right {
   display: flex;
   align-items: center;
   flex: 1;
 }
 
-.nav-left {
-  justify-content: flex-end;
-}
-
-.nav-right {
-  justify-content: flex-start;
-}
-
-.nav-left ul {
-  padding-right: 0;
-}
-
-.nav-right ul {
-  padding-left: 0;
-}
+.nav-left { justify-content: flex-end; }
+.nav-right { justify-content: flex-start; }
 
 nav ul {
   display: flex;
@@ -157,13 +171,11 @@ nav ul {
   margin: 0;
   padding: 0 20px;
   list-style: none;
-  border-top: 8px solid #fff;
+  border-top: 8px solid #fff; /* White borders for dark theme */
   border-bottom: 8px solid #fff;
 }
 
-nav ul li {
-  margin: 0 40px;
-}
+nav ul li { margin: 0 40px; }
 
 nav ul li a {
   display: inline-block;
@@ -177,6 +189,7 @@ nav ul li a {
   transition: all 0.3s ease;
 }
 
+/* Triangle Hover Effect */
 nav ul li a::after {
   content: "";
   position: absolute;
@@ -197,12 +210,6 @@ nav ul li a:hover::after {
   animation: triangleShake 0.25s infinite;
 }
 
-.logo {
-  margin: 0;
-  position: relative;
-  flex-shrink: 0;
-}
-
 .logo img {
   display: block;
   height: 180px;
@@ -216,303 +223,160 @@ nav ul li a:hover::after {
   100% { transform: translateX(-50%) rotate(0deg); }
 }
 
-@media (max-width: 1100px) {
-  nav {
-    max-width: 100%;
-    padding: 0 10px;
-  }
-
-  nav ul li {
-    margin: 0 16px;
-  }
-
-  nav ul li a {
-    font-size: 20px;
-  }
-
-  .logo img {
-    height: 130px;
-  }
-}
-
-@media (max-width: 768px) {
-  nav {
-    height: 160px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0 6px;
-  }
-
-  .nav-left,
-  .nav-right {
-    flex: 1;
-    display: flex;
-    align-items: center;
-  }
-
-  nav ul {
-    height: 58px;
-    padding: 0 6px;
-    flex-wrap: nowrap;
-    border-top: 4px solid #fff;
-    border-bottom: 4px solid #fff;
-  }
-
-  nav ul li {
-    margin: 0 8px;
-  }
-
-  nav ul li a {
-    font-size: 12px;
-    padding-top: 4px;
-    white-space: nowrap;
-  }
-
-  .logo img {
-    height: 115px;
-  }
-}
-
-@media (max-width: 390px) {
-  nav ul li {
-    margin: 0 3px;
-  }
-
-  nav ul li a {
-    font-size: 11px;
-  }
-
-  .logo img {
-    height: 78px;
-  }
-}
-
 /* =========================================================
-   HERO SECTION
+   SMALL INTRO SECTION
 ========================================================= */
-.hero {
-  display: flex;
-  justify-content: center;
-  padding: 80px 40px;
-}
 
-.hero-frame {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin-top: 40px;
-  padding: 60px 40px;
-  border: 5px solid #fff;
-  border-top: none;
-  background-color: #000;
-}
-
-.frame-top-left,
-.frame-top-right {
-  position: absolute;
-  top: 0;
-  width: 50%;
-  height: 5px;
-  background: #fff;
-}
-
-.frame-top-left { left: 0; }
-.frame-top-right { right: 0; }
-
-.hero-socials {
-  position: absolute;
-  top: 25px;
-  right: 40px;
-  display: flex;
-  gap: 15px;
-  z-index: 100;
-}
-
-.hero-social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  color: #fff;
-  font-size: 22px;
-  text-decoration: none;
-  border: 1px solid transparent;
-  transition: all 0.2s ease;
-}
-
-.hero-social-link:hover {
-  color: red;
-  border-color: red;
-  transform: translateY(-2px);
-}
-
-.hero-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-.hero-text-side {
-  flex: 1;
-  text-align: left;
-}
-
-.main-title {
-  margin: 0 0 30px;
-  color: #fff;
-  font-family: 'GothamBlack', sans-serif;
-  font-size: 80px;
-  line-height: 0.9;
-  letter-spacing: -3px;
-  text-transform: uppercase;
-}
-
-.underlined-name {
-  position: relative;
-  display: inline-block;
-  margin-bottom: 30px;
-  white-space: nowrap;
-  text-decoration: none;
-  z-index: 1;
-}
-
-.underlined-name::after {
-  content: '';
-  position: absolute;
-  left: -10px;
-  right: -10px;
-  bottom: -30px;
-  height: 35px;
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/664131/underline.svg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  filter: invert(15%) sepia(100%) saturate(6932%) hue-rotate(358deg) brightness(95%) contrast(112%);
-  z-index: -1;
-}
-
-.hero-description {
-  max-width: 450px;
-  margin: 0;
-  color: #fff;
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-.hero-cta-side {
-  position: relative;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.hero-cta-side .brutalist-resume-btn {
-  position: relative;
-  z-index: 999;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 25px 50px;
-  background-color: #fff;
-  color: #000;
-  border: 4px solid #fff;
-  box-shadow: 12px 12px 0 red;
-  font-size: 24px;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  pointer-events: auto;
-  transition: all 0.1s step-end;
-}
-
-.hero-cta-side .brutalist-resume-btn .btn-text {
-  pointer-events: none;
-}
-
-.hero-cta-side .brutalist-resume-btn:hover {
-  transform: translate(6px, 6px);
-  box-shadow: 6px 6px 0 red;
-  background-color: #000;
-  color: #fff !important;
-}
-
-.hero-cta-side .brutalist-resume-btn:hover .btn-text,
-.hero-cta-side .brutalist-resume-btn:hover .btn-arrow {
-  color: #fff;
-}
-
-.view-work-box {
-  position: relative;
-  z-index: 10;
-  padding: 20px 40px;
-  background: #fff;
-  cursor: pointer;
-  transform: rotate(-3deg);
-}
-
-.view-work-box h2 {
-  margin: 0;
-  color: #000;
-  font-size: 60px;
-  font-weight: 900;
-  line-height: 1;
+.intro-section {
+  padding: 10px 10% 10px 10%;
   text-align: center;
 }
 
-.lightning-effect,
-.lightning-effect2 {
+.intro-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.intro-text {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+/* THE RED SCRIBBLE HIGHLIGHT */
+.scribble-name {
+  position: relative;
+  display: inline-block;
+  font-weight: 800;
+}
+
+.scribble-name::after {
+  content: "";
   position: absolute;
-  width: 400px;
-  z-index: 5;
-  pointer-events: none;
+  bottom: 8px;
+  left: -5%;
+  width: 110%;
+  height: 10px;
+  background-color: #ff3c00; /* Red scribble */
+  z-index: -1;
+  transform: rotate(-1.5deg);
+  border-radius: 40% 60% 40% 60%;
 }
 
-.lightning-effect {
-  top: 190%;
-  right: -155px;
-  transform: translateY(-50%);
+/* =========================================================
+   PORTFOLIO INTEGRATION
+========================================================= */
+.port-section {
+  padding: 60px 5%;
 }
 
-.lightning-effect2 {
-  top: -45%;
-  right: 15px;
-  transform: translate(-200%) scaleX(-1);
+.port-section h4 {
+  font-size: 6rem; /* Huge impact title from your screenshot */
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  letter-spacing: -4px;
 }
 
-@media (max-width: 900px) {
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-  }
+/* =========================================================
+   CLEANUP & RESPONSIVE
+========================================================= */
+/* Disable old Hero Frame styles */
+.hero, .hero-frame, .hero-socials, .frame-top-left, .frame-top-right {
+  display: none !important;
+}
+/* =========================================================
+   FIXED HERO ALIGNMENT (Centered Divider)
+========================================================= */
+.hero-framed {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centers the whole frame on the page */
+    padding: 60px 0;
+}
 
-  .hero-text-side {
+.hero-container {
+    width: 90%; /* Adjust width as needed */
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 4px solid #ffffff;
+    display: flex;
+    align-items: center; /* Vertically centers the content */
+    padding: 80px 0; /* Vertical padding only */
+    position: relative;
+}
+
+/* LEFT SIDE - Forced to exactly 50% width */
+.hero-left {
+    flex: 1; 
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
-
-  .main-title {
-    font-size: 50px;
-  }
-
-  .view-work-box h2 {
-    font-size: 40px;
-  }
+    padding: 0 40px; /* Internal spacing */
 }
 
+.hero-name {
+    font-family: 'GothamBlack', sans-serif;
+    font-size: 5.5rem; /* Adjust based on your screen size */
+    line-height: 0.9;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.hero-title {
+    font-family: 'GothamBlack', sans-serif;
+    font-size: 2.2rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* THE DIVIDER - Now guaranteed to be at the exact 50% center */
+.hero-divider {
+    width: 8px;
+    height: 150px; 
+    background-color: #ffffff;
+    flex-shrink: 0;
+}
+
+/* RIGHT SIDE - Forced to exactly 50% width */
+.hero-right {
+    flex: 1;
+    padding: 0 60px; /* Internal spacing */
+}
+
+.hero-bio {
+    font-family: 'voye';
+    font-size: 1.1rem;
+    line-height: 1.5;
+    text-align: left;
+    color: #ffffff;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+    .hero-container {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+    .hero-divider {
+        width: 100px;
+        height: 2px;
+        margin: 30px 0;
+    }
+    .hero-name { font-size: 3.5rem; }
+}
 @media (max-width: 768px) {
-  .hero-socials {
-    top: 20px;
-    left: 50%;
-    right: auto;
-    width: auto;
-    transform: translateX(-50%);
-  }
+  nav { height: 160px; }
+  nav ul { height: 60px; border-top: 4px solid #fff; border-bottom: 4px solid #fff; }
+  nav ul li a { font-size: 14px; }
+  .logo img { height: 100px; }
+  .intro-text { font-size: 1.8rem; }
+  .port-section h4 { font-size: 3rem; }
+  .top-right-socials { right: 20px; top: 15px; }
 }
 
 /* =========================================================
@@ -611,13 +475,22 @@ nav ul li a:hover::after {
 /* =========================================================
    PORTFOLIO / GALLERY
 ========================================================= */
+
 .portfolio-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-  padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Exactly 3 items per row */
+    gap: 20px;
+    padding: 20px 5%;
+}
+
+/* --- THE MAIN ITEM BOX --- */
+.portfolio-item {
+    position: relative;
+    border: 1px solid #ffffff; /* White border around the whole item */
+    background-color: #000;
+    display: flex;
+    flex-direction: column; /* Stacks image on top of bar */
+    transition: transform 0.3s ease;
 }
 
 .port-section h4 {
@@ -629,16 +502,6 @@ nav ul li a:hover::after {
   text-align: center;
 }
 
-.portfolio-item {
-  position: relative;
-  width: calc(50% - 1rem);
-  max-width: 550px;
-  overflow: hidden;
-  background: #000;
-  border: 3px solid #fff;
-  box-shadow: 10px 10px 0 rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease;
-}
 
 .portfolio-item:hover {
   transform: scale(1.05);
@@ -651,13 +514,19 @@ nav ul li a:hover::after {
 }
 
 .image-container {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%;
-  overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16 / 9; 
+    overflow: hidden;
 }
-
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.portfolio-item:hover img {
+    transform: scale(1.03);
+}
 .portfolio-overlay {
   position: absolute;
   inset: 0;
@@ -1269,6 +1138,59 @@ footer {
   display: flex;
   gap: 15px;
 }
+.project-details-bar {
+    display: flex;
+    justify-content: space-between; /* Puts name on left, category on right */
+    align-items: center;
+    padding: 12px 15px;
+    border-top: 1px solid #ffffff; /* The line dividing image from text */
+    background-color: #000;
+}
+.details-left {
+    font-family: 'GothamBlack', sans-serif;
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.details-right {
+    font-family: 'GothamBlack', sans-serif;
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.8;
+}
+red-arrow {
+    color: #ff3c00; /* Red color for the arrow */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Hide old overlay if it's still in your code */
+.portfolio-overlay {
+    display: none !important;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+    .project-details-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .details-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
 
 .brutalist-nav-btn,
 .brutalist-scroll-btn {
@@ -1396,6 +1318,84 @@ footer {
    PROJECT PAGES
 ========================================================= */
 /* Brutalist Container */
+
+.project-header {
+        max-width: 1200px;
+        margin: 40px auto 20px auto;
+        padding: 0 20px;
+        color: #fff;
+        font-family: 'Arial', sans-serif;
+    }
+    .project-header h2 {
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #FF5A1F; /* Flame red color */
+        border-bottom: 2px solid #333;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+     .project-header p {
+        font-size: 1.1rem;
+        text-align: center;
+        color: white;
+        line-height: 1.6;
+    }
+    .gooey-header {
+        max-width: 1200px;
+        margin: 40px auto 20px auto;
+        padding: 0 20px;
+        color: #fff;
+        font-family: 'voye';
+    }
+    .gooey-header h2 {
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #5A2E16;
+        border-bottom: 2px solid #333;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    .gooey-header p {
+        font-size: 1.1rem;
+        text-align: center;
+        color: white;
+        line-height: 1.6;
+    }
+      .sonix-header {
+        max-width: 1200px;
+        margin: 40px auto 20px auto;
+        padding: 0 20px;
+        color: #fff;
+        font-family: 'voye';
+    }
+    .sonix-header h2 {
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: red;
+        border-bottom: 2px solid #333;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    .sonix-header p {
+        font-size: 1.1rem;
+        text-align: center;
+        color: white;
+        line-height: 1.6;
+    }
+    /* Placeholder style for empty images */
+    .img-placeholder {
+        background: #1a1a1a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #444;
+        font-size: 0.9rem;
+        min-height: 300px;
+        border: 1px dashed #444;
+    }
 .brutalist-technical-grid {
     border-top: 4px solid #fff;
     border-bottom: 4px solid #fff;
@@ -1554,7 +1554,45 @@ footer {
   align-items: center;
   padding: 100px 0 40px;
 }
+/* New Grid Layout: 3 Large/Long, 2 Medium */
+.showcase-grid-alt {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Use 6 columns to allow 3-way and 2-way splits */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+}
 
+/* The 3 Long/Large items take up 2 columns each (total 6) */
+.grid-item.long-large {
+    grid-column: span 2;
+    aspect-ratio: 2 / 3; /* Makes them vertically long */
+}
+
+/* The 2 Medium items take up 3 columns each (total 6) */
+.grid-item.medium {
+    grid-column: span 3;
+    aspect-ratio: 16 / 10; /* Makes them wider/rectangular */
+}
+
+/* Common styling for the items to keep hover effects consistent */
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: #111;
+}
+
+/* Responsive: stack them on mobile */
+@media (max-width: 768px) {
+    .showcase-grid-alt {
+        grid-template-columns: 1fr;
+    }
+    .grid-item.long-large, .grid-item.medium {
+        grid-column: span 1;
+        aspect-ratio: 1 / 1;
+    }
+}
 .project-main-logo img {
   display: block;
   width: 100%;

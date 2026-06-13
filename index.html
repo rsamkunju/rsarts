@@ -3,383 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio | Ryan Sam</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Scripts -->
     <script src="script.js" defer></script>
-	<script src="filter.js" defer></script>
-	<script src="scroll.js" defer></script>
-	<script src="name.js" defer></script>
-	<script src="transition.js" defer></script>
-<script>
-function toggleAdobe() {
-  document.getElementById("adobe-tools").classList.toggle("open");
-}
-</script>
+    <script src="filter.js" defer></script>
+    <script src="scroll.js" defer></script>
+    <script src="name.js" defer></script>
+    <script src="transition.js" defer></script>
+    <script>
+        function toggleAdobe() {
+            document.getElementById("adobe-tools").classList.toggle("open");
+        }
+    </script>
+    <!-- Icons and Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap" rel="stylesheet">
 </head>
 <body>
-	<nav>
-		<div class="nav-left">
-		  <ul>
-			<li><a href="#about">About</a></li>
-			<li><a href="#services">Services</a></li>
-		  </ul>
-		</div>
-	  
-		<div class="logo">
-		  <a href="#"><img src="images/RS12.png" alt="Logo" /></a>
-		</div>
-		<div class="nav-right">
-		  <ul>
-			<li><a href="#portfolio">Portfolio</a></li>
-			<li><a href="#resume">Resume</a></li>
-		  </ul>
-		</div>
-	  </nav>
-	  
-	  
-	  
-	
-	<!-- About Section -->
-<section class="hero">
-  <div class="hero-frame">
-    
-    <!-- SOCIAL ICONS: Top Right -->
-    <div class="hero-socials">
-      <a href="#" target="_blank" class="hero-social-link"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#" target="_blank" class="hero-social-link"><i class="fa-brands fa-behance"></i></a>
-      <a href="https://www.artstation.com/ryansamarts" target="_blank" class="hero-social-link"><i class="fa-brands fa-artstation"></i></a>
-    </div>
+    <!-- NAVIGATION BAR -->
+    <nav class="minimal-nav">
+        <div class="nav-left">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+            </ul>
+        </div>
+      
+        <div class="logo">
+            <a href="#"><img src="images/RS12.png" alt="Logo" /></a>
+        </div>
 
-    <!-- These create the gaps in the top border for your logo -->
-    <div class="frame-top-left"></div>
-    <div class="frame-top-right"></div>
+        <div class="nav-right">
+            <ul>
+                <li><a href="#services">Toolkit</a></li>
+                <li><a href="#resume">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+	  
+    <!-- INTRO SECTION (Centered Bio) -->
+  <section class="hero-framed">
     
-    <div class="hero-content">
-      <!-- Left Side: Title and Bio -->
-      <div class="hero-text-side">
-        <h1 class="main-title">
-  <span class="underlined-name">RYAN SAM</span><br>
-  CREATIVE <br>DESIGNER
-</h1>
-        <p class="hero-description">
-          A creative designer with over six years of experience specializing in visual design, branding, animation, and 3D graphics. Skilled in developing compelling visuals across digital and print media, 
-          combining strong design fundamentals with creative problem solving and attention to detail. 
-          Known for delivering polished, impactful results while working seamlessly both independently and within creative teams.
-      </div>
-
-      <!-- Right Side: View My Work CTA -->
-    <div class="hero-cta-side">
-  <a href="#portfolio" class="brutalist-resume-btn">
-    <span class="btn-text">VIEW MY WORK</span>
-    <span class="btn-arrow">→</span>
-    <!-- Animated Red Circle -->
-    <svg class="circle-effect" viewBox="0 0 420 150">
-      <path d="M55 80 
-               C70 10, 330 5, 370 65 
-               C410 125, 110 150, 50 95 
-               C25 75, 35 50, 80 35" />
-    </svg>
-  </a>
-</div>
+    <div class="hero-container">
+       <!-- INDEPENDENT SOCIAL LINKS (Top Right - Floating) -->
+    <div class="top-right-socials">
+        <a href="#" target="_blank"><i class="fa-brands fa-behance"></i></a>
+        <a href="https://www.artstation.com/ryansamarts" target="_blank"><i class="fa-brands fa-artstation"></i></a>
+        <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
     </div>
-  </div>
+        <!-- Left Block -->
+        <div class="hero-left">
+            <h1 class="hero-name">RYAN SAM</h1>
+            <h2 class="hero-title">CREATIVE DESIGNER</h2>
+        </div>
+
+        <!-- Vertical Divider -->
+        <div class="hero-divider"></div>
+
+        <!-- Right Block -->
+        <div class="hero-right">
+            <p class="hero-bio">
+                A creative designer with over six years of experience specializing in visual design, branding, animation, and 3D graphics. Skilled in developing compelling visuals across digital and print media, combining strong design fundamentals with creative problem solving and attention to detail. Known for delivering polished, impactful results while working seamlessly both independently and within creative teams.
+            </p>
+        </div>
+    </div>
 </section>
 
-
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio" class="port-section">
+        <div class="portfolio-header">
+            <!-- Portfolio Filter Buttons -->
+            <div class="portfolio-filter">
+                <button data-filter="all">All</button>
+                <button data-filter="Branding">Branding</button>
+                <button data-filter="Packaging">Packaging</button>
+                <button data-filter="Animation">Animation</button>
+                <button data-filter="Illustration">Illustration</button>
+                <button data-filter="Layout">Layout</button>
+                <button data-filter="Apparel">Apparel</button>
+                <button data-filter="3D Modeling">3D Modeling</button>
+            </div>
+        </div>
 	
-	<section class="brutalist-master-container" id="services">
-  <!-- THE OUTER FRAME -->
-  <div class="main-frame">
-    
-    <!-- MAIN HEADER (Sits on Top Border) -->
-    <h2 class="master-title">TOOLKIT</h2>
-
-    <!-- TOP SECTION: SERVICES -->
-    <div class="services-wrapper">
-      <div class="services-container">
-        
-        <!-- Panel 1 -->
-        <div class="service-panel" style="background-image: url('images/Illustratortest.png');">
-          <div class="panel-content">
-            <span class="service-number">01</span>
-            <h2 class="service-title">Illustrator</h2>
-            <div class="service-details">
-              <p>[ VECTOR GRAPHICS ]<br>[ IDENTITY SYSTEMS ]<br>[ TYPOGRAPHY ]</p>
+       <div class="portfolio-container">
+    <!-- Project 1 -->
+    <div class="portfolio-item" data-category="Branding, Packaging">
+        <a href="gooey.html" class="image-link">
+            <div class="image-container">
+                <img src="images/gooeynewbanner.jpg" alt="Project 1">
             </div>
-          </div>
-        </div>
-
-        <!-- Panel 2 -->
-        <div class="service-panel" style="background-image: url('images/Phototest.png');">
-          <div class="panel-content">
-            <span class="service-number">02</span>
-            <h2 class="service-title">PHOTOSHOP</h2>
-            <div class="service-details">
-              <p>[ DIGITAL ART ]<br>
-[ VISUAL DESIGN ]<br>
-[ BRAND SYSTEMS ]</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Panel 3 -->
-        <div class="service-panel" style="background-image: url('images/effectstest.png');">
-          <div class="panel-content">
-            <span class="service-number">03</span>
-            <h2 class="service-title">AFTER EFFECTS</h2>
-            <div class="service-details">
-              <p>[ MOTION GRAPHICS ]<br>
-[ VIDEO EDITING ]<br>
-[ VISUAL EFFECTS ]</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Panel 4 -->
-        <div class="service-panel" style="background-image: url('images/indesigntest.png');">
-          <div class="panel-content">
-            <span class="service-number">04</span>
-            <h2 class="service-title">INDESIGN</h2>
-            <div class="service-details">
-              <p>[ EDITORIAL DESIGN ]<br>
-[ PRINT PRODUCTION ]<br>
-[ PUBLICATION DESIGN ]
-            </p>
-            </div>
-          </div>
-        </div>
-  <!-- Panel 4 -->
-        <div class="service-panel" style="background-image: url('images/blendertest.png');">
-          <div class="panel-content">
-            <span class="service-number">05</span>
-            <h2 class="service-title">BLENDER</h2>
-            <div class="service-details">
-              <p>[ 3D MODELING ]<br>
-[ PRODUCT VISUALIZATION ]<br>
-[ CINEMATIC RENDERING ]
-            </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- INTERNAL DIVIDER (Sits between sections) -->
-    <div class="section-divider">
-      <span class="divider-label">FREELANCE PROCESS</span>
-    </div>
-
-    <!-- BOTTOM SECTION: PROCESS -->
-    <div class="process-wrapper">
-      <div class="about-cards__row">
-        <!-- STEP 1 -->
-        <article class="about-card">
-          <div class="about-card__icon">
-            <img src="images/pad.png" alt="Planning">
-          </div>
-          <h3 class="about-card__title">CORE PLANNING</h3>
-          <p class="about-card__text">We discuss your goals, project requirements, timeline, and creative direction before any design work begins.</p>
-        </article>
-
-        <div class="process-arrow">
-          <img src="images/arrow1.png" alt="arrow">
-        </div>
-
-        <!-- STEP 2 -->
-        <article class="about-card">
-          <div class="about-card__icon">
-            <img src="images/screen.png" alt="Design">
-          </div>
-          <h3 class="about-card__title">DESIGN & REVISIONS</h3>
-          <p class="about-card__text">Concepts are created and refined through feedback until the final direction is approved.</p>
-        </article>
-
-        <div class="process-arrow">
-          <img src="images/arrow1.png" alt="arrow">
-        </div>
-
-        <!-- STEP 3 -->
-        <article class="about-card">
-          <div class="about-card__icon">
-            <img src="images/rocket.png" alt="Quality">
-          </div>
-          <h3 class="about-card__title">FINAL DELIVERY</h3>
-          <p class="about-card__text">Final files are prepared, organized, and delivered in the appropriate formats for immediate use.</p>
-        </article>
-      </div>
-      <div class="process-contact-footer">
-  <div class="hero-cta-side">
-    <a href="mailto:ryansamkunjunhp@gmail.com" class="brutalist-resume-btn">
-      <span class="btn-text">CONTACT ME</span>
-    </a>
-  </div>
-</div>
-    </div>
-</div>
-
-  </div>
-  
-</section>
-
-    <!-- Portfolio Section -->
-	<!-- Portfolio Section -->
-	<!-- Portfolio Section -->
-<section id="portfolio" class="port-section">
-	   <h4>PORTFOLIO</h4>
-	<!-- Portfolio Filter -->
-	<div class="portfolio-filter">
-	  <button data-filter="all">All</button>
-	  <button data-filter="Branding">Branding</button>
-	  <button data-filter="Packaging">Packaging</button>
-	  <button data-filter="Animation">Animation</button>
-	  <button data-filter="Illustration">Illustration</button>
-	  <button data-filter="Layout">Layout</button>
-	  <button data-filter="Apparel">Apparel</button>
-	  <button data-filter="3D Modeling">3D Modeling</button>
-	</div>
-	
-	<!-- Portfolio Grid -->
-	<div class="portfolio-container">
-	  <!-- Project 1 -->
-	  <div class="portfolio-item" data-category="Branding, Packaging">
-		<a href="gooey.html" class="image-container"> <!-- Link to the project page -->
-			<div class="portfolio-thumb">
-		  <img src="images/gooeynewbanner.jpg" alt="Project 1">
-		  </div>
-		</a>
-		<div class="portfolio-overlay">
-		  <h3>Gooey Cookies </h3>
-		  <p>BRANDING / PACKAGE </p>
-		</div>
-	  </div>
-  
-	<!-- Project 2 -->
-<div class="portfolio-item" data-category="Apparel">
-  <a href="velocyte.html" class="image-container">
-    <!-- Changed class here to portfolio-velocyte -->
-    <div class="portfolio-velocyte"> 
-      <img src="images/VEL04.png" alt="Project 2">
-    </div>
-  </a>
-  <div class="portfolio-overlay">
-    <h3>VELOCYTE</h3>
-    <p>APPAREL</p>
-  </div>
-</div>
-  
-	  <!-- Project 3 -->
-
-
-     <div class="portfolio-item" data-category="Branding, Packaging, 3D Modeling">
-		<a href="emberhorn.html" class="image-container"> <!-- Link to the project page -->
-				<div class="portfolio-thumb">
-		  <img src="images/emberthumb.png" alt="Project 4">
-		</div>
-		</a>
-		<div class="portfolio-overlay">
-		  <h3>Emberhorn Hot BBQ</h3>
-		  <p>BRANDING / PACKAGE / 3D </p>
-		</div>
-	  </div>
-  
-	  <!-- Project 4 -->
-	<div class="portfolio-item" data-category="3D Modeling, Animation">
-		<a href="" class="image-container"> <!-- Link to the project page -->
-				<div class="portfolio-throne">
-		  <img src="images/" alt="Project 3">
-		</div>
-		</a>
-		<div class="portfolio-overlay">
-		  <h3>Headphones</h3>
-		  <p>3D MODELING / ANIMATION</p>
-		</div>
-	  </div>
-  
-	  <!-- Project 5 -->
-<div class="portfolio-item" data-category="Apparel">
-  <a href="myths-grunge-clothing.html" class="image-container">
-    <div class="portfolio-thumb">
-      <img src="images/21.jpg" alt="Project 5">
-    </div>
-  </a>
-  <div class="portfolio-overlay">
-    <h3>WORK IN PROGRESS</h3>
-    <p>ILLUSTRATION</p>
-  </div>
-</div>
-	  <!-- Project 6 -->
-<div class="portfolio-item" data-category="Apparel">
-  <a href="myths-grunge-clothing.html" class="image-container">
-    <div class="portfolio-thumb">
-      <img src="images/21.jpg" alt="Project 5">
-    </div>
-  </a>
-  <div class="portfolio-overlay">
-    <h3>WORK IN PROGRESS</h3>
-    <p>ILLUSTRATION</p>
-  </div>
-</div>
-	</div>
-  </section>
-  
-	  
-	  
- <!-- Portfolio Section -->
-<!-- Portfolio Section -->
-
-    <!-- Resume Section -->
-    <!-- Download Area -->
-     
-    <div class="resume-content-box" id="resume">
-<h4>RESUME</h4>
-  <p class="resume-file-info">
-    FILE_TYPE: PDF // SIZE: 204KB // VER: 2026_RESUME
-  </p>
-
- <a href="/images/RyanSamkunjuResume.pdf" download class="brutalist-btn">
-
-    <span class="btn-text">DOWNLOAD_FILE</span>
-    <span class="btn-arrow">↓</span>
-
-  </a>
-
-</div>
-
- <!-- Resume Section -->
-  
-    <!-- Footer -->
-<footer class="brutalist-footer">
-  <div class="footer-frame">
-    <!-- Big impact text -->
-    <div class="footer-main">
-      <h2 class="footer-logo-text">RYAN <br>SAMKUNJU</h2>
-      <div class="footer-contact">
-        <p class="tech-label">[ CONTACT_ME ]</p>
-        <a href="mailto:your@email.com" class="footer-link">@RYANSAMKUNJUNHP</a>
-      </div>
-    </div>
-
-    <!-- Bottom metadata bar -->
-    <div class="footer-bottom">
-      <div class="footer-meta">
-        <p>VERSION: 2.1.0</p>
-        <p>&copy; 2026 ALL RIGHTS RESERVED</p>
-        <p>STATUS: OPEN_FOR_WORK</p>
-      </div>
-
-      <!-- Scroll to Top Button -->
-      <div class="scroll-container">
-        <a href="#top" class="brutalist-scroll-btn">
-          <span class="arrow">↑</span>
-          <span class="btn-text">TOP</span>
         </a>
-      </div>
+        <div class="project-details-bar">
+            <div class="details-left">GOOEY COOKIES</div>
+            <div class="details-right">BRANDING / PACKAGING</div>
+        </div>
     </div>
-  </div>
-</footer>
+
+    <!-- Project 2 -->
+    <div class="portfolio-item" data-category="Apparel">
+        <a href="velocyte.html" class="image-link">
+            <div class="image-container">
+                <img src="images/VEL04.png" alt="Velocity Apparel">
+            </div>
+        </a>
+        <div class="project-details-bar">
+            <div class="details-left">VELOCYTE APPAREL</div>
+            <div class="details-right">BRANDING / APPAREL</div>
+        </div>
+      </div>
+
+    <!-- Project 3 -->
+    <div class="portfolio-item" data-category="Branding, Packaging, 3D Modeling">
+        <a href="emberhorn.html" class="image-link">
+            <div class="image-container">
+                <img src="images/emberthumb.png" alt="Inferno Hot Sauce">
+            </div>
+        </a>
+        <div class="project-details-bar">
+            <div class="details-left">EMBERHORN HOT SAUCE</div>
+            <div class="details-right">
+                PACKAGING / BRANDING
+            </div>
+        </div>
+    </div>
+        <!-- Project 4 -->
+           <div class="portfolio-item" data-category="Branding, Animation, 3D Modeling">
+        <a href="sonix.html" class="image-link">
+            <div class="image-container">
+                <img src="images/sonixbanner.png" alt="Inferno Hot Sauce">
+            </div>
+        </a>
+        <div class="project-details-bar">
+            <div class="details-left">SONIX</div>
+            <div class="details-right">
+                 BRANDING / 3D / ANIMATION 
+            </div>
+        </div>
+    </div>
+</div>
+    </section>
+
+    <!-- TOOLKIT / SERVICES SECTION -->
+    <section class="brutalist-master-container" id="services">
+        <div class="main-frame">
+            <h2 class="master-title">TOOLKIT</h2>
+            <div class="services-wrapper">
+                <div class="services-container">
+                    <!-- Adobe Tools Panels -->
+                    <div class="service-panel" style="background-image: url('images/Illustratortest.png');">
+                        <div class="panel-content">
+                            <span class="service-number">01</span>
+                            <h2 class="service-title">Illustrator</h2>
+                            <div class="service-details"><p>[ VECTOR GRAPHICS ]<br>[ IDENTITY SYSTEMS ]</p></div>
+                        </div>
+                    </div>
+                    <div class="service-panel" style="background-image: url('images/Phototest.png');">
+                        <div class="panel-content">
+                            <span class="service-number">02</span>
+                            <h2 class="service-title">PHOTOSHOP</h2>
+                            <div class="service-details"><p>[ DIGITAL ART ]<br>[ VISUAL DESIGN ]</p></div>
+                        </div>
+                    </div>
+                    <div class="service-panel" style="background-image: url('images/effectstest.png');">
+                        <div class="panel-content">
+                            <span class="service-number">03</span>
+                            <h2 class="service-title">AFTER EFFECTS</h2>
+                            <div class="service-details"><p>[ MOTION GRAPHICS ]<br>[ VFX ]</p></div>
+                        </div>
+                    </div>
+                    <div class="service-panel" style="background-image: url('images/indesigntest.png');">
+                        <div class="panel-content">
+                            <span class="service-number">04</span>
+                            <h2 class="service-title">INDESIGN</h2>
+                            <div class="service-details"><p>[ EDITORIAL ]<br>[ PRINT ]</p></div>
+                        </div>
+                    </div>
+                    <div class="service-panel" style="background-image: url('images/blendertest.png');">
+                        <div class="panel-content">
+                            <span class="service-number">05</span>
+                            <h2 class="service-title">BLENDER</h2>
+                            <div class="service-details"><p>[ 3D MODELING ]<br>[ RENDERING ]</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-divider">
+                <span class="divider-label">FREELANCE PROCESS</span>
+            </div>
+
+            <!-- Process Section -->
+            <div class="process-wrapper">
+                <div class="about-cards__row">
+                    <article class="about-card">
+                        <div class="about-card__icon"><img src="images/pad.png" alt="Planning"></div>
+                        <h3 class="about-card__title">CORE PLANNING</h3>
+                        <p class="about-card__text">We discuss goals and requirements before design work begins.</p>
+                    </article>
+                    <div class="process-arrow"><img src="images/arrow1.png" alt="arrow"></div>
+                    <article class="about-card">
+                        <div class="about-card__icon"><img src="images/screen.png" alt="Design"></div>
+                        <h3 class="about-card__title">DESIGN & REVISIONS</h3>
+                        <p class="about-card__text">Concepts are refined through feedback until approval.</p>
+                    </article>
+                    <div class="process-arrow"><img src="images/arrow1.png" alt="arrow"></div>
+                    <article class="about-card">
+                        <div class="about-card__icon"><img src="images/rocket.png" alt="Quality"></div>
+                        <h3 class="about-card__title">FINAL DELIVERY</h3>
+                        <p class="about-card__text">Final files are organized and delivered for immediate use.</p>
+                    </article>
+                  </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESUME SECTION -->
+    <section class="resume-content-box" id="resume">
+        <h4>RESUME</h4>
+        <p class="resume-file-info">FILE_TYPE: PDF // SIZE: 204KB // VER: 2026_RESUME</p>
+        <a href="/images/RyanSamkunjuResume.pdf" download class="brutalist-btn">
+            <span class="btn-text">DOWNLOAD_FILE</span>
+            <span class="btn-arrow">↓</span>
+        </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="brutalist-footer">
+        <div class="footer-frame">
+            <div class="footer-main">
+                <h2 class="footer-logo-text">RYAN <br>SAMKUNJU</h2>
+                <div class="footer-contact">
+                    <p class="tech-label">[ CONTACT_ME ]</p>
+                    <a href="mailto:ryansamkunjunhp@gmail.com" class="footer-link">@RYANSAMKUNJUNHP</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-meta">
+                    <p>VERSION: 2.1.0</p>
+                    <p>&copy; 2026 ALL RIGHTS RESERVED</p>
+                </div>
+                <div class="scroll-container">
+                    <a href="#top" class="brutalist-scroll-btn">
+                        <span class="arrow">↑</span>
+                        <span class="btn-text">TOP</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 	
 </body>
 </html>
