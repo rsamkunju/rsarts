@@ -171,8 +171,6 @@ nav ul {
   margin: 0;
   padding: 0 20px;
   list-style: none;
-  border-top: 8px solid #fff; /* White borders for dark theme */
-  border-bottom: 8px solid #fff;
 }
 
 nav ul li { margin: 0 40px; }
@@ -209,12 +207,54 @@ nav ul li a:hover::after {
   opacity: 1;
   animation: triangleShake 0.25s infinite;
 }
-
-.logo img {
-  display: block;
-  height: 180px;
+.logo {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
 }
 
+.logo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo img {
+  display: block;
+  width: 120px;
+  height: auto;
+  max-width: none;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  nav {
+    height: 120px;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  nav ul {
+    height: 55px;
+    padding: 0 10px;
+  }
+
+  nav ul li {
+    margin: 0 12px;
+  }
+
+  nav ul li a {
+    font-size: 13px;
+    padding-top: 6px;
+  }
+
+  .logo img {
+    width: 80px;
+    height: auto;
+    max-width: none;
+  }
+}
 @keyframes triangleShake {
   0% { transform: translateX(-50%) rotate(0deg); }
   25% { transform: translateX(-48%) rotate(2deg); }
@@ -294,20 +334,102 @@ nav ul li a:hover::after {
     width: 100%;
     display: flex;
     justify-content: center; /* Centers the whole frame on the page */
-    padding: 60px 0;
+     padding: 60px 5%;
 }
 
 .hero-container {
-    width: 90%; /* Adjust width as needed */
     max-width: 1200px;
     margin: 0 auto;
-    border: 4px solid #ffffff;
-    display: flex;
-    align-items: center; /* Vertically centers the content */
-    padding: 80px 0; /* Vertical padding only */
+    border: 2px solid #ffffff;
     position: relative;
+    padding: 100px 60px; /* Increased padding for better spacing */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero-socials-inner {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    display: flex;
+    gap: 15px;
+}
+.hero-socials-inner a {
+    color: #fff;
+    font-size: 1.2rem;
+    opacity: 0.7;
+    transition: opacity 0.3s;
 }
 
+.hero-socials-inner a:hover { opacity: 1; }
+
+.hero-name {
+    font-family: 'GothamBlack', sans-serif;
+    font-size: 5rem;
+    margin: 0;
+    line-height: 1;
+}
+
+.hero-title {
+    font-family: 'GothamBlack', sans-serif;
+    font-size: 2rem;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+/* The Horizontal Line */
+.hero-line {
+    width: 100px;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 40px auto;
+}
+
+.hero-bio {
+    max-width: 800px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0 auto;
+}
+
+/* --- FIX FOR STRETCHING IMAGES --- */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    /* This prevents stretching by cropping the image to fit its container */
+    object-fit: cover; 
+    display: block;
+}
+
+/* --- MOBILE RESPONSIVE FIXES --- */
+@media (max-width: 768px) {
+    .hero-container {
+        padding: 80px 20px 40px 20px;
+    }
+
+    /* CENTER SOCIALS ON MOBILE */
+    .hero-socials-inner {
+        position: relative; /* Remove absolute positioning */
+        top: 0;
+        right: 0;
+        justify-content: center; /* Center horizontally */
+        margin-bottom: 40px; /* Space between socials and name */
+        width: 100%;
+    }
+
+    .hero-name {
+        font-size: 2.8rem;
+    }
+
+    .hero-title {
+        font-size: 1.4rem;
+    }
+
+    .hero-bio {
+        font-size: 1rem;
+    }
+}
 /* LEFT SIDE - Forced to exactly 50% width */
 .hero-left {
     flex: 1; 
@@ -1606,28 +1728,25 @@ red-arrow {
 }
 
 .showcase-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-auto-rows: minmax(150px, auto);
-  gap: 15px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-auto-rows: 300px; /* Base height for all rows */
+    gap: 15px;
+    max-width: 1200px;
+    margin: 40px auto;
 }
 
 .grid-item {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid #333;
-  cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #333;
 }
 
-.grid-item img,
-.img-primary {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fill the boxes without stretching */
+    display: block;
 }
 
 .img-primary {
@@ -1652,12 +1771,383 @@ red-arrow {
 .grid-item:hover .img-primary {
   transform: scale(1.05);
 }
+/* 1. The Big Feature (Top Left) */
+.grid-item.large { 
+    grid-column: span 2; 
+    grid-row: span 2; 
+}
 
-.grid-item.large { grid-column: 1 / 2; grid-row: span 2; }
-.grid-item.small-top { grid-column: 2 / 3; }
-.grid-item.small-bottom { grid-column: 2 / 3; }
-.grid-item.tall { grid-column: 3 / 4; grid-row: span 2; }
-.grid-item.full-width { grid-column: 1 / 4; height: 400px; margin: 10px 0; }
+/* 2. The Tall Sidepiece (Top Right) */
+.grid-item.tall { 
+    grid-column: span 1; 
+    grid-row: span 2; 
+}
+
+/* 3. The Full Width Banner (Middle) */
+.grid-item.full-width { 
+    grid-column: span 3; 
+    height: 400px; /* Slightly taller for impact */
+}
+
+/* 4, 5, 6. The Three Squares (Bottom Row 1) */
+.grid-item.square {
+    grid-column: span 1;
+}
+
+/* 7. The Wide Piece (Bottom Row 2 Left) */
+.grid-item.wide {
+    grid-column: span 2;
+}
+
+/* 8. The Final Square (Bottom Row 2 Right) */
+/* (This uses the standard grid-item default) */
+
+@media (max-width: 768px) {
+    .showcase-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
+    .grid-item.large, .grid-item.tall, .grid-item.full-width, .grid-item.wide {
+        grid-column: span 1;
+        grid-row: span 1;
+        aspect-ratio: 1/1;
+    }
+}
+/* =========================================================
+   GOOEY PROJECT SHOWCASE GRID
+========================================================= */
+
+.gooey-showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    max-width: 1200px;
+    margin: 40px auto 70px;
+    padding: 0 20px;
+}
+
+.gooey-grid-item {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #333;
+    background: #111;
+    cursor: pointer;
+}
+
+.gooey-grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Top large horizontal image */
+.gooey-feature {
+    grid-column: span 2;
+    aspect-ratio: 16 / 9;
+}
+
+/* Vertical image beside feature */
+.gooey-portrait {
+    grid-column: span 1;
+    aspect-ratio: 8 / 9;
+}
+
+/* Full-width banner image */
+.gooey-banner {
+    grid-column: span 3;
+    aspect-ratio: 16 / 5;
+}
+
+/* Standard 3-column item */
+.gooey-square {
+    grid-column: span 1;
+    aspect-ratio: 4 / 3;
+}
+
+/* Wide bottom image */
+.gooey-wide {
+    grid-column: span 2;
+    aspect-ratio: 16 / 6;
+}
+
+/* Hover effect */
+.gooey-grid-item .img-primary {
+    transition: transform 0.5s ease;
+}
+
+.gooey-grid-item:hover .img-primary {
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   GOOEY ALT CONCEPT GRID
+========================================================= */
+
+.gooey-showcase-alt {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto 70px;
+    padding: 0 20px;
+}
+
+.gooey-long {
+    grid-column: span 2;
+    aspect-ratio: 2 / 3;
+}
+
+.gooey-medium {
+    grid-column: span 3;
+    aspect-ratio: 16 / 10;
+}
+
+
+/* =========================================================
+   GOOEY SHOWCASE RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+    .gooey-showcase-grid,
+    .gooey-showcase-alt {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gooey-feature,
+    .gooey-portrait,
+    .gooey-banner,
+    .gooey-square,
+    .gooey-wide,
+    .gooey-long,
+    .gooey-medium {
+        grid-column: span 1;
+        aspect-ratio: 4 / 3;
+    }
+}
+
+@media (max-width: 600px) {
+    .gooey-showcase-grid,
+    .gooey-showcase-alt {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .gooey-feature,
+    .gooey-portrait,
+    .gooey-banner,
+    .gooey-square,
+    .gooey-wide,
+    .gooey-long,
+    .gooey-medium {
+        grid-column: span 1;
+        aspect-ratio: 16 / 9;
+    }
+}
+/* =========================================================
+   EMBERHORN PROJECT SHOWCASE
+========================================================= */
+
+.ember-showcase-section {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 100px;
+}
+
+/* Main Emberhorn mosaic grid */
+.ember-showcase-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-auto-rows: clamp(170px, 18vw, 260px);
+    gap: 15px;
+    max-width: 1200px;
+    margin: 40px auto 80px;
+    padding: 0 20px;
+}
+
+/* Base Emberhorn image item */
+.ember-grid-item {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #333;
+    background: #111;
+    cursor: pointer;
+    min-width: 0;
+}
+
+/* Image fill */
+.ember-grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Hover image system */
+.ember-grid-item .img-primary {
+    transition: transform 0.5s ease;
+}
+
+.ember-grid-item .img-hover {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.ember-grid-item:hover .img-primary {
+    transform: scale(1.05);
+}
+
+.ember-grid-item:hover .img-hover {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   EMBERHORN MOSAIC ITEM SIZES
+========================================================= */
+
+/* Large left feature image */
+.ember-large {
+    grid-column: 1 / 2;
+    grid-row: span 2;
+}
+
+/* Small top middle image */
+.ember-small-top {
+    grid-column: 2 / 3;
+    grid-row: span 1;
+}
+
+/* Small bottom middle image */
+.ember-small-bottom {
+    grid-column: 2 / 3;
+    grid-row: span 1;
+}
+
+/* Tall right-side image */
+.ember-tall {
+    grid-column: 3 / 4;
+    grid-row: span 2;
+}
+
+/* Full-width banner image */
+.ember-full {
+    grid-column: 1 / -1;
+    grid-row: span 2;
+}
+
+/* Standard square card */
+.ember-square {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+/* Wide image */
+.ember-wide {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+
+/* =========================================================
+   EMBERHORN ALT / UPCOMING GRID
+========================================================= */
+
+.ember-showcase-alt {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-auto-rows: clamp(120px, 16vw, 220px);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto 80px;
+    padding: 0 20px;
+}
+
+.ember-long {
+    grid-column: span 2;
+    grid-row: span 3;
+}
+
+.ember-medium {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+
+/* =========================================================
+   EMBERHORN RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+    .ember-showcase-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: clamp(180px, 28vw, 260px);
+    }
+
+    .ember-large,
+    .ember-small-top,
+    .ember-small-bottom,
+    .ember-tall,
+    .ember-full,
+    .ember-square,
+    .ember-wide {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .ember-full,
+    .ember-large,
+    .ember-tall {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .ember-showcase-alt {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: clamp(180px, 28vw, 260px);
+    }
+
+    .ember-long,
+    .ember-medium {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .ember-showcase-grid,
+    .ember-showcase-alt {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        padding: 0 20px;
+    }
+
+    .ember-large,
+    .ember-small-top,
+    .ember-small-bottom,
+    .ember-tall,
+    .ember-full,
+    .ember-square,
+    .ember-wide,
+    .ember-long,
+    .ember-medium {
+        grid-column: span 1;
+        grid-row: span 1;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+
+
+
+
+
+
+
 
 .showcase-grid.velocyte-grid {
   grid-template-columns: repeat(4, 1fr) !important;
