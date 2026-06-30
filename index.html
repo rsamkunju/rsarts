@@ -25,7 +25,31 @@
             document.getElementById("adobe-tools").classList.toggle("open");
         }
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const underDevelopmentProjects = document.querySelectorAll(
+        ".portfolio-item.is-under-development .image-link"
+    );
+
+    const notification = document.getElementById("dev-notification");
+
+    underDevelopmentProjects.forEach(function (link) {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            const projectURL = link.getAttribute("href");
+
+            notification.classList.add("active");
+
+            setTimeout(function () {
+                window.location.href = projectURL;
+            }, 1200);
+        });
+    });
+});
+    </script>
     <!-- Icons and Fonts -->
+       <link rel="icon" type="image/png" href="images/RS12.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap" rel="stylesheet">
 </head>
@@ -69,7 +93,7 @@
             <div class="hero-line"></div>
 
             <p class="hero-bio">
-               A creative designer with over six years of experience across branding, packaging, social media content creation, animation, and 3D graphics. Skilled in both print and digital media, with a strong foundation in layout, typography, visual storytelling, and brand consistency. Experienced in developing creative assets from concept to final execution, while balancing strong design choices with project goals and deadlines. Able to work independently or collaboratively within a team, bringing attention to detail, adaptability, and a clear understanding of how to create visuals that feel purposeful.
+              Creative designer with over six years of experience across branding, packaging, social media content creation, animation, and 3D graphics. Skilled in both print and digital media, with a strong foundation in layout, typography, visual storytelling, and brand consistency. Experienced in developing creative assets from concept through final execution, while balancing strong design decisions with project goals, deadlines, and brand needs. Adaptable, detail-oriented, and eager to learn, with the ability to work independently or collaboratively to create visuals that feel purposeful, polished, and effective.
             </p>
         </div>
     </div>
@@ -96,7 +120,7 @@
     <div class="portfolio-item" data-category="Branding, Packaging">
         <a href="gooey.html" class="image-link">
             <div class="image-container">
-                <img src="images/gooeynewbanner.jpg" alt="Project 1">
+                <img src="images/gooeybannerrewr2.jpg" alt="Project 1">
             </div>
         </a>
         <div class="project-details-bar">
@@ -109,7 +133,7 @@
     <div class="portfolio-item" data-category="Apparel">
         <a href="velocyte.html" class="image-link">
             <div class="image-container">
-                <img src="images/VEL04.png" alt="Velocity Apparel">
+                <img src="images/VelocyteBannerRed.png" alt="Velocity Apparel">
             </div>
         </a>
         <div class="project-details-bar">
@@ -119,33 +143,37 @@
       </div>
 
     <!-- Project 3 -->
-    <div class="portfolio-item" data-category="Branding, Packaging, 3D Modeling">
-        <a href="emberhorn.html" class="image-link">
-            <div class="image-container">
-                <img src="images/emberthumb.png" alt="Inferno Hot Sauce">
-            </div>
-        </a>
-        <div class="project-details-bar">
-            <div class="details-left">EMBERHORN HOT SAUCE</div>
-            <div class="details-right">
-                PACKAGING | BRANDING
-            </div>
+  <div class="portfolio-item is-under-development" data-category="Packaging, 3D Modeling">
+    <a href="emberhorn.html" class="image-link">
+        <div class="image-container">
+            <img src="images/emberthumb.png" alt="Emberhorn Hot Sauce">
+            <div class="dev-badge">UNDER DEVELOPMENT</div>
+        </div>
+    </a>
+
+    <div class="project-details-bar">
+        <div class="details-left">EMBERHORN HOT SAUCE</div>
+        <div class="details-right">
+            PACKAGING | 3D 
         </div>
     </div>
-        <!-- Project 4 -->
-           <div class="portfolio-item" data-category="Branding, Animation, 3D Modeling">
-        <a href="sonix.html" class="image-link">
-            <div class="image-container">
-                <img src="images/sonixbanner.png" alt="Inferno Hot Sauce">
-            </div>
-        </a>
-        <div class="project-details-bar">
-            <div class="details-left">SONIX GAMING PERIPHERALS</div>
-            <div class="details-right">
-                 BRANDING | 3D | ANIMATION 
-            </div>
+</div>
+      <!-- Project 4 -->
+<div class="portfolio-item is-under-development" data-category="Branding, Animation, 3D Modeling">
+    <a href="sonix.html" class="image-link">
+        <div class="image-container">
+            <img src="images/sonixbanner.png" alt="SONIX Gaming Peripherals">
+            <div class="dev-badge">UNDER DEVELOPMENT</div>
+        </div>
+    </a>
+
+    <div class="project-details-bar">
+        <div class="details-left">SONIX GAMING PERIPHERALS</div>
+        <div class="details-right">
+            BRANDING | 3D | ANIMATION
         </div>
     </div>
+</div>
 </div>
     </section>
 
@@ -257,6 +285,8 @@
             </div>
         </div>
     </footer>
-	
+	<div id="dev-notification" class="dev-notification">
+    This project is still under development. Some sections may be unfinished.
+</div>
 </body>
 </html>

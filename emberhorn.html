@@ -11,6 +11,7 @@
     <script src="scroll.js" defer></script>
     <script src="name.js" defer></script>
     <script src="transition.js" defer></script>
+    <script src="lightbox.js" defer></script>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-31W8MHHCCV"></script>
 <script>
@@ -25,6 +26,7 @@
             document.getElementById("adobe-tools").classList.toggle("open");
         }
     </script>
+    
     <!-- Icons and Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap" rel="stylesheet">
@@ -71,63 +73,61 @@
         </p>
     </div>
 
-    <div class="ember-showcase-grid">
-        <div class="ember-grid-item ember-large" onclick="openLightbox(this)">
-            <img src="images/emberthumb.png" class="img-primary" alt="Emberhorn bottle render">
-            <img src="images/redtablegray.jpg" class="img-hover" alt="Material view">
-        </div>
-
-        <div class="ember-grid-item ember-small-top" onclick="openLightbox(this)">
-            <img src="images/emberfront.png" class="img-primary" alt="Emberhorn front bottle">
-            <img src="images/emberhorngray.jpg" class="img-hover" alt="Material view">
-        </div>
-
-        <div class="ember-grid-item ember-tall" onclick="openLightbox(this)">
-            <img src="images/embertable.png" class="img-primary" alt="Emberhorn table render">
-            <img src="images/emberhorngray2.jpg" class="img-hover" alt="Material view">
-        </div>
-
-        <div class="ember-grid-item ember-small-bottom" onclick="openLightbox(this)">
-            <img src="images/emberdripp4.jpg" class="img-primary" alt="Emberhorn sauce drip render">
-            <img src="images/emberdripgray.jpg" class="img-hover" alt="Material view">
-        </div>
+    <!-- YOUR GRID -->
+<div class="ember-showcase-grid">
+    <div class="ember-grid-item ember-large" onclick="openLightbox(this)">
+        <img src="images/emberthumb.png" class="img-primary" alt="Emberhorn bottle render">
+        <img src="images/redtablegray.jpg" class="img-hover" alt="Material view">
     </div>
 
-
-    <!-- SECTION 2: PACKAGING & DESIGN -->
-    <div class="project-header">
-        <h2>Packaging & Storytelling</h2>
-        <p>
-            A deep dive into the Emberhorn box design. From the custom typography to the inner panel storytelling, every detail is crafted to provide a premium unboxing experience.
-        </p>
+    <div class="ember-grid-item ember-small-top" onclick="openLightbox(this)">
+        <img src="images/emberfront.png" class="img-primary" alt="Emberhorn front bottle">
+        <img src="images/emberhorngray.jpg" class="img-hover" alt="Material view">
     </div>
 
-    <div class="ember-showcase-grid">
-        <div class="ember-grid-item ember-full" onclick="openLightbox(this)">
-            <img src="images/emberhornbottlesbox52.png" class="img-primary" alt="Emberhorn box dieline">
-            <img src="images/emberboxbottlesgray21.png" class="img-hover" alt="Material view">
-        </div>
-
-        <div class="ember-grid-item ember-large" onclick="openLightbox(this)">
-            <img src="images/emberbox5.jpg" class="img-primary" alt="Emberhorn box open render">
-            <img src="images/embergraybox2.jpg" class="img-hover" alt="Material view">
-        </div>
-
-        <div class="ember-grid-item ember-small-top" onclick="openLightbox(this)">
-            <img src="images/emberboxes2.jpg" class="img-primary" alt="Emberhorn box mockup">
-            <img src="images/emberboxestestgray.png" class="img-hover" alt="Material view">
-        </div>
-
-        <div class="ember-grid-item ember-tall" onclick="openLightbox(this)">
-            <img src="images/emberlightbox214.png" class="img-primary" alt="Emberhorn lightbox render">
-            <img src="images/emberboxsidewaysgray2.jpg" class="img-hover" alt="Material view">
-        </div>
-
-        <div class="ember-grid-item ember-small-bottom" onclick="openLightbox(this)">
-            <img src="images/emberboxes2.jpg" class="img-primary" alt="Emberhorn packaging render">
-            <img src="images/emberboxestestgray.png" class="img-hover" alt="Material view">
-        </div>
+    <div class="ember-grid-item ember-tall" onclick="openLightbox(this)">
+        <img src="images/embertable.png" class="img-primary" alt="Emberhorn table render">
+        <img src="images/emberhorngray2.jpg" class="img-hover" alt="Material view">
     </div>
+
+    <div class="ember-grid-item ember-small-bottom" onclick="openLightbox(this)">
+        <img src="images/emberdripp4.jpg" class="img-primary" alt="Emberhorn sauce drip render">
+        <img src="images/emberdripgray.jpg" class="img-hover" alt="Material view">
+    </div>
+</div>
+
+<!-- SECTION 2: PACKAGING & DESIGN -->
+<div class="project-header">
+    <h2>Packaging & Storytelling</h2>
+    <p>A deep dive into the Emberhorn box design.</p>
+</div>
+
+<div class="ember-showcase-grid">
+    <div class="ember-grid-item ember-full" onclick="openLightbox(this)">
+        <img src="images/emberhornbottlesbox52.png" class="img-primary" alt="Emberhorn box dieline">
+        <img src="images/emberboxbottlesgray21.png" class="img-hover" alt="Material view">
+    </div>
+
+    <div class="ember-grid-item ember-large" onclick="openLightbox(this)">
+        <img src="images/emberbox5.jpg" class="img-primary" alt="Emberhorn box open render">
+        <img src="images/embergraybox2.jpg" class="img-hover" alt="Material view">
+    </div>
+
+    <div class="ember-grid-item ember-small-top" onclick="openLightbox(this)">
+        <img src="images/emberboxes2.jpg" class="img-primary" alt="Emberhorn box mockup">
+        <img src="images/emberboxestestgray.png" class="img-hover" alt="Material view">
+    </div>
+
+    <div class="ember-grid-item ember-tall" onclick="openLightbox(this)">
+        <img src="images/emberlightbox214.png" class="img-primary" alt="Emberhorn lightbox render">
+        <img src="images/emberboxsidewaysgray2.jpg" class="img-hover" alt="Material view">
+    </div>
+
+    <div class="ember-grid-item ember-small-bottom" onclick="openLightbox(this)">
+        <img src="images/emberboxes2.jpg" class="img-primary" alt="Emberhorn packaging render">
+        <img src="images/emberboxestestgray.png" class="img-hover" alt="Material view">
+    </div>
+</div>
 
 
     <!-- SECTION 3: UPCOMING RELEASES -->
@@ -311,22 +311,44 @@
   </div>
 </footer>
 
-   <!-- Lightbox Structure -->
-   <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <span class="close-btn">&times;</span>
-    <div class="slider-wrapper" onclick="event.stopPropagation()">
-        <div class="comparison-slider">
-            <img id="img-after" src="" alt="">
-            <div id="img-before-wrap">
-                <img id="img-before" src="" alt="">
-            </div>
-            
-            <!-- THE HANDLE MUST BE HERE -->
-            <div id="slider-handle" class="slider-handle"></div> 
+ <!-- THE LIGHTBOX STRUCTURE -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
 
-            <input type="range" min="0" max="100" value="50" class="slider-input" id="slider-range">
+    <button class="close-lightbox" type="button" aria-label="Close lightbox">
+        &times;
+    </button>
+
+    <button class="lightbox-arrow lightbox-prev" type="button" aria-label="Previous image">
+        &#10094;
+    </button>
+
+    <!-- Normal image mode: Gooey -->
+    <img id="lightbox-img" src="" alt="Full View">
+
+    <!-- Slider mode: Emberhorn -->
+    <div id="slider-container" class="slider-wrapper">
+        <div class="comparison-slider">
+            <img id="img-after" src="" alt="Regular render">
+            <img id="img-before" src="" alt="Material view">
+
+            <input 
+                id="slider-range"
+                class="slider-input"
+                type="range"
+                min="0"
+                max="100"
+                value="50"
+                aria-label="Compare image slider"
+            >
+
+            <div class="slider-handle"></div>
         </div>
     </div>
+
+    <button class="lightbox-arrow lightbox-next" type="button" aria-label="Next image">
+        &#10095;
+    </button>
+
 </div>
 
 </body>

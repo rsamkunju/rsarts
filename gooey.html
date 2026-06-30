@@ -4,280 +4,311 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Ryan Sam</title>
+
     <link rel="stylesheet" href="style.css">
+
     <!-- Scripts -->
     <script src="script.js" defer></script>
     <script src="filter.js" defer></script>
     <script src="scroll.js" defer></script>
     <script src="name.js" defer></script>
     <script src="transition.js" defer></script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-31W8MHHCCV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script src="lightbox.js" defer></script>
 
-  gtag('config', 'G-31W8MHHCCV');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-31W8MHHCCV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-31W8MHHCCV');
+    </script>
+
     <script>
         function toggleAdobe() {
             document.getElementById("adobe-tools").classList.toggle("open");
         }
     </script>
+
     <!-- Icons and Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap" rel="stylesheet">
 </head>
+
 <body>
- <nav>
-  <div class="nav-left">
-    <ul>
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#services">Services</a></li>
-    </ul>
-  </div>
 
-  <div class="logo">
-    <a href="index.html"><img src="images/RS12.png" alt="Logo" /></a>
-  </div>
+<nav>
+    <div class="nav-left">
+        <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+        </ul>
+    </div>
 
-  <div class="nav-right">
-    <ul>
-      <li><a href="index.html#portfolio">Portfolio</a></li>
-      <li><a href="index.html#resume">Resume</a></li>
-    </ul>
-  </div>
+    <div class="logo">
+        <a href="index.html">
+            <img src="images/RS12.png" alt="Logo">
+        </a>
+    </div>
+
+    <div class="nav-right">
+        <ul>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li><a href="index.html#resume">Resume</a></li>
+        </ul>
+    </div>
 </nav>
 
-    <main class="project-page">
-        <!-- Background Asset -->
-        <img src="images/sidetest.png" class="side-gooey-bg" alt="">
+<main class="project-page">
 
-        <section class="project-top">
-            <div class="project-main-logo">
-                <img src="images/GOOEYNEW2.png" alt="Gooey Logo">
-            </div>
-        </section>
+    <!-- Background Asset -->
+    <img src="images/sidetest.png" class="side-gooey-bg" alt="">
 
-        <!-- SHOWCASE GRID -->
-     <!-- SECTION 1: BRAND IDENTITY -->
-<div class="gooey-header">
-    <h2>PROMOTIONAL & DIGITAL ASSETS</h2>
-    <p>
-        The Gooey Cookies promotional system showcases a collection of social media, campaign, and digital marketing assets designed to build a bold, recognizable brand presence. This section highlights banner graphics, 
-        promotional visuals, and content-driven assets that bring Gooey’s playful, indulgent personality to life across digital platforms.
-    </p>
-</div>
-
-<div class="gooey-showcase-grid">
-    <!-- 1 & 2: Top Block -->
-    <div class="gooey-grid-item gooey-feature" onclick="openLightbox(this)">
-        <img src="images/gooeybannerrewr2.jpg" class="img-primary" alt="Gooey Brand Visual">
-    </div>
-
-    <div class="gooey-grid-item gooey-portrait" onclick="openLightbox(this)">
-        <img src="images/img2.jpg" class="img-primary" alt="Gooey Bag Mockup">
-    </div>
-
-    <!-- 3: Full Width Banner -->
-    <div class="gooey-grid-item gooey-banner" onclick="openLightbox(this)">
-        <img src="images/img3.jpg" class="img-primary" alt="Gooey Campaign Banner">
-    </div>
-
-    <!-- 4, 5, 6: Row of Cards -->
-    <div class="gooey-grid-item gooey-square" onclick="openLightbox(this)">
-        <img src="images/img4.jpg" class="img-primary" alt="Gooey Asset 1">
-    </div>
-
-    <div class="gooey-grid-item gooey-square" onclick="openLightbox(this)">
-        <img src="images/img5.jpg" class="img-primary" alt="Gooey Asset 2">
-    </div>
-
-    <div class="gooey-grid-item gooey-square" onclick="openLightbox(this)">
-        <img src="images/img6.jpg" class="img-primary" alt="Gooey Asset 3">
-    </div>
-
-    <!-- 7 & 8: Bottom Block -->
-    <div class="gooey-grid-item gooey-wide" onclick="openLightbox(this)">
-        <img src="images/img7.jpg" class="img-primary" alt="Gooey Wide Visual">
-    </div>
-
-    <div class="gooey-grid-item gooey-square" onclick="openLightbox(this)">
-        <img src="images/img8.jpg" class="img-primary" alt="Gooey Final Asset">
-    </div>
-</div>
-
-
-<!-- SECTION 2: PACKAGING & EXPERIENCE -->
-<div class="gooey-header">
-    <h2>Packaging & Experience</h2>
-    <p>
-        Capturing the unboxing experience and the product in motion. This collection showcases the physical packaging design and high-energy content used to showcase the product's unique texture.
-    </p>
-</div>
-
-<div class="gooey-showcase-grid">
-    <div class="gooey-grid-item gooey-banner" onclick="openLightbox(this)">
-        <img src="images/bannergoey.jpg" class="img-primary" alt="Gooey Banner Wide">
-    </div>
-
-    <div class="gooey-grid-item gooey-feature" onclick="openLightbox(this)">
-        <img src="images/gooeyboxopen.png" class="img-primary" alt="Box Open View">
-    </div>
-
-    <div class="gooey-grid-item gooey-square" onclick="openLightbox(this)">
-        <img src="images/gooeyclose.png" class="img-primary" alt="Close Up Texture">
-    </div>
-
-    <div class="gooey-grid-item gooey-portrait" onclick="openLightbox(this)">
-        <img src="images/cookieeat.gif" class="img-primary" alt="Cookie GIF">
-    </div>
-
-    <div class="gooey-grid-item gooey-square" onclick="openLightbox(this)">
-        <img src="images/GOOEYBAG.png" class="img-primary" alt="Gooey Bag">
-    </div>
-</div>
-
-
-<!-- SECTION 3: FUTURE CONCEPTS -->
-<div class="gooey-header">
-    <h2>Upcoming Concepts</h2>
-    <p>
-        A look at the future of the Gooey menu. This section features upcoming flavors, limited edition seasonal packaging, and experimental brand collaborations currently in development.
-    </p>
-</div>
-
-<div class="gooey-showcase-alt">
-    <div class="gooey-grid-item gooey-long" onclick="openLightbox(this)">
-        <img src="images/placeholder-long-1.jpg" class="img-primary" alt="Upcoming Concept">
-    </div>
-
-    <div class="gooey-grid-item gooey-long" onclick="openLightbox(this)">
-        <img src="images/placeholder-long-2.jpg" class="img-primary" alt="Future Flavor">
-    </div>
-
-    <div class="gooey-grid-item gooey-long" onclick="openLightbox(this)">
-        <img src="images/placeholder-long-3.jpg" class="img-primary" alt="Seasonal Design">
-    </div>
-
-    <div class="gooey-grid-item gooey-medium" onclick="openLightbox(this)">
-        <img src="images/placeholder-medium-1.jpg" class="img-primary" alt="Concept View">
-    </div>
-
-    <div class="gooey-grid-item gooey-medium" onclick="openLightbox(this)">
-        <img src="images/placeholder-medium-2.jpg" class="img-primary" alt="Concept Detail">
-    </div>
-</div>
-
-        <!-- BRUTALIST TECHNICALS SECTION -->
-        <section class="brutalist-technical-grid">
-            
-            <!-- ROW 1: OVERVIEW & SPECS -->
-            <div class="b-row">
-                <div class="b-block main-info">
-                    <span class="b-label">[ 01 ] PROJECT INFORMATION </span>
-                    <h1 class="b-title">GOOEY COOKIES</h1>
-                    <h2 class="b-subtitle">BRANDING & PACKAGE DESIGN</h2>
-                    <p class="b-body">
-                        Gooey is a conceptual cookie branding and package design project built around the idea of warm,
-                        melted-center cookies and playful dessert visuals. The branding combines custom display typography, 
-                        dripping chocolate-inspired graphics, and modern bakery-inspired visuals.
-                    </p>
-                </div>
-                <div class="b-block specs">
-                    <span class="b-label">[ 02 ] PROJECT SPECS</span>
-                    <div class="b-spec-list">
-                        <div class="b-spec-item"><strong>CLIENT</strong> <span>Gooey</span></div>
-                        <div class="b-spec-item"><strong>CAT.</strong> <span>Branding / Package</span></div>
-                        <div class="b-spec-item"><strong>YEAR</strong> <span>2025</span></div>
-                        <div class="b-spec-item"><strong>TOOLS</strong> <span>AI / PS / AE</span></div>
-                        <div class="b-spec-item"><strong>DIR.</strong> <span>Warm / Indulgent</span></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ROW 2: TYPE & COLOR -->
-            <div class="b-row split-border">
-                <div class="b-block typography">
-                    <span class="b-label">[ 03 ] TYPOGRAPHY</span>
-                    <div class="b-type-container">
-                        <p class="b-tiny">CUSTOM DISPLAY FONT - GOOEY</p>
-                        <img src="images/GOOEYALPHA.png" alt="Font Alpha" class="b-type-img">
-                    </div>
-                </div>
-                <div class="b-block colors">
-                    <span class="b-label">[ 04 ] COLOR VALUES</span>
-                    <div class="b-color-bars">
-                        <div class="b-bar" style="background:#2A160D"><span>#2A160D</span></div>
-                        <div class="b-bar" style="background:#5A2E16"><span>#5A2E16</span></div>
-                        <div class="b-bar" style="background:#C97A3D"><span>#C97A3D</span></div>
-                        <div class="b-bar" style="background:#D9B38C"><span>#D9B38C</span></div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- CONCEPT GALLERY -->
-        <section class="concept-section">
-            <h2 class="concept-title">CONCEPT WORK</h2>
-            <div class="concept-gallery">
-                <img src="images/GooeyColors.png" alt="">
-                <img src="images/Gooeyconcept1.png" alt="">
-                <img src="images/boxmeasure1.png" alt="">
-            </div>
-        </section>
-    </main>
-
-    <footer class="brutalist-footer">
-        <div class="footer-frame">
-          <div class="footer-main">
-            <h2 class="footer-logo-text">RYAN <br>SAMKUNJU</h2>
-            <div class="footer-contact">
-              <p class="tech-label">[ CONTACT_ME ]</p>
-              <a href="mailto:your@email.com" class="footer-link">@RYANSAMKUNJUNHP</a>
-            </div>
-          </div>
-          <div class="footer-bottom">
-            <div class="footer-meta">
-              <p>VERSION: 2.1.0</p>
-              <p>&copy; 2026 ALL RIGHTS RESERVED</p>
-              <p>STATUS: OPEN_FOR_WORK</p>
-            </div>
-            <div class="project-nav-container">
-              <a href="index.html" class="brutalist-nav-btn">
-                <span class="arrow">←</span>
-                <span class="btn-text">HOME</span>
-              </a>
-              <a href="velocyte.html" class="brutalist-nav-btn">
-                <span class="arrow">→</span>
-                <span class="btn-text">NEXT</span>
-              </a>
-            </div>
-          </div>
+    <section class="project-top">
+        <div class="project-main-logo">
+            <img src="images/GOOEYNEW2.png" alt="Gooey Logo">
         </div>
-      </footer>
+    </section>
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox" onclick="this.style.display='none'">
-        <span class="close-lightbox">&times;</span>
-        <img id="lightbox-img" src="" alt="Full View">
+    <!-- SECTION 1: PROMOTIONAL & DIGITAL ASSETS -->
+    <div class="gooey-header">
+        <h2>PROMOTIONAL & DIGITAL ASSETS</h2>
+        <p>
+           This section presents Gooey’s social media, promotional, and campaign visuals, focusing on how the brand’s chocolate-inspired color palette and indulgent personality translate across digital platforms. These assets create a recognizable dessert brand presence, drawing from the bold, polished look of modern bakery and cookie brands.
+        </p>
     </div>
 
-    <script>
-        function openLightbox(element) {
-            const primaryImg = element.querySelector('.img-primary');
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            if (primaryImg) {
-                lightboxImg.src = primaryImg.src;
-                lightbox.style.display = 'flex';
-            }
-        }
-        document.addEventListener('keydown', (e) => {
-            if (e.key === "Escape") document.getElementById('lightbox').style.display = 'none';
-        });
-    </script>
+    <div class="gooey-showcase-grid">
+
+    <div class="gooey-grid-item gooey-feature js-lightbox-item" data-lightbox-gallery="gooey-promo">
+        <img src="images/gooeybannerrewr2.jpg" class="img-primary" alt="Gooey Brand Promotion Banner">
+    </div>
+
+    <div class="gooey-grid-item gooey-portrait js-lightbox-item" data-lightbox-gallery="gooey-promo">
+        <img src="images/gooeybanner1252.jpg" class="img-primary" alt="Gooey Promotion Banner">
+    </div>
+
+    <div class="gooey-grid-item gooey-social js-lightbox-item" data-lightbox-gallery="gooey-promo">
+        <img src="images/GooeyMedia1.jpg" class="img-primary" alt="Gooey Asset 1">
+    </div>
+
+    <div class="gooey-grid-item gooey-social js-lightbox-item" data-lightbox-gallery="gooey-promo">
+        <img src="images/COOKIE1CHOCOLATE.jpg" class="img-primary" alt="Gooey Asset 2">
+    </div>
+
+    <div class="gooey-grid-item gooey-social js-lightbox-item" data-lightbox-gallery="gooey-promo">
+        <img src="images/COOKIE3CHOCOLATE.jpg" class="img-primary" alt="Gooey Asset 3">
+    </div>
+
+    <div class="gooey-grid-item gooey-social js-lightbox-item" data-lightbox-gallery="gooey-promo">
+        <img src="images/COOKIEMEDIA3.jpg" class="img-primary" alt="Gooey Asset 4">
+    </div>
+
+  <div class="gooey-grid-item gooey-social js-lightbox-item"
+     data-lightbox-gallery="gooey-promo"
+     data-type="video"
+     data-src="images/gooeycookies.mp4">
+
+    <video class="img-primary gooey-video-thumb" autoplay muted loop playsinline preload="metadata">
+        <source src="images/gooeycookies.mp4" type="video/mp4">
+    </video>
+</div>
+
+</div>
+
+    <!-- SECTION 2: PACKAGING & EXPERIENCE -->
+    <div class="gooey-header">
+        <h2>Packaging & Experience</h2>
+        <p>
+         This section highlights the consistency of Gooey’s colors, patterns, and visual style across multiple packaging pieces and brand touchpoints.
+        </p>
+    </div>
+
+    <div class="gooey-showcase-grid">
+
+        <div class="gooey-grid-item gooey-banner js-lightbox-item" data-lightbox-gallery="gooey-packaging">
+            <img src="images/gooeystuffstationary.jpg" class="img-primary" alt="Gooey Banner Wide">
+        </div>
+
+        <div class="gooey-grid-item gooey-square js-lightbox-item" data-lightbox-gallery="gooey-packaging">
+            <img src="images/gooeyboxglossy.png" class="img-primary" alt="Gooey Box">
+        </div>
+
+        <div class="gooey-grid-item gooey-square js-lightbox-item" data-lightbox-gallery="gooey-packaging">
+            <img src="images/gooeyboxreworkopen.jpg" class="img-primary" alt="Gooey Box Opened">
+        </div>
+
+         <div class="gooey-grid-item gooey-square js-lightbox-item" data-lightbox-gallery="gooey-packaging">
+            <img src="images/gooeycookiebagged.png" class="img-primary" alt="Gooey Cookie">
+        </div>
+         <div class="gooey-grid-item gooey-square js-lightbox-item" data-lightbox-gallery="gooey-packaging">
+            <img src="images/gooeynapkin.png" class="img-primary" alt="Gooey Napkin">
+        </div>
+          <div class="gooey-grid-item gooey-square js-lightbox-item" data-lightbox-gallery="gooey-packaging">
+            <img src="images/gooeybackfront.jpg" class="img-primary" alt="Close Up Texture">
+        </div>
+        <div class="gooey-grid-item gooey-square js-lightbox-item" data-lightbox-gallery="gooey-packaging">
+            <img src="images/gooeybackback.jpg" class="img-primary" alt="Close Up Texture">
+        </div>
+
+        <div class="gooey-grid-item gooey-square js-lightbox-item" data-lightbox-gallery="gooey-packaging">
+            <img src="images/gooeybacksopen.jpg" class="img-primary" alt="Gooey Bag">
+        </div>
+         <div class="gooey-grid-item gooey-square js-lightbox-item" data-lightbox-gallery="gooey-packaging">
+            <img src="images/gooeycookiebag.jpg" class="img-primary" alt="Gooey Bag">
+        </div>
+
+    </div>
+
+    <!-- SECTION 3: FUTURE CONCEPTS -->
+   <div class="gooey-header">
+    <h2>REAL WORLD BRAND APPLICATIONS</h2>
+    <p>
+        This section showcases Gooey’s real world customer touchpoints, including environmental design, merchandise, print materials, and miscellaneous branded items. Storefront graphics, signage, apparel, loyalty cards, bags, stickers, and other physical applications demonstrate how the Gooey identity extends beyond packaging and digital promotion.
+    </p>
+</div>
+
+    <div class="gooey-showcase-alt">
+
+        <div class="gooey-grid-item gooey-long js-lightbox-item" data-lightbox-gallery="gooey-concepts">
+            <img src="images/GOOEYLOYALTY.jpg" class="img-primary" alt="Upcoming Concept">
+        </div>
+
+        <div class="gooey-grid-item gooey-long js-lightbox-item" data-lightbox-gallery="gooey-concepts">
+            <img src="images/gooeysign.jpg" class="img-primary" alt="Future Flavor">
+        </div>
+
+        <div class="gooey-grid-item gooey-long js-lightbox-item" data-lightbox-gallery="gooey-concepts">
+            <img src="images/gooeyapron.jpg" class="img-primary" alt="Seasonal Design">
+        </div>
+
+        <div class="gooey-grid-item gooey-medium js-lightbox-item" data-lightbox-gallery="gooey-concepts">
+            <img src="images/GooeyPole.jpg" class="img-primary" alt="STREET STICKER">
+        </div>
+        
+
+        <div class="gooey-grid-item gooey-medium js-lightbox-item" data-lightbox-gallery="gooey-concepts">
+            <img src="images/gooeystore.jpg" class="img-primary" alt="Concept Detail">
+        </div>
+        
+
+    </div>
+
+    <!-- BRUTALIST TECHNICALS SECTION -->
+    <section class="brutalist-technical-grid">
+
+        <div class="b-row">
+            <div class="b-block main-info">
+                <span class="b-label">[ 01 ] PROJECT INFORMATION </span>
+                <h1 class="b-title">GOOEY COOKIES</h1>
+                <h2 class="b-subtitle">BRANDING & PACKAGE DESIGN</h2>
+                <p class="b-body">
+                    Gooey is a conceptual cookie branding and package design project built around the idea of warm,
+                    melted-center cookies and playful dessert visuals. The branding combines custom display typography,
+                    dripping chocolate-inspired graphics, and modern bakery-inspired visuals.
+                </p>
+            </div>
+
+            <div class="b-block specs">
+                <span class="b-label">[ 02 ] PROJECT SPECS</span>
+                <div class="b-spec-list">
+                    <div class="b-spec-item"><strong>CLIENT</strong> <span>GOOEY</span></div>
+                    <div class="b-spec-item"><strong>CATEGORY</strong> <span>BRANDING / PACKAGE</span></div>
+                    <div class="b-spec-item"><strong>YEAR</strong> <span>2025</span></div>
+                    <div class="b-spec-item"><strong>TOOLS</strong> <span>ILLUSTRATOR / PHOTOSHOP / AFTEREFFECTS</span></div>
+                    <div class="b-spec-item"><strong>DIRECTION</strong> <span>WARM / GOOEY <span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="b-row split-border">
+            <div class="b-block typography">
+                <span class="b-label">[ 03 ] TYPOGRAPHY</span>
+                <div class="b-type-container">
+                    <p class="b-tiny"></p>
+                    <img src="images/GOOEYALPHA.png" alt="Font Alpha" class="b-type-img">
+                     <!-- The Horizontal Line -->
+    <hr class="b-type-divider">
+                     <img src="images/BARLOWFONT1.png" alt="Font Alpha" class="b-type-img">
+                </div>
+            </div>
+
+            <div class="b-block colors">
+                <span class="b-label">[ 04 ] COLOR VALUES</span>
+                <div class="b-color-bars">
+                   <div class="b-bar" style="background:#2A160D"><span> DARK CHOCOLATE BROWN <br>#2A160D</span></div>
+                    <div class="b-bar" style="background:#5A2E16"><span>MILK CHOCOLATE BROWN <br>#5A2E16</span></div>
+                    <div class="b-bar" style="background:#C97A3D"><span>CARAMEL BROWN <br>#C97A3D</span></div>
+                    <div class="b-bar" style="background:#D9B38C"><span>COOKIE DOUGH BEIGE <br>#D9B38C</span></div>
+                    <div class="b-bar" style="background:#F6E8D5"><span>VANILLA CREAM <br>#F6E8D5</span></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- CONCEPT GALLERY -->
+    <section class="concept-section">
+        <h2 class="concept-title">CONCEPT WORK</h2>
+
+        <div class="concept-gallery">
+            <img src="images/GooeyColors.png" alt="">
+            <img src="images/Gooeyconcept1.png" alt="">
+            <img src="images/boxmeasure1.png" alt="">
+        </div>
+    </section>
+
+</main>
+
+<footer class="brutalist-footer">
+    <div class="footer-frame">
+
+        <div class="footer-main">
+            <h2 class="footer-logo-text">RYAN <br>SAMKUNJU</h2>
+
+            <div class="footer-contact">
+                <p class="tech-label">[ CONTACT_ME ]</p>
+                <a href="mailto:your@email.com" class="footer-link">@RYANSAMKUNJUNHP</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-meta">
+                <p>VERSION: 2.1.0</p>
+                <p>&copy; 2026 ALL RIGHTS RESERVED</p>
+                <p>STATUS: OPEN_FOR_WORK</p>
+            </div>
+
+            <div class="project-nav-container">
+                <a href="index.html" class="brutalist-nav-btn">
+                    <span class="arrow">←</span>
+                    <span class="btn-text">HOME</span>
+                </a>
+
+                <a href="velocyte.html" class="brutalist-nav-btn">
+                    <span class="arrow">→</span>
+                    <span class="btn-text">NEXT</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<!-- LIGHTBOX MODAL -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="close-lightbox" type="button" aria-label="Close lightbox">&times;</button>
+
+    <button class="lightbox-arrow lightbox-prev" type="button" aria-label="Previous image">
+        &#10094;
+    </button>
+
+    <img id="lightbox-img" src="" alt="Full View">
+
+    <button class="lightbox-arrow lightbox-next" type="button" aria-label="Next image">
+        &#10095;
+    </button>
+</div>
+
 </body>
 </html>
