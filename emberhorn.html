@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Ryan Sam</title>
+
+    <title>Emberhorn | Ryan Sam</title>
+
     <link rel="stylesheet" href="style.css">
+
     <!-- Scripts -->
     <script src="script.js" defer></script>
     <script src="filter.js" defer></script>
@@ -12,346 +15,838 @@
     <script src="name.js" defer></script>
     <script src="transition.js" defer></script>
     <script src="lightbox.js" defer></script>
+
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-31W8MHHCCV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-31W8MHHCCV');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-31W8MHHCCV"></script>
     <script>
-        function toggleAdobe() {
-            document.getElementById("adobe-tools").classList.toggle("open");
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
         }
+
+        gtag("js", new Date());
+        gtag("config", "G-31W8MHHCCV");
     </script>
-    
+
     <!-- Icons and Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap" rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    >
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap"
+    >
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap"
+    >
 </head>
-<body>
-	<nav>
-  <div class="nav-left">
-    <ul>
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#services">Services</a></li>
-    </ul>
-  </div>
 
-  <div class="logo">
-    <a href="index.html"><img src="images/RS12.png" alt="Logo" /></a>
-  </div>
+<body id="top">
 
-  <div class="nav-right">
-    <ul>
-      <li><a href="index.html#portfolio">Portfolio</a></li>
-      <li><a href="index.html#resume">Resume</a></li>
-    </ul>
-  </div>
-</nav>
-   <main class="project-page">
-    <!-- Fixed Side Bull (The one cut off on the left) -->
-    <img src="images/WHITEBULL.png" class="side-bull-bg" alt="">
-
-    <!-- 1. Centered Project Logo -->
-    <section class="project-top">
-        <div class="project-main-logo">
-            <img src="images/EMBERHORNFULLLOGO.png" alt="Emberhorn Logo">
-        </div>
-    </section>
-
-    <!-- 2. Final Showcase Section -->
-     <section class="ember-showcase-section">
-
-    <!-- SECTION 1: HOT SAUCE BOTTLES -->
-    <div class="project-header">
-        <h2>The Emberhorn Bottle</h2>
-        <p>
-            Warm Ember is a sweet and smoky BBQ sauce with the first spark of heat, introducing the beginning of Emberhorn’s long road to bold, fiery flavor. The bottle was fully modeled, textured, and rendered in Blender 3D to showcase the product’s packaging, material finish, and shelf-ready presentation.
-        </p>
-    </div>
-
-    <!-- YOUR GRID -->
-<div class="ember-showcase-grid">
-    <div class="ember-grid-item ember-large" onclick="openLightbox(this)">
-        <img src="images/emberthumb.png" class="img-primary" alt="Emberhorn bottle render">
-        <img src="images/redtablegray.jpg" class="img-hover" alt="Material view">
-    </div>
-
-    <div class="ember-grid-item ember-small-top" onclick="openLightbox(this)">
-        <img src="images/emberfront.png" class="img-primary" alt="Emberhorn front bottle">
-        <img src="images/emberhorngray.jpg" class="img-hover" alt="Material view">
-    </div>
-
-    <div class="ember-grid-item ember-tall" onclick="openLightbox(this)">
-        <img src="images/embertable.png" class="img-primary" alt="Emberhorn table render">
-        <img src="images/emberhorngray2.jpg" class="img-hover" alt="Material view">
-    </div>
-
-    <div class="ember-grid-item ember-small-bottom" onclick="openLightbox(this)">
-        <img src="images/emberdripp4.jpg" class="img-primary" alt="Emberhorn sauce drip render">
-        <img src="images/emberdripgray.jpg" class="img-hover" alt="Material view">
-    </div>
-</div>
-
-<!-- SECTION 2: PACKAGING & DESIGN -->
-<div class="project-header">
-    <h2>Packaging & Storytelling</h2>
-    <p>A deep dive into the Emberhorn box design.</p>
-</div>
-
-<div class="ember-showcase-grid">
-    <div class="ember-grid-item ember-full" onclick="openLightbox(this)">
-        <img src="images/emberhornbottlesbox52.png" class="img-primary" alt="Emberhorn box dieline">
-        <img src="images/emberboxbottlesgray21.png" class="img-hover" alt="Material view">
-    </div>
-
-    <div class="ember-grid-item ember-large" onclick="openLightbox(this)">
-        <img src="images/emberbox5.jpg" class="img-primary" alt="Emberhorn box open render">
-        <img src="images/embergraybox2.jpg" class="img-hover" alt="Material view">
-    </div>
-
-    <div class="ember-grid-item ember-small-top" onclick="openLightbox(this)">
-        <img src="images/emberboxes2.jpg" class="img-primary" alt="Emberhorn box mockup">
-        <img src="images/emberboxestestgray.png" class="img-hover" alt="Material view">
-    </div>
-
-    <div class="ember-grid-item ember-tall" onclick="openLightbox(this)">
-        <img src="images/emberlightbox214.png" class="img-primary" alt="Emberhorn lightbox render">
-        <img src="images/emberboxsidewaysgray2.jpg" class="img-hover" alt="Material view">
-    </div>
-
-    <div class="ember-grid-item ember-small-bottom" onclick="openLightbox(this)">
-        <img src="images/emberboxes2.jpg" class="img-primary" alt="Emberhorn packaging render">
-        <img src="images/emberboxestestgray.png" class="img-hover" alt="Material view">
-    </div>
-</div>
-
-
-    <!-- SECTION 3: UPCOMING RELEASES -->
-    <div class="project-header">
-        <h2>Upcoming Flavors</h2>
-        <p>
-            Previewing the future of Emberhorn. New heat levels and unique small-batch infusions are currently in development.
-        </p>
-    </div>
-
-    <div class="ember-showcase-alt">
-        <div class="ember-grid-item ember-long" onclick="openLightbox(this)">
-            <img src="images/placeholder-coming-soon-1.jpg" class="img-primary" alt="Upcoming Heat">
-            <img src="images/placeholder-material-gray.jpg" class="img-hover" alt="Material view">
+    <nav class="minimal-nav">
+        <div class="nav-left">
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+            </ul>
         </div>
 
-        <div class="ember-grid-item ember-long" onclick="openLightbox(this)">
-            <img src="images/placeholder-coming-soon-2.jpg" class="img-primary" alt="New Batch">
-            <img src="images/placeholder-material-gray.jpg" class="img-hover" alt="Material view">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/NEWRSRSLOGO.png" alt="Ryan Sam logo">
+            </a>
         </div>
 
-        <div class="ember-grid-item ember-long" onclick="openLightbox(this)">
-            <img src="images/placeholder-coming-soon-3.jpg" class="img-primary" alt="Smoky Infusion">
-            <img src="images/placeholder-material-gray.jpg" class="img-hover" alt="Material view">
+        <div class="nav-right">
+            <ul>
+                <li><a href="index.html#services">Toolkit</a></li>
+                <li><a href="index.html#resume">Resume</a></li>
+            </ul>
         </div>
+    </nav>
 
-        <div class="ember-grid-item ember-medium" onclick="openLightbox(this)">
-            <img src="images/placeholder-medium-1.jpg" class="img-primary" alt="TBA">
-            <img src="images/placeholder-material-gray.jpg" class="img-hover" alt="Material view">
-        </div>
+    <main class="project-page ember-case-study">
 
-        <div class="ember-grid-item ember-medium" onclick="openLightbox(this)">
-            <img src="images/placeholder-medium-2.jpg" class="img-primary" alt="Coming 2025">
-            <img src="images/placeholder-material-gray.jpg" class="img-hover" alt="Material view">
-        </div>
-    </div>
+        <!-- Existing decorative background asset -->
+        <img src="images/WHITEBULL.png" class="side-bull-bg" alt="" aria-hidden="true">
 
-</section>
-    <!-- 3. Info Section -->
-    <section class="brutalist-technical-grid">
+        <!-- 01. PROJECT OVERVIEW -->
+        <section
+            class="ember-case-panel ember-case-intro"
+            aria-labelledby="ember-overview-title"
+        >
+            <div class="ember-case-wrap">
 
-            
+                <div class="ember-intro-grid">
 
-            <!-- ROW 1: OVERVIEW & SPECS -->
+                    <div class="ember-intro-copy">
+                        <div class="ember-case-kicker">
+                            <span>01</span>
+                            <p>PROJECT OVERVIEW</p>
+                        </div>
 
-            <div class="b-row">
+                        <p class="ember-overline">BRANDING &amp; PACKAGE DESIGN</p>
 
-                <div class="b-block main-info">
+                        <h1 id="ember-overview-title">
+                            A FIRE-FORGED IDENTITY BUILT AROUND SMOKE, HEAT, AND FLAVOR.
+                        </h1>
 
-                    <span class="b-label">[ 01 ] PROJECT INFORMATION </span>
-
-                    <h1 class="b-title">EMBERHORN HOT BBQ</h1>
-
-                    <h2 class="b-subtitle">BRANDING & PACKAGE DESIGN</h2>
-
-                    <p class="b-body">
-
-                       EMBERHORN is a conceptual barbecue sauce brand built around smoky bourbon flavor and a subtle spicy kick. 
-
-                    Inspired by slow-cooked barbecue and open flame grilling, the brand focuses on rich smoke, deep sweetness, 
-
-                    and bold heat to create a strong fire-inspired identity. Emberhorn takes on a blend of modern rustic aesthetic. 
-
-                    </p>
-
-                </div>
-
-                <div class="b-block specs">
-
-                    <span class="b-label">[ 02 ] PROJECT SPECS</span>
-
-                    <div class="b-spec-list">
-
-                        <div class="b-spec-item"><strong>CLIENT</strong> <span>EMBERHORN</span></div>
-
-                        <div class="b-spec-item"><strong>CATEGORY</strong> <span>BRANDING / PACKAGE</span></div>
-
-                        <div class="b-spec-item"><strong>YEAR</strong> <span>2025</span></div>
-
-                        <div class="b-spec-item"><strong>TOOLS</strong> <span>ILLUSTRATOR / PHOTOSHOP / BLENDER</span></div>
-
-                        <div class="b-spec-item"><strong>DIRECTION</strong> <span>SOUTHERN HEAT / RUSTIC</span></div>
-
+                        <p class="ember-intro-description">
+                            Emberhorn is a conceptual barbecue sauce brand built around smoky
+                            bourbon flavor, subtle heat, and open-flame cooking. The identity
+                            combines a horned fire emblem, distressed display typography,
+                            dark packaging, and dimensional product visualization to create
+                            a bold modern-rustic brand system.
+                        </p>
                     </div>
 
-                </div>
+                    <div class="ember-overview-logo">
+                        <img
+                            src="images/EMBERHORNFULLLOGO.png"
+                            alt="Emberhorn primary logo"
+                        >
+                    </div>
 
+                    <dl class="ember-project-meta">
+                        <div>
+                            <dt>CLIENT</dt>
+                            <dd>EMBERHORN</dd>
+                        </div>
+
+                        <div>
+                            <dt>CATEGORY</dt>
+                            <dd>BRANDING / PACKAGE</dd>
+                        </div>
+
+                        <div>
+                            <dt>YEAR</dt>
+                            <dd>2025</dd>
+                        </div>
+
+                        <div>
+                            <dt>TOOLS</dt>
+                            <dd>ILLUSTRATOR / PHOTOSHOP / BLENDER</dd>
+                        </div>
+
+                        <div>
+                            <dt>DIRECTION</dt>
+                            <dd>SMOKY / RUSTIC / INTENSE</dd>
+                        </div>
+                    </dl>
+
+                </div>
             </div>
-
-
-
-            <!-- ROW 2: TYPE & COLOR -->
-
-            <div class="b-row split-border">
-
-                <div class="b-block typography">
-
-                    <span class="b-label">[ 03 ] TYPOGRAPHY</span>
-
-                    <div class="b-type-container">
-
-
-                        <img src="images/EMBERALPHA2.png" alt="Font Alpha" class="b-type-img">
-
-                    </div>
-
-                </div>
-
-                <div class="b-block colors">
-
-                    <span class="b-label">[ 04 ] COLOR VALUES</span>
-
-                    <div class="b-color-bars">
-
-                        <div class="b-bar" style="background:#E0A106"><span>#E0A106</span></div>
-
-                        <div class="b-bar" style="background:#8B1E1E"><span>#8B1E1E</span></div>
-
-                        <div class="b-bar" style="background:#FF5A1F"><span>#FF5A1F</span></div>
-
-                        <div class="b-bar" style="background:#0F0F0F"><span>#0F0F0F</span></div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
         </section>
 
-    <!-- 5. Concept Work -->
-    <section class="concept-section">
-        <h2 class="concept-title">CONCEPT WORK</h2>
-        <div class="concept-gallery">
-            <img src="images/openbox.png" alt="">
-            <img src="images/emberbox.png" alt="">
-            <img src="images/boxember.png" alt="">
-            <img src="images/EMBERLABEL3.png" alt="">
-            <img src="images/FlamingBullks.png" alt="">
-            <img src="images/BULLSKETCH.png" alt="">
-            <img src="images/boxdetailsflat.png" alt="">
-            <img src="images/PEPPERSCOLOR.png" alt="">
-            <img src="images/graintextureember.png" alt="">
+        <!-- 02. BRAND IDENTITY -->
+        <section
+            class="ember-case-panel"
+            aria-labelledby="ember-logo-system-title"
+        >
+            <div class="ember-case-wrap">
 
-        </div>
-        <div class="wireframe-box">
-            <img src="images/box-wireframe.png" alt="">
-        </div>
-    </section>
-</main>
+                <header class="ember-case-heading">
+                    <div class="ember-case-kicker">
+                        <span>02</span>
+                        <p>BRAND IDENTITY</p>
+                    </div>
+
+                    <div>
+                        <p class="ember-overline">LOGO SYSTEM</p>
+
+                        <h2 id="ember-logo-system-title">
+                            A MARK BUILT TO FEEL BOLD, RITUALISTIC, AND FORGED BY FIRE.
+                        </h2>
+                    </div>
+                </header>
+
+                <div class="ember-logo-layout">
+
+                    <div class="ember-logo-stage">
+                        <img
+                            src="images/EMBERHORNFULLLOGO.png"
+                            alt="Emberhorn primary logo"
+                        >
+                    </div>
+
+                    <div class="ember-logo-story">
+                        <p class="ember-pullquote">
+                            A horned skull, rising flames, and distressed details create
+                            a symbol of smoke, strength, and controlled heat.
+                        </p>
+
+                        <p>
+                            The primary lockup establishes the full personality of Emberhorn.
+                            A simplified bull icon supports smaller applications such as bottle
+                            caps, labels, social icons, stamps, and secondary package details.
+                        </p>
+
+                        <div class="ember-mini-marks">
+                            <figure>
+                                <img
+                                    src="images/EMBERHORNFULLLOGO.png"
+                                    alt="Emberhorn full wordmark and emblem"
+                                >
+                                <figcaption>PRIMARY LOCKUP</figcaption>
+                            </figure>
+
+                            <figure>
+                                <img
+                                    src="images/FlamingBullks.png"
+                                    alt="Emberhorn bull icon"
+                                >
+                                <figcaption>BULL ICON</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 03. TYPOGRAPHY -->
+        <section
+            class="ember-case-panel"
+            aria-labelledby="ember-type-title"
+        >
+            <div class="ember-case-wrap">
+
+                <header class="ember-case-heading">
+                    <div class="ember-case-kicker">
+                        <span>03</span>
+                        <p>TYPOGRAPHY</p>
+                    </div>
+
+                    <div>
+                        <p class="ember-overline">DISPLAY + SUPPORTING TYPE</p>
+
+                        <h2 id="ember-type-title">
+                            RUGGED IN THE HEADLINES. DIRECT AND FUNCTIONAL EVERYWHERE ELSE.
+                        </h2>
+                    </div>
+                </header>
+
+                <div class="ember-type-grid">
+
+                    <article class="ember-type-card ember-type-card--display">
+                        <div class="ember-type-card-heading">
+                            <span>01</span>
+
+                            <div>
+                                <p>CUSTOM DISPLAY</p>
+                                <h3>EMBERHORN DISPLAY</h3>
+                            </div>
+                        </div>
+
+                        <div class="ember-alpha-mask">
+                            <img
+                                src="images/EMBERALPHA2.png"
+                                alt="Emberhorn custom display alphabet"
+                            >
+                        </div>
+
+                        <p class="ember-type-note">
+                            Used for the logo, product names, flavor callouts,
+                            warnings, and high-impact campaign statements.
+                        </p>
+                    </article>
+
+                    <article class="ember-type-card ember-type-card--support">
+                        <div class="ember-type-card-heading">
+                            <span>02</span>
+
+                            <div>
+                                <p>SUPPORTING TYPE</p>
+                                <h3>FUTURA BOLD</h3>
+                            </div>
+                        </div>
+
+                        <div class="ember-live-type">
+                            <p class="ember-live-type-large">Aa</p>
+
+                            <p class="ember-live-type-alphabet">
+                                ABCDEFGHIJKLM<br>
+                                NOPQRSTUVWXYZ<br>
+                                0123456789
+                            </p>
+                        </div>
+
+                        <div class="ember-type-weights">
+                            <span>HEADLINES</span>
+                            <span>PACKAGE INFO</span>
+                            <span>CAMPAIGN COPY</span>
+                        </div>
+
+                        <p class="ember-type-note">
+                            Used for clear supporting information, product specifications,
+                            ingredient callouts, captions, and structured layouts.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 04. COLOR SYSTEM -->
+        <section
+            class="ember-case-panel"
+            aria-labelledby="ember-color-title"
+        >
+            <div class="ember-case-wrap">
+
+                <header class="ember-case-heading">
+                    <div class="ember-case-kicker">
+                        <span>04</span>
+                        <p>COLOR SYSTEM</p>
+                    </div>
+
+                    <div>
+                        <p class="ember-overline">FIRE-INSPIRED PALETTE</p>
+
+                        <h2 id="ember-color-title">
+                            CHARCOAL, EMBER RED, OPEN-FLAME ORANGE, AND SMOKED GOLD.
+                        </h2>
+
+                        <div class="ember-color-statement">
+                            <p>
+                                Near-black provides the premium foundation. Red and orange
+                                create heat and urgency, while the smoked gold introduces
+                                warmth and separates supporting information from the core mark.
+                            </p>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="ember-color-grid">
+
+                    <article
+                        class="ember-color-card ember-color-card--dark"
+                        style="--swatch:#0F0F0F"
+                    >
+                        <div class="ember-color-number">01</div>
+
+                        <div class="ember-color-info">
+                            <h3>CHARCOAL</h3>
+                            <p>#0F0F0F</p>
+                            <p>RGB 15 / 15 / 15</p>
+                        </div>
+                    </article>
+
+                    <article
+                        class="ember-color-card ember-color-card--dark"
+                        style="--swatch:#8B1E1E"
+                    >
+                        <div class="ember-color-number">02</div>
+
+                        <div class="ember-color-info">
+                            <h3>EMBER RED</h3>
+                            <p>#8B1E1E</p>
+                            <p>RGB 139 / 30 / 30</p>
+                        </div>
+                    </article>
+
+                    <article
+                        class="ember-color-card"
+                        style="--swatch:#FF5A1F"
+                    >
+                        <div class="ember-color-number">03</div>
+
+                        <div class="ember-color-info">
+                            <h3>FLAME ORANGE</h3>
+                            <p>#FF5A1F</p>
+                            <p>RGB 255 / 90 / 31</p>
+                        </div>
+                    </article>
+
+                    <article
+                        class="ember-color-card"
+                        style="--swatch:#E0A106"
+                    >
+                        <div class="ember-color-number">04</div>
+
+                        <div class="ember-color-info">
+                            <h3>SMOKED GOLD</h3>
+                            <p>#E0A106</p>
+                            <p>RGB 224 / 161 / 6</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 05. PRODUCT VISUALIZATION -->
+        <section
+            class="ember-case-panel"
+            aria-labelledby="ember-product-title"
+        >
+            <div class="ember-case-wrap">
+
+                <header class="ember-case-heading">
+                    <div class="ember-case-kicker">
+                        <span>05</span>
+                        <p>PRODUCT SYSTEM</p>
+                    </div>
+
+                    <div>
+                        <p class="ember-overline">THE EMBERHORN BOTTLE</p>
+
+                        <h2 id="ember-product-title">
+                            A FULLY MODELED PRODUCT BUILT FOR A SHELF-READY PRESENTATION.
+                        </h2>
+                    </div>
+                </header>
+
+                <div class="ember-showcase-grid">
+
+                    <div
+                        class="ember-grid-item ember-large"
+                        onclick="openLightbox(this)"
+                    >
+                        <img
+                            src="images/emberthumb.png"
+                            class="img-primary"
+                            alt="Emberhorn bottle campaign render"
+                        >
+
+                        <img
+                            src="images/redtablegray.jpg"
+                            class="img-hover"
+                            alt="Emberhorn bottle material view"
+                        >
+                    </div>
+
+                    <div
+                        class="ember-grid-item ember-small-top"
+                        onclick="openLightbox(this)"
+                    >
+                        <img
+                            src="images/emberfront.png"
+                            class="img-primary"
+                            alt="Front view of the Emberhorn bottle"
+                        >
+
+                        <img
+                            src="images/emberhorngray.jpg"
+                            class="img-hover"
+                            alt="Front bottle material view"
+                        >
+                    </div>
+
+                    <div
+                        class="ember-grid-item ember-tall"
+                        onclick="openLightbox(this)"
+                    >
+                        <img
+                            src="images/embertable.png"
+                            class="img-primary"
+                            alt="Emberhorn bottle on a red display table"
+                        >
+
+                        <img
+                            src="images/emberhorngray2.jpg"
+                            class="img-hover"
+                            alt="Table render material view"
+                        >
+                    </div>
+
+                    <div
+                        class="ember-grid-item ember-small-bottom"
+                        onclick="openLightbox(this)"
+                    >
+                        <img
+                            src="images/emberdripp4.jpg"
+                            class="img-primary"
+                            alt="Emberhorn sauce drip render"
+                        >
+
+                        <img
+                            src="images/emberdripgray.jpg"
+                            class="img-hover"
+                            alt="Sauce drip material view"
+                        >
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 06. PACKAGING & STORYTELLING -->
+        <section
+            class="ember-case-panel"
+            aria-labelledby="ember-packaging-title"
+        >
+            <div class="ember-case-wrap">
+
+                <header class="ember-case-heading">
+                    <div class="ember-case-kicker">
+                        <span>06</span>
+                        <p>PACKAGE SYSTEM</p>
+                    </div>
+
+                    <div>
+                        <p class="ember-overline">PACKAGING &amp; STORYTELLING</p>
+
+                        <h2 id="ember-packaging-title">
+                            A DARK PACKAGE SYSTEM THAT BUILDS THE WORLD AROUND THE BOTTLE.
+                        </h2>
+                    </div>
+                </header>
+
+                <div class="ember-showcase-grid">
+
+                    <div
+                        class="ember-grid-item ember-full"
+                        onclick="openLightbox(this)"
+                    >
+                        <img
+                            src="images/emberhornbottlesbox52.png"
+                            class="img-primary"
+                            alt="Emberhorn packaging and bottle presentation"
+                        >
+
+                        <img
+                            src="images/emberboxbottlesgray21.png"
+                            class="img-hover"
+                            alt="Packaging material view"
+                        >
+                    </div>
+
+                    <div
+                        class="ember-grid-item ember-large"
+                        onclick="openLightbox(this)"
+                    >
+                        <img
+                            src="images/emberbox5.jpg"
+                            class="img-primary"
+                            alt="Open Emberhorn package"
+                        >
+
+                        <img
+                            src="images/embergraybox2.jpg"
+                            class="img-hover"
+                            alt="Open package material view"
+                        >
+                    </div>
+
+                    <div
+                        class="ember-grid-item ember-small-top"
+                        onclick="openLightbox(this)"
+                    >
+                        <img
+                            src="images/emberboxes2.jpg"
+                            class="img-primary"
+                            alt="Emberhorn package mockups"
+                        >
+
+                        <img
+                            src="images/emberboxestestgray.png"
+                            class="img-hover"
+                            alt="Package mockup material view"
+                        >
+                    </div>
+
+                    <div
+                        class="ember-grid-item ember-tall"
+                        onclick="openLightbox(this)"
+                    >
+                        <img
+                            src="images/emberlightbox214.png"
+                            class="img-primary"
+                            alt="Emberhorn lightbox package"
+                        >
+
+                        <img
+                            src="images/emberboxsidewaysgray2.jpg"
+                            class="img-hover"
+                            alt="Lightbox package material view"
+                        >
+                    </div>
+
+                    <div
+                        class="ember-grid-item ember-small-bottom"
+                        onclick="openLightbox(this)"
+                    >
+                        <img
+                            src="images/emberboxes2.jpg"
+                            class="img-primary"
+                            alt="Emberhorn packaging detail"
+                        >
+
+                        <img
+                            src="images/emberboxestestgray.png"
+                            class="img-hover"
+                            alt="Packaging detail material view"
+                        >
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 07. UPCOMING FLAVORS -->
+        <section
+            class="ember-case-panel"
+            aria-labelledby="ember-flavors-title"
+        >
+            <div class="ember-case-wrap">
+
+                <header class="ember-case-heading">
+                    <div class="ember-case-kicker">
+                        <span>07</span>
+                        <p>FLAVOR EXPANSION</p>
+                    </div>
+
+                    <div>
+                        <p class="ember-overline">UPCOMING FLAVORS</p>
+
+                        <h2 id="ember-flavors-title">
+                            A FLEXIBLE SYSTEM DESIGNED TO EXPAND ACROSS NEW HEAT LEVELS.
+                        </h2>
+                    </div>
+                </header>
+
+                <div class="ember-showcase-alt">
+
+                    <div
+                        class="ember-grid-item ember-long"
+                        onclick="openLightbox(this)"
+                    >
+                        <img
+                            src="images/placeholder-coming-soon-1.jpg"
+                            class="img-primary"
+                            alt="Upcoming Emberhorn flavor concept"
+                        >
+
+                        <img
+                            src="images/placeholder-material-gray.jpg"
+                            class="img-hover"
+                            alt="Upcoming flavor material view"
+                        >
+                    </div>
+
+                    <div
+                        class="ember-grid-item ember-long"
+                        onclick="openLightbox(this)"
+                    >
+                        <img
+                            src="images/placeholder-coming-soon-2.jpg"
+                            class="img-primary"
+                            alt="Second upcoming Emberhorn flavor"
+                        >
+
+                        <img
+                            src="images/placeholder-material-gray.jpg"
+                            class="img-hover"
+                            alt="Second flavor material view"
+                        >
+                    </div>
+
+                    <div
+                        class="ember-grid-item ember-long"
+                        onclick="openLightbox(this)"
+                    >
+                        <img
+                            src="images/placeholder-coming-soon-3.jpg"
+                            class="img-primary"
+                            alt="Third upcoming Emberhorn flavor"
+                        >
+
+                        <img
+                            src="images/placeholder-material-gray.jpg"
+                            class="img-hover"
+                            alt="Third flavor material view"
+                        >
+                    </div>
+
+                    <div
+                        class="ember-grid-item ember-medium"
+                        onclick="openLightbox(this)"
+                    >
+                        <img
+                            src="images/placeholder-medium-1.jpg"
+                            class="img-primary"
+                            alt="Emberhorn flavor system detail"
+                        >
+
+                        <img
+                            src="images/placeholder-material-gray.jpg"
+                            class="img-hover"
+                            alt="Flavor system detail material view"
+                        >
+                    </div>
+
+                    <div
+                        class="ember-grid-item ember-medium"
+                        onclick="openLightbox(this)"
+                    >
+                        <img
+                            src="images/placeholder-medium-2.jpg"
+                            class="img-primary"
+                            alt="Emberhorn future release concept"
+                        >
+
+                        <img
+                            src="images/placeholder-material-gray.jpg"
+                            class="img-hover"
+                            alt="Future release material view"
+                        >
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 08. CONCEPT WORK -->
+        <section
+            class="ember-case-panel"
+            aria-labelledby="ember-concept-title"
+        >
+            <div class="ember-case-wrap">
+
+                <header class="ember-case-heading">
+                    <div class="ember-case-kicker">
+                        <span>08</span>
+                        <p>CONCEPT WORK</p>
+                    </div>
+
+                    <div>
+                        <p class="ember-overline">EXPLORATION &amp; DEVELOPMENT</p>
+
+                        <h2 id="ember-concept-title">
+                            THE SKETCHES, LABEL STUDIES, STRUCTURES, AND TEXTURES BEHIND THE SYSTEM.
+                        </h2>
+                    </div>
+                </header>
+
+                <div class="ember-concept-gallery">
+                    <img src="images/openbox.png" alt="Open package concept">
+                    <img src="images/emberbox.png" alt="Emberhorn package concept">
+                    <img src="images/boxember.png" alt="Box structure concept">
+                    <img src="images/EMBERLABEL3.png" alt="Emberhorn label development">
+                    <img src="images/FlamingBullks.png" alt="Flaming bull logo study">
+                    <img src="images/BULLSKETCH.png" alt="Bull emblem sketch">
+                    <img src="images/boxdetailsflat.png" alt="Flat package details">
+                    <img src="images/PEPPERSCOLOR.png" alt="Pepper color study">
+                    <img src="images/graintextureember.png" alt="Emberhorn grain texture">
+                </div>
+
+                <div class="ember-wireframe-box">
+                    <img
+                        src="images/box-wireframe.png"
+                        alt="Emberhorn packaging wireframe"
+                    >
+                </div>
+
+            </div>
+        </section>
+
+    </main>
 
     <footer class="brutalist-footer">
-  <div class="footer-frame">
-    <!-- Big impact text -->
-    <div class="footer-main">
-      <h2 class="footer-logo-text">RYAN <br>SAMKUNJU</h2>
-      <div class="footer-contact">
-        <p class="tech-label">[ CONTACT_ME ]</p>
-        <a href="mailto:your@email.com" class="footer-link">@RYANSAMKUNJUNHP</a>
-      </div>
-    </div>
+        <div class="footer-frame">
 
-    <!-- Bottom metadata bar -->
-    <div class="footer-bottom">
-      <div class="footer-meta">
-        <p>VERSION: 2.1.0</p>
-        <p>&copy; 2026 ALL RIGHTS RESERVED</p>
-        <p>STATUS: OPEN_FOR_WORK</p>
-      </div>
+            <div class="footer-main">
+                <h2 class="footer-logo-text">RYAN<br>SAMKUNJU</h2>
 
-      <!-- Scroll to Top Button -->
-      <div class="scroll-container">
-        <a href="#top" class="brutalist-scroll-btn">
-          <span class="arrow">↑</span>
-          <span class="btn-text">TOP</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</footer>
+                <div class="footer-contact">
+                    <p class="tech-label">[ CONTACT_ME ]</p>
 
- <!-- THE LIGHTBOX STRUCTURE -->
-<div id="lightbox" class="lightbox" aria-hidden="true">
+                    <a
+                        href="mailto:your@email.com"
+                        class="footer-link"
+                    >
+                        @RYANSAMKUNJUNHP
+                    </a>
+                </div>
+            </div>
 
-    <button class="close-lightbox" type="button" aria-label="Close lightbox">
-        &times;
-    </button>
+            <div class="footer-bottom">
 
-    <button class="lightbox-arrow lightbox-prev" type="button" aria-label="Previous image">
-        &#10094;
-    </button>
+                <div class="footer-meta">
+                    <p>VERSION: 2.1.0</p>
+                    <p>&copy; 2026 ALL RIGHTS RESERVED</p>
+                    <p>STATUS: OPEN_FOR_WORK</p>
+                </div>
 
-    <!-- Normal image mode: Gooey -->
-    <img id="lightbox-img" src="" alt="Full View">
+                <div class="project-nav-container">
+                    <a href="index.html" class="brutalist-nav-btn">
+                        <span class="arrow">←</span>
+                        <span class="btn-text">HOME</span>
+                    </a>
 
-    <!-- Slider mode: Emberhorn -->
-    <div id="slider-container" class="slider-wrapper">
-        <div class="comparison-slider">
-            <img id="img-after" src="" alt="Regular render">
-            <img id="img-before" src="" alt="Material view">
+                    <a href="gooey.html" class="brutalist-nav-btn">
+                        <span class="arrow">→</span>
+                        <span class="btn-text">NEXT</span>
+                    </a>
+                </div>
 
-            <input 
-                id="slider-range"
-                class="slider-input"
-                type="range"
-                min="0"
-                max="100"
-                value="50"
-                aria-label="Compare image slider"
-            >
-
-            <div class="slider-handle"></div>
+            </div>
         </div>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+
+        <button
+            class="close-lightbox"
+            type="button"
+            aria-label="Close lightbox"
+        >
+            &times;
+        </button>
+
+        <button
+            class="lightbox-arrow lightbox-prev"
+            type="button"
+            aria-label="Previous image"
+        >
+            &#10094;
+        </button>
+
+        <img id="lightbox-img" src="" alt="Full view">
+
+        <div id="slider-container" class="slider-wrapper">
+            <div class="comparison-slider">
+
+                <img
+                    id="img-after"
+                    src=""
+                    alt="Regular render"
+                >
+
+                <img
+                    id="img-before"
+                    src=""
+                    alt="Material view"
+                >
+
+                <input
+                    id="slider-range"
+                    class="slider-input"
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="50"
+                    aria-label="Compare regular and material render"
+                >
+
+                <div class="slider-handle"></div>
+            </div>
+        </div>
+
+        <button
+            class="lightbox-arrow lightbox-next"
+            type="button"
+            aria-label="Next image"
+        >
+            &#10095;
+        </button>
+
     </div>
 
-    <button class="lightbox-arrow lightbox-next" type="button" aria-label="Next image">
-        &#10095;
-    </button>
-
-</div>
-
-</body>
-</html>
 </body>
 </html>

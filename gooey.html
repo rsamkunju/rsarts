@@ -33,228 +33,544 @@
     <!-- Icons and Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<nav>
-    <div class="nav-left">
-        <ul>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#services">Services</a></li>
-        </ul>
-    </div>
+<nav class="minimal-nav">
+        <div class="nav-left">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+            </ul>
+        </div>
+      
+        <div class="logo">
+            <a href="index.html"><img src="images/NEWRSRSLOGO.png" alt="Logo" /></a>
+        </div>
 
-    <div class="logo">
-        <a href="index.html">
-            <img src="images/RS12.png" alt="Logo">
-        </a>
-    </div>
+        <div class="nav-right">
+            <ul>
+                <li><a href="#services">Toolkit</a></li>
+                <li><a href="#resume">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <div class="nav-right">
-        <ul>
-            <li><a href="index.html#portfolio">Portfolio</a></li>
-            <li><a href="index.html#resume">Resume</a></li>
-        </ul>
-    </div>
-</nav>
+<main class="project-page gooey-case-study">
 
-<main class="project-page">
+    <!-- KEEPING YOUR EXISTING BACKGROUND ASSET -->
+    <img src="images/GOOEYHALF.png" class="side-gooey-bg" alt="" aria-hidden="true">
 
-    <!-- Background Asset -->
-    <img src="images/sidetest.png" class="side-gooey-bg" alt="">
+    <!-- 01. PROJECT OVERVIEW -->
+    <section class="gooey-case-panel gooey-case-intro" aria-labelledby="gooey-overview-title">
+        <div class="gooey-case-wrap">
 
-    <section class="project-top">
-        <div class="project-main-logo">
-            <img src="images/GOOEYNEW2.png" alt="Gooey Logo">
+            <div class="gooey-intro-grid">
+                <div class="gooey-intro-copy">
+
+                    <div class="gooey-case-kicker">
+                        <span>01</span>
+                        <p>PROJECT OVERVIEW</p>
+                    </div>
+
+                    <p class="gooey-overline">BRANDING &amp; PACKAGE DESIGN</p>
+                    <h1 id="gooey-overview-title">A WARM, PLAYFUL IDENTITY BUILT AROUND THE PERFECT MELT.</h1>
+
+                    <p class="gooey-intro-description">
+                        Gooey is a conceptual cookie brand inspired by a warm and melted cookie,
+                        bold dessert visuals, and the playful anticipation of the first bite.
+                        The identity combines custom dripping typography, chocolate inspired colors,
+                        colorful packaging, promotional campaigns, and physical customer touchpoints.
+                    </p>
+                </div>
+
+                <div class="gooey-overview-logo">
+                    <img src="images/GOOEYFINALLAYOUT.png" alt="Gooey Logo">
+                </div>
+
+                <dl class="gooey-project-meta">
+                    <div>
+                        <dt>CLIENT</dt>
+                        <dd>GOOEY</dd>
+                    </div>
+                    <div>
+                        <dt>CATEGORY</dt>
+                        <dd>BRANDING / PACKAGE</dd>
+                    </div>
+                    <div>
+                        <dt>YEAR</dt>
+                        <dd>2025</dd>
+                    </div>
+                    <div>
+                        <dt>TOOLS</dt>
+                        <dd>ILLUSTRATOR / PHOTOSHOP / AFTER EFFECTS</dd>
+                    </div>
+                    <div>
+                        <dt>DIRECTION</dt>
+                        <dd>WARM / PLAYFUL / INDULGENT</dd>
+                    </div>
+                </dl>
+            </div>
+
         </div>
     </section>
 
-    <!-- SECTION 1: PROMOTIONAL & DIGITAL ASSETS -->
-    <div class="gooey-header">
-        <h2>PROMOTIONAL & DIGITAL ASSETS</h2>
+    <!-- 02. LOGO SYSTEM -->
+    <section class="gooey-case-panel" aria-labelledby="gooey-logo-system-title">
+        <div class="gooey-case-wrap">
+
+            <header class="gooey-case-heading">
+                <div class="gooey-case-kicker">
+                    <span>02</span>
+                    <p>BRAND IDENTITY</p>
+                </div>
+
+                <div>
+                    <p class="gooey-overline">LOGO SYSTEM</p>
+
+                    <h2 id="gooey-logo-system-title">
+                        A FLEXIBLE IDENTITY DESIGNED TO WORK ACROSS EVERY BRAND TOUCHPOINT.
+                    </h2>
+
+                    <p class="gooey-logo-intro">
+                        The primary wordmark is supported by simplified
+                        marks for packaging, signage, social icons, stickers, and small-format use.
+                    </p>
+                </div>
+            </header>
+
+            <!--
+                Export these four files as transparent PNGs or SVGs:
+
+                images/GOOEYLOCKUP-HORIZONTAL.png
+                images/GOOEYMARK.png
+                images/GOOEYLOCKUP-STACKED.png
+                images/GOOEYLOGOGRID.png
+            -->
+
+            <div class="gooey-logo-showcase">
+
+                <div class="gooey-logo-showcase-left">
+
+                    <figure class="gooey-logo-board gooey-logo-board--horizontal">
+                        <img
+                            src="images/GOOEYFINALLAYOUT.png"
+                            alt="Gooey horizontal logo lockup"
+                        >
+
+                        <figcaption>HORIZONTAL LOCKUP</figcaption>
+                    </figure>
+
+                    <figure class="gooey-logo-board gooey-logo-board--mark">
+                        <img
+                            src="images/GooeyG.png"
+                            alt="Gooey simplified brand mark"
+                        >
+
+                        <figcaption>SIMPLIFIED MARK</figcaption>
+                    </figure>
+
+                </div>
+
+            </div>
+
+           <div class="gooey-ideology">
+
+    <div class="gooey-ideology-heading">
+        <p class="gooey-overline">BRAND IDEOLOGY</p>
+
+        <h3>
+            BUILT FROM<br>
+            WARMTH, MELT<br>
+            &amp; PLAY.
+        </h3>
+    </div>
+
+    <div class="gooey-ideology-principles">
+
+        <figure class="gooey-ideology-item">
+            <div class="gooey-ideology-icon">
+                <img
+                    src="images/GOOEY-IDEOLOGY-MELT.png"
+                    alt="Melting graphic principle"
+                >
+            </div>
+
+            <figcaption>MELT</figcaption>
+        </figure>
+
+        <figure class="gooey-ideology-item">
+            <div class="gooey-ideology-icon">
+                <img
+                    src="images/GOOEY-IDEOLOGY-WARMTH.png"
+                    alt="Warm cookie graphic principle"
+                >
+            </div>
+
+            <figcaption>WARMTH</figcaption>
+        </figure>
+
+        <figure class="gooey-ideology-item">
+            <div class="gooey-ideology-icon">
+                <img
+                    src="images/GOOEY-IDEOLOGY-PLAY.png"
+                    alt="Playful graphic principle"
+                >
+            </div>
+
+            <figcaption>PLAY</figcaption>
+        </figure>
+
+    </div>
+
+    <div class="gooey-ideology-copy">
         <p>
-           This section presents Gooey’s social media, promotional, and campaign visuals, focusing on how the brand’s chocolate-inspired color palette and indulgent personality translate across digital platforms. These assets create a recognizable dessert brand presence, drawing from the bold, polished look of modern bakery and cookie brands.
+       The Gooey logo is inspired by the feeling of a warm, melty indulgence. 
+       Rounded letterforms communicate softness and playfulness, while exaggerated drips reflect the rich, 
+       gooey texture of the cookies.
+        </p>
+
+        <p>
+         A smile shaped silhouette brings the logo together, framing the Gooey letterforms like a mouthful of warm chocolatey delights. The same smile we guarantee you’ll have after every bite.
         </p>
     </div>
 
-    <div class="gooey-showcase-grid">
-
-    <div class="gooey-grid-item gooey-feature js-lightbox-item" data-lightbox-gallery="gooey-promo">
-        <img src="images/gooeybannerrewr2.jpg" class="img-primary" alt="Gooey Brand Promotion Banner">
-    </div>
-
-    <div class="gooey-grid-item gooey-portrait js-lightbox-item" data-lightbox-gallery="gooey-promo">
-        <img src="images/gooeybanner1252.jpg" class="img-primary" alt="Gooey Promotion Banner">
-    </div>
-
-    <div class="gooey-grid-item gooey-social js-lightbox-item" data-lightbox-gallery="gooey-promo">
-        <img src="images/GooeyMedia1.jpg" class="img-primary" alt="Gooey Asset 1">
-    </div>
-
-    <div class="gooey-grid-item gooey-social js-lightbox-item" data-lightbox-gallery="gooey-promo">
-        <img src="images/COOKIE1CHOCOLATE.jpg" class="img-primary" alt="Gooey Asset 2">
-    </div>
-
-    <div class="gooey-grid-item gooey-social js-lightbox-item" data-lightbox-gallery="gooey-promo">
-        <img src="images/COOKIE3CHOCOLATE.jpg" class="img-primary" alt="Gooey Asset 3">
-    </div>
-
-    <div class="gooey-grid-item gooey-social js-lightbox-item" data-lightbox-gallery="gooey-promo">
-        <img src="images/COOKIEMEDIA3.jpg" class="img-primary" alt="Gooey Asset 4">
-    </div>
-
-  <div class="gooey-grid-item gooey-social js-lightbox-item"
-     data-lightbox-gallery="gooey-promo"
-     data-type="video"
-     data-src="images/gooeycookies.mp4">
-
-    <video class="img-primary gooey-video-thumb" autoplay muted loop playsinline preload="metadata">
-        <source src="images/gooeycookies.mp4" type="video/mp4">
-    </video>
 </div>
 
-</div>
-
-    <!-- SECTION 2: PACKAGING & EXPERIENCE -->
-    <div class="gooey-header">
-        <h2>Packaging & Experience</h2>
-        <p>
-         This section highlights the consistency of Gooey’s colors, patterns, and visual style across multiple packaging pieces and brand touchpoints.
-        </p>
-    </div>
-
-    <div class="gooey-showcase-grid">
-
-        <div class="gooey-grid-item gooey-banner js-lightbox-item" data-lightbox-gallery="gooey-packaging">
-            <img src="images/gooeystuffstationary.jpg" class="img-primary" alt="Gooey Banner Wide">
         </div>
+    </section>
 
-        <div class="gooey-grid-item gooey-square js-lightbox-item" data-lightbox-gallery="gooey-packaging">
-            <img src="images/gooeyboxglossy.png" class="img-primary" alt="Gooey Box">
+    <!-- 03. TYPOGRAPHY -->
+    <section class="gooey-case-panel" aria-labelledby="gooey-type-title">
+        <div class="gooey-case-wrap">
+
+            <header class="gooey-case-heading">
+                <div class="gooey-case-kicker">
+                    <span>03</span>
+                    <p>TYPOGRAPHY</p>
+                </div>
+
+                <div>
+                    <p class="gooey-overline">DISPLAY + SUPPORTING TYPE</p>
+                    <h2 id="gooey-type-title">PLAYFUL UP FRONT. CLEAN AND FUNCTIONAL UNDERNEATH.</h2>
+                </div>
+            </header>
+
+            <div class="gooey-type-grid">
+
+                <!-- The screen blend removes the visible black rectangle
+                     from the existing white-on-black alphabet PNG. -->
+                <article class="gooey-type-card gooey-type-card--display">
+                    <div class="gooey-type-card-heading">
+                        <span>01</span>
+                        <div>
+                            <p>CUSTOM DISPLAY</p>
+                            <h3>GOOEY DISPLAY</h3>
+                        </div>
+                    </div>
+
+                    <div class="gooey-alpha-mask">
+                        <img src="images/GOOEYALPHA.png" alt="Gooey custom display alphabet">
+                    </div>
+
+                    <p class="gooey-type-note">
+                        Used for the primary wordmark, flavor names, campaign statements,
+                        and high-impact brand moments.
+                    </p>
+                </article>
+
+                <article class="gooey-type-card gooey-type-card--support">
+                    <div class="gooey-type-card-heading">
+                        <span>02</span>
+                        <div>
+                            <p>SUPPORTING TYPE</p>
+                            <h3>BARLOW CONDENSED</h3>
+                        </div>
+                    </div>
+
+                    <div class="gooey-live-type">
+                        <p class="gooey-live-type-large">Aa</p>
+                        <p class="gooey-live-type-alphabet">
+                            ABCDEFGHIJKLM<br>
+                            NOPQRSTUVWXYZ<br>
+                            0123456789
+                        </p>
+                    </div>
+
+                    <div class="gooey-type-weights">
+                        <span>REGULAR</span>
+                        <span>SEMIBOLD</span>
+                        <span>BLACK</span>
+                    </div>
+
+                    <p class="gooey-type-note">
+                        Used for body copy, product details, packaging information,
+                        captions, and digital communication.
+                    </p>
+                </article>
+
+            </div>
+
         </div>
+    </section>
 
-        <div class="gooey-grid-item gooey-square js-lightbox-item" data-lightbox-gallery="gooey-packaging">
-            <img src="images/gooeyboxreworkopen.jpg" class="img-primary" alt="Gooey Box Opened">
-        </div>
+    <!-- 04. COLOR SYSTEM -->
+    <section class="gooey-case-panel" aria-labelledby="gooey-color-title">
+        <div class="gooey-case-wrap">
 
-         <div class="gooey-grid-item gooey-square js-lightbox-item" data-lightbox-gallery="gooey-packaging">
-            <img src="images/gooeycookiebagged.png" class="img-primary" alt="Gooey Cookie">
-        </div>
-         <div class="gooey-grid-item gooey-square js-lightbox-item" data-lightbox-gallery="gooey-packaging">
-            <img src="images/gooeynapkin.png" class="img-primary" alt="Gooey Napkin">
-        </div>
-          <div class="gooey-grid-item gooey-square js-lightbox-item" data-lightbox-gallery="gooey-packaging">
-            <img src="images/gooeybackfront.jpg" class="img-primary" alt="Close Up Texture">
-        </div>
-        <div class="gooey-grid-item gooey-square js-lightbox-item" data-lightbox-gallery="gooey-packaging">
-            <img src="images/gooeybackback.jpg" class="img-primary" alt="Close Up Texture">
-        </div>
+            <header class="gooey-case-heading">
+                <div class="gooey-case-kicker">
+                    <span>04</span>
+                    <p>COLOR SYSTEM</p>
+                </div>
 
-        <div class="gooey-grid-item gooey-square js-lightbox-item" data-lightbox-gallery="gooey-packaging">
-            <img src="images/gooeybacksopen.jpg" class="img-primary" alt="Gooey Bag">
-        </div>
-         <div class="gooey-grid-item gooey-square js-lightbox-item" data-lightbox-gallery="gooey-packaging">
-            <img src="images/gooeycookiebag.jpg" class="img-primary" alt="Gooey Bag">
-        </div>
-
-    </div>
-
-    <!-- SECTION 3: FUTURE CONCEPTS -->
-   <div class="gooey-header">
-    <h2>REAL WORLD BRAND APPLICATIONS</h2>
-    <p>
-        This section showcases Gooey’s real world customer touchpoints, including environmental design, merchandise, print materials, and miscellaneous branded items. Storefront graphics, signage, apparel, loyalty cards, bags, stickers, and other physical applications demonstrate how the Gooey identity extends beyond packaging and digital promotion.
-    </p>
-</div>
-
-    <div class="gooey-showcase-alt">
-
-        <div class="gooey-grid-item gooey-long js-lightbox-item" data-lightbox-gallery="gooey-concepts">
-            <img src="images/GOOEYLOYALTY.jpg" class="img-primary" alt="Upcoming Concept">
-        </div>
-
-        <div class="gooey-grid-item gooey-long js-lightbox-item" data-lightbox-gallery="gooey-concepts">
-            <img src="images/gooeysign.jpg" class="img-primary" alt="Future Flavor">
-        </div>
-
-        <div class="gooey-grid-item gooey-long js-lightbox-item" data-lightbox-gallery="gooey-concepts">
-            <img src="images/gooeyapron.jpg" class="img-primary" alt="Seasonal Design">
-        </div>
-
-        <div class="gooey-grid-item gooey-medium js-lightbox-item" data-lightbox-gallery="gooey-concepts">
-            <img src="images/GooeyPole.jpg" class="img-primary" alt="STREET STICKER">
-        </div>
-        
-
-        <div class="gooey-grid-item gooey-medium js-lightbox-item" data-lightbox-gallery="gooey-concepts">
-            <img src="images/gooeystore.jpg" class="img-primary" alt="Concept Detail">
-        </div>
-        
-
-    </div>
-
-    <!-- BRUTALIST TECHNICALS SECTION -->
-    <section class="brutalist-technical-grid">
-
-        <div class="b-row">
-            <div class="b-block main-info">
-                <span class="b-label">[ 01 ] PROJECT INFORMATION </span>
-                <h1 class="b-title">GOOEY COOKIES</h1>
-                <h2 class="b-subtitle">BRANDING & PACKAGE DESIGN</h2>
-                <p class="b-body">
-                    Gooey is a conceptual cookie branding and package design project built around the idea of warm,
-                    melted-center cookies and playful dessert visuals. The branding combines custom display typography,
-                    dripping chocolate-inspired graphics, and modern bakery-inspired visuals.
+                <div>
+                    <p class="gooey-overline">CHOCOLATE-INSPIRED PALETTE</p>
+                    <h2 id="gooey-color-title">A WARM RANGE OF CHOCOLATE COLORS</h2>
+                     <div class="gooey-color-statement">
+                <p>
+                    The palette is intentionally tonal. Dark cocoa anchors the identity,
+                    caramel creates emphasis, and the lighter dough and cream shades provide
+                    enough contrast for packaging, typography, and digital layouts.
                 </p>
             </div>
-
-            <div class="b-block specs">
-                <span class="b-label">[ 02 ] PROJECT SPECS</span>
-                <div class="b-spec-list">
-                    <div class="b-spec-item"><strong>CLIENT</strong> <span>GOOEY</span></div>
-                    <div class="b-spec-item"><strong>CATEGORY</strong> <span>BRANDING / PACKAGE</span></div>
-                    <div class="b-spec-item"><strong>YEAR</strong> <span>2025</span></div>
-                    <div class="b-spec-item"><strong>TOOLS</strong> <span>ILLUSTRATOR / PHOTOSHOP / AFTEREFFECTS</span></div>
-                    <div class="b-spec-item"><strong>DIRECTION</strong> <span>WARM / GOOEY <span></div>
                 </div>
+            </header>
+
+            <div class="gooey-color-grid">
+                <article class="gooey-color-card gooey-color-card--dark" style="--swatch:#2A160D">
+                    <div class="gooey-color-number">01</div>
+                    <div class="gooey-color-info">
+                        <h3>DARK CHOCOLATE</h3>
+                        <p>#2A160D</p>
+                        <p>RGB 42 / 22 / 13</p>
+                    </div>
+                </article>
+
+                <article class="gooey-color-card gooey-color-card--dark" style="--swatch:#5A2E16">
+                    <div class="gooey-color-number">02</div>
+                    <div class="gooey-color-info">
+                        <h3>MILK CHOCOLATE</h3>
+                        <p>#5A2E16</p>
+                        <p>RGB 90 / 46 / 22</p>
+                    </div>
+                </article>
+
+                <article class="gooey-color-card" style="--swatch:#C97A3D">
+                    <div class="gooey-color-number">03</div>
+                    <div class="gooey-color-info">
+                        <h3>CARAMEL</h3>
+                        <p>#C97A3D</p>
+                        <p>RGB 201 / 122 / 61</p>
+                    </div>
+                </article>
+
+                <article class="gooey-color-card" style="--swatch:#D9B38C">
+                    <div class="gooey-color-number">04</div>
+                    <div class="gooey-color-info">
+                        <h3>COOKIE DOUGH</h3>
+                        <p>#D9B38C</p>
+                        <p>RGB 217 / 179 / 140</p>
+                    </div>
+                </article>
+
+                <article class="gooey-color-card" style="--swatch:#F6E8D5">
+                    <div class="gooey-color-number">05</div>
+                    <div class="gooey-color-info">
+                        <h3>VANILLA CREAM</h3>
+                        <p>#F6E8D5</p>
+                        <p>RGB 246 / 232 / 213</p>
+                    </div>
+                </article>
             </div>
+
         </div>
-
-        <div class="b-row split-border">
-            <div class="b-block typography">
-                <span class="b-label">[ 03 ] TYPOGRAPHY</span>
-                <div class="b-type-container">
-                    <p class="b-tiny"></p>
-                    <img src="images/GOOEYALPHA.png" alt="Font Alpha" class="b-type-img">
-                     <!-- The Horizontal Line -->
-    <hr class="b-type-divider">
-                     <img src="images/BARLOWFONT1.png" alt="Font Alpha" class="b-type-img">
-                </div>
-            </div>
-
-            <div class="b-block colors">
-                <span class="b-label">[ 04 ] COLOR VALUES</span>
-                <div class="b-color-bars">
-                   <div class="b-bar" style="background:#2A160D"><span> DARK CHOCOLATE BROWN <br>#2A160D</span></div>
-                    <div class="b-bar" style="background:#5A2E16"><span>MILK CHOCOLATE BROWN <br>#5A2E16</span></div>
-                    <div class="b-bar" style="background:#C97A3D"><span>CARAMEL BROWN <br>#C97A3D</span></div>
-                    <div class="b-bar" style="background:#D9B38C"><span>COOKIE DOUGH BEIGE <br>#D9B38C</span></div>
-                    <div class="b-bar" style="background:#F6E8D5"><span>VANILLA CREAM <br>#F6E8D5</span></div>
-                </div>
-            </div>
-        </div>
-
     </section>
 
-    <!-- CONCEPT GALLERY -->
-    <section class="concept-section">
-        <h2 class="concept-title">CONCEPT WORK</h2>
+    <!-- 05. PROMOTIONAL & DIGITAL ASSETS -->
+    <section class="gooey-case-panel" aria-labelledby="gooey-promo-title">
+        <div class="gooey-case-wrap">
 
-        <div class="concept-gallery">
-            <img src="images/GooeyColors.png" alt="">
-            <img src="images/Gooeyconcept1.png" alt="">
-            <img src="images/boxmeasure1.png" alt="">
+            <header class="gooey-case-heading">
+                <div class="gooey-case-kicker">
+                    <span>05</span>
+                    <p>CAMPAIGN SYSTEM</p>
+                </div>
+
+                <div>
+                    <p class="gooey-overline">PROMOTIONAL &amp; DIGITAL ASSETS</p>
+                    <h2 id="gooey-promo-title">THE IDENTITY IN MOTION, SOCIAL, AND CAMPAIGN CONTENT.</h2>
+                </div>
+            </header>
+
+            <div class="gooey-showcase-grid">
+
+                <div class="gooey-grid-item gooey-feature js-lightbox-item" data-lightbox-gallery="gooey-promo">
+                    <img src="images/gooeybannerrewr2.jpg" class="img-primary" alt="Gooey brand campaign banner">
+                </div>
+
+                <div class="gooey-grid-item gooey-portrait js-lightbox-item" data-lightbox-gallery="gooey-promo">
+                    <img src="images/gooeybanner1252.jpg" class="img-primary" alt="Gooey vertical campaign banner">
+                </div>
+
+                <div class="gooey-grid-item gooey-social js-lightbox-item" data-lightbox-gallery="gooey-promo">
+                    <img src="images/GooeyMedia1.jpg" class="img-primary" alt="Gooey social media design">
+                </div>
+
+                <div class="gooey-grid-item gooey-social js-lightbox-item" data-lightbox-gallery="gooey-promo">
+                    <img src="images/COOKIE1CHOCOLATE.jpg" class="img-primary" alt="Chocolate chip promotional asset">
+                </div>
+
+                <div class="gooey-grid-item gooey-social js-lightbox-item" data-lightbox-gallery="gooey-promo">
+                    <img src="images/COOKIE3CHOCOLATE.jpg" class="img-primary" alt="Red velvet promotional asset">
+                </div>
+
+                <div class="gooey-grid-item gooey-social js-lightbox-item" data-lightbox-gallery="gooey-promo">
+                    <img src="images/COOKIEMEDIA3.jpg" class="img-primary" alt="Double chocolate promotional asset">
+                </div>
+
+                <div
+                    class="gooey-grid-item gooey-social js-lightbox-item"
+                    data-lightbox-gallery="gooey-promo"
+                    data-type="video"
+                    data-src="images/gooeycookies.mp4"
+                >
+                    <video class="img-primary gooey-video-thumb" autoplay muted loop playsinline preload="metadata">
+                        <source src="images/gooeycookies.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 06. PACKAGING & EXPERIENCE -->
+    <section class="gooey-case-panel" aria-labelledby="gooey-packaging-title">
+        <div class="gooey-case-wrap">
+
+            <header class="gooey-case-heading">
+                <div class="gooey-case-kicker">
+                    <span>06</span>
+                    <p>PACKAGE SYSTEM</p>
+                </div>
+
+                <div>
+                    <p class="gooey-overline">PACKAGING &amp; EXPERIENCE</p>
+                    <h2 id="gooey-packaging-title">A FLEXIBLE SYSTEM ACROSS EVERY PRODUCT TOUCHPOINT.</h2>
+                </div>
+            </header>
+
+            <div class="gooey-showcase-grid">
+
+                <div class="gooey-grid-item gooey-banner js-lightbox-item" data-lightbox-gallery="gooey-packaging">
+                    <img src="images/gooeystuffstationary.jpg" class="img-primary" alt="Gooey package collection">
+                </div>
+
+                <div class="gooey-grid-item gooey-square js-lightbox-item" data-lightbox-gallery="gooey-packaging">
+                    <img src="images/gooeyboxglossy.png" class="img-primary" alt="Closed Gooey cookie box">
+                </div>
+
+                <div class="gooey-grid-item gooey-square js-lightbox-item" data-lightbox-gallery="gooey-packaging">
+                    <img src="images/gooeyboxreworkopen.jpg" class="img-primary" alt="Open Gooey cookie box">
+                </div>
+
+                <div class="gooey-grid-item gooey-square js-lightbox-item" data-lightbox-gallery="gooey-packaging">
+                    <img src="images/gooeycookiebagged.png" class="img-primary" alt="Wrapped Gooey cookie">
+                </div>
+
+                <div class="gooey-grid-item gooey-square js-lightbox-item" data-lightbox-gallery="gooey-packaging">
+                    <img src="images/gooeynapkin.png" class="img-primary" alt="Gooey branded napkin">
+                </div>
+
+                <div class="gooey-grid-item gooey-square js-lightbox-item" data-lightbox-gallery="gooey-packaging">
+                    <img src="images/gooeybackfront.jpg" class="img-primary" alt="Front Gooey cookie bag">
+                </div>
+
+                <div class="gooey-grid-item gooey-square js-lightbox-item" data-lightbox-gallery="gooey-packaging">
+                    <img src="images/gooeybackback.jpg" class="img-primary" alt="Back Gooey cookie bag">
+                </div>
+
+                <div class="gooey-grid-item gooey-square js-lightbox-item" data-lightbox-gallery="gooey-packaging">
+                    <img src="images/gooeybacksopen.jpg" class="img-primary" alt="Open Gooey cookie bag">
+                </div>
+
+                <div class="gooey-grid-item gooey-square js-lightbox-item" data-lightbox-gallery="gooey-packaging">
+                    <img src="images/gooeycookiebag.jpg" class="img-primary" alt="Gooey cookie package">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 07. REAL-WORLD APPLICATIONS -->
+    <section class="gooey-case-panel" aria-labelledby="gooey-applications-title">
+        <div class="gooey-case-wrap">
+
+            <header class="gooey-case-heading">
+                <div class="gooey-case-kicker">
+                    <span>07</span>
+                    <p>BRAND APPLICATIONS</p>
+                </div>
+
+                <div>
+                    <p class="gooey-overline">REAL-WORLD TOUCHPOINTS</p>
+                    <h2 id="gooey-applications-title">BRINGING THE BRAND OUT OF THE PACKAGE AND INTO THE WORLD.</h2>
+                </div>
+            </header>
+
+            <div class="gooey-showcase-alt">
+
+                <div class="gooey-grid-item gooey-long js-lightbox-item" data-lightbox-gallery="gooey-real-world">
+                    <img src="images/GOOEYLOYALTY.jpg" class="img-primary" alt="Gooey loyalty materials">
+                </div>
+
+                <div class="gooey-grid-item gooey-long js-lightbox-item" data-lightbox-gallery="gooey-real-world">
+                    <img src="images/gooeysign.jpg" class="img-primary" alt="Gooey sidewalk sign">
+                </div>
+
+                <div class="gooey-grid-item gooey-long js-lightbox-item" data-lightbox-gallery="gooey-real-world">
+                    <img src="images/gooeyapron.jpg" class="img-primary" alt="Gooey branded apron">
+                </div>
+
+                <div class="gooey-grid-item gooey-medium js-lightbox-item" data-lightbox-gallery="gooey-real-world">
+                    <img src="images/GooeyPole.jpg" class="img-primary" alt="Gooey street sticker">
+                </div>
+
+                <div class="gooey-grid-item gooey-medium js-lightbox-item" data-lightbox-gallery="gooey-real-world">
+                    <img src="images/gooeystore.jpg" class="img-primary" alt="Gooey storefront application">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 08. CONCEPT WORK -->
+    <section class="gooey-case-panel" aria-labelledby="gooey-concept-title">
+        <div class="gooey-case-wrap">
+
+            <header class="gooey-case-heading">
+                <div class="gooey-case-kicker">
+                    <span>08</span>
+                    <p>CONCEPT WORK</p>
+                </div>
+
+                <div>
+                    <p class="gooey-overline">EXPLORATION &amp; DEVELOPMENT</p>
+                    <h2 id="gooey-concept-title">THE IDEAS, TESTS, AND STRUCTURES BEHIND THE FINAL SYSTEM.</h2>
+                </div>
+            </header>
+
+            <div class="concept-gallery">
+                <img src="images/GooeyColors.png" alt="Gooey logo and color explorations">
+                <img src="images/Gooeyconcept1.png" alt="Early Gooey identity concepts">
+                <img src="images/boxmeasure1.png" alt="Gooey package dieline measurements">
+            </div>
+
         </div>
     </section>
 
@@ -264,7 +580,7 @@
     <div class="footer-frame">
 
         <div class="footer-main">
-            <h2 class="footer-logo-text">RYAN <br>SAMKUNJU</h2>
+            <h2 class="footer-logo-text">RYAN<br>SAMKUNJU</h2>
 
             <div class="footer-contact">
                 <p class="tech-label">[ CONTACT_ME ]</p>
@@ -279,7 +595,7 @@
                 <p>STATUS: OPEN_FOR_WORK</p>
             </div>
 
-            <div class="project-nav-container">
+            <nav class="project-nav-container" aria-label="Project navigation">
                 <a href="index.html" class="brutalist-nav-btn">
                     <span class="arrow">←</span>
                     <span class="btn-text">HOME</span>
@@ -289,7 +605,7 @@
                     <span class="arrow">→</span>
                     <span class="btn-text">NEXT</span>
                 </a>
-            </div>
+            </nav>
         </div>
 
     </div>

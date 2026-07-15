@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Ryan Sam</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+    <script src="filter.js" defer></script>
+    <script src="scroll.js" defer></script>
+    <script src="name.js" defer></script>
+    <script src="transition.js" defer></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-31W8MHHCCV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-31W8MHHCCV');
+</script>
+    <script>
+        function toggleAdobe() {
+            document.getElementById("adobe-tools").classList.toggle("open");
+        }
+    </script>
+    <!-- Icons and Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap" rel="stylesheet">
+</head>
+<body>
+   <nav class="minimal-nav">
+        <div class="nav-left">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+            </ul>
+        </div>
+      
+        <div class="logo">
+            <a href="index.html"><img src="images/NEWRSRSLOGO.png" alt="Logo" /></a>
+        </div>
+
+        <div class="nav-right">
+            <ul>
+                <li><a href="#services">Toolkit</a></li>
+                <li><a href="#resume">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="project-page">
+        <!-- Background Asset -->
+        <img src="images/XSonix.png" class="side-gooey-bg" alt="">
+
+        <section class="project-top">
+            <div class="project-main-logo">
+                <img src="images/SoniXLogo.png" alt="Gooey Logo">
+            </div>
+        </section>
+
+        <!-- SHOWCASE GRID -->
+        <section class="showcase-section">
+
+    <!-- SECTION 1: BRAND IDENTITY -->
+    <div class="sonix-header">
+    <h2>BRAND CAMPAIGN</h2>
+    <p>
+        A digital campaign system built to introduce SONIX across web, social, and promotional platforms. The visuals created are to launch a presence for a next-generation gaming peripherals brand.
+    </p>
+</div>
+    <div class="showcase-grid">
+        <div class="grid-item large" onclick="openLightbox(this)">
+            <img src="images/sonixbanner.png" class="img-primary" alt="Sonix Promo">
+        </div>
+        <div class="grid-item small-top" onclick="openLightbox(this)">
+            <img src="images/.png" class="img-primary" alt="Sonix Promo">
+        </div>
+        <div class="grid-item small-top" onclick="openLightbox(this)">
+            <img src="images/.png" class="img-primary" alt="Sonix Promo">
+        </div>
+        <div class="grid-item small-bottom" onclick="openLightbox(this)">
+            <img src="images/.jpg" class="img-primary" alt="Sonix Promo">
+        </div>
+         <div class="grid-item small-bottom" onclick="openLightbox(this)">
+            <img src="images/.jpg" class="img-primary" alt="Sonix Promo">
+        </div>
+         <div class="grid-item small-bottom" onclick="openLightbox(this)">
+            <img src="images/.jpg" class="img-primary" alt="Sonix Promo">
+        </div>
+    </div>
+
+    <!-- SECTION 2: PACKAGING & CONTENT -->
+    <div class="sonix-header">
+        <h2>PRODUCT VISUALIZATION</h2>
+        <p>This section showcases the Sonix gaming peripherals product visualization line, featuring the Sonix headset, keyboard, mouse, and additional branded products within the collection.</p>
+    </div>
+   <div class="sonix-showcase-grid">
+
+    <!-- Large video tile -->
+    <div class="sonix-grid-item sonix-feature-video js-lightbox-item"
+         data-lightbox-gallery="sonix-visuals"
+         data-type="video"
+         data-src="images/headphone1_1.mp4">
+
+        <video class="img-primary sonix-video-thumb" autoplay muted loop playsinline preload="metadata">
+            <source src="images/headphone1_1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Tall video tile -->
+    <div class="sonix-grid-item sonix-portrait-video js-lightbox-item"
+         data-lightbox-gallery="sonix-visuals"
+         data-type="video"
+         data-src="images/headphones12_1.mp4">
+
+        <video class="img-primary sonix-video-thumb" autoplay muted loop playsinline preload="metadata">
+            <source src="images/headphones12_1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Wide image tile -->
+    <div class="sonix-grid-item sonix-portrait-video js-lightbox-item" data-lightbox-gallery="sonix-visuals">
+        <img src="images/sonixheadphonescolored.jpg" class="img-primary" alt="Sonix Brand Banner">
+    </div>
+
+   
+
+</div>
+
+    <!-- SECTION 3: FUTURE CONCEPTS (NEW GRID LAYOUT) -->
+    <div class="sonix-header">
+        <h2>RETAIL EXPERIENCE</h2>
+        <p>For store displays, shelf mockups, hanging product cards, signage, product stand.</p>
+    </div>
+    <div class="showcase-grid-alt">
+        <!-- 3 LONG LARGE IMAGES -->
+        <div class="grid-item long-large" onclick="openLightbox(this)">
+            <img src="images/placeholder-long-1.jpg" class="img-primary" alt="Shelf Display">
+        </div>
+        <div class="grid-item long-large" onclick="openLightbox(this)">
+            <img src="images/placeholder-long-2.jpg" class="img-primary" alt="Shelf Display">
+        </div>
+        <div class="grid-item long-large" onclick="openLightbox(this)">
+            <img src="images/placeholder-long-3.jpg" class="img-primary" alt="Shelf Display">
+        </div>
+
+        <!-- 2 MEDIUM IMAGES -->
+        <div class="grid-item medium" onclick="openLightbox(this)">
+            <img src="images/placeholder-medium-1.jpg" class="img-primary" alt="Concept View">
+        </div>
+        <div class="grid-item medium" onclick="openLightbox(this)">
+            <img src="images/placeholder-medium-2.jpg" class="img-primary" alt="Concept Detail">
+        </div>
+    </div>
+
+</section>
+
+        <!-- BRUTALIST TECHNICALS SECTION -->
+        <section class="brutalist-technical-grid">
+            
+            <!-- ROW 1: OVERVIEW & SPECS -->
+            <div class="b-row">
+                <div class="b-block main-info">
+                    <span class="b-label">[ 01 ] PROJECT INFORMATION </span>
+                    <h1 class="b-title">SONIX</h1>
+                    <h2 class="b-subtitle">GAMING PERIPHERALS</h2>
+                    <p class="b-body">
+                        SONIX is a conceptual gaming peripherals brand built around the idea
+                         of redefining what futuristic hardware can look and feel like. The project explores a sleek, high-performance 
+                         visual identity for products such as headsets, keyboards, mice, and gaming accessories, 
+                         combining clean technology-driven design with a bold, aggressive edge.
+                    </p>
+                </div>
+                <div class="b-block specs">
+                    <span class="b-label">[ 02 ] PROJECT SPECS</span>
+                    <div class="b-spec-list">
+                        <div class="b-spec-item"><strong>CLIENT</strong> <span>SONIX</span></div>
+                        <div class="b-spec-item"><strong>CATEGORY</strong> <span>Branding / 3D / ANIMATION </span></div>
+                        <div class="b-spec-item"><strong>YEAR</strong> <span>2025</span></div>
+                        <div class="b-spec-item"><strong>TOOLS</strong> <span>ILLUSTRATOR / PHOTOSHOP / BLENDER</span></div>
+                        <div class="b-spec-item"><strong>DIRECTION</strong> <span>Sleek / Futuristic / High-Performance</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROW 2: TYPE & COLOR -->
+            <div class="b-row split-border">
+                <div class="b-block typography">
+                    <span class="b-label">[ 03 ] TYPOGRAPHY</span>
+                    <div class="b-type-container">
+                        <p class="b-tiny">CUSTOM DISPLAY FONT - GOOEY</p>
+                        <img src="" alt="SONIX Font" class="b-type-img">
+                    </div>
+                </div>
+                <div class="b-block colors">
+                    <span class="b-label">[ 04 ] COLOR VALUES</span>
+                    <div class="b-color-bars">
+                        <div class="b-bar" style="background:#FF1010"><span> SIGNAL RED #FF1010</span></div>
+                        <div class="b-bar" style="background:#050505"><span>VOID BLACK #050505</span></div>
+                        <div class="b-bar" style="background:#F4F4F4"><span>TECH WHITE #F4F4F4</span></div>
+                        <div class="b-bar" style="background:#A8A8A8"><span>SYSTEM GRAY #A8A8A8</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- CONCEPT GALLERY -->
+        <section class="concept-section">
+            <h2 class="concept-title">CONCEPT WORK</h2>
+            <div class="concept-gallery">
+            </div>
+        </section>
+    </main>
+
+   <footer class="brutalist-footer">
+  <div class="footer-frame">
+    <div class="footer-main">
+      <h2 class="footer-logo-text">RYAN <br>SAMKUNJU</h2>
+      <div class="footer-contact">
+        <p class="tech-label">[ CONTACT_ME ]</p>
+        <a href="mailto:your@email.com" class="footer-link">@RYANSAMKUNJUNHP</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-meta">
+        <p>VERSION: 2.1.0</p>
+        <p>&copy; 2026 ALL RIGHTS RESERVED</p>
+        <p>STATUS: OPEN_FOR_WORK</p>
+      </div>
+      <div class="project-nav-container">
+        <a href="index.html" class="brutalist-nav-btn">
+          <span class="arrow">←</span>
+          <span class="btn-text">HOME</span>
+        </a>
+        <a href="velocyte.html" class="brutalist-nav-btn">
+          <span class="arrow">→</span>
+          <span class="btn-text">NEXT</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="this.style.display='none'">
+        <span class="close-lightbox">&times;</span>
+        <img id="lightbox-img" src="" alt="Full View">
+    </div>
+
+    <!-- Lightbox Script -->
+    <script>
+        function openLightbox(element) {
+            const primaryImg = element.querySelector('.img-primary');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            if (primaryImg) {
+                lightboxImg.src = primaryImg.src;
+                lightbox.style.display = 'flex';
+            }
+        }
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape") document.getElementById('lightbox').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

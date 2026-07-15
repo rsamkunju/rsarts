@@ -3,250 +3,802 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Ryan Sam</title>
+
+    <title>Velocyte | Ryan Sam</title>
+
     <link rel="stylesheet" href="style.css">
+
     <!-- Scripts -->
     <script src="script.js" defer></script>
     <script src="filter.js" defer></script>
     <script src="scroll.js" defer></script>
     <script src="name.js" defer></script>
     <script src="transition.js" defer></script>
+
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-31W8MHHCCV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-31W8MHHCCV');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-31W8MHHCCV"></script>
     <script>
-        function toggleAdobe() {
-            document.getElementById("adobe-tools").classList.toggle("open");
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
         }
+
+        gtag("js", new Date());
+        gtag("config", "G-31W8MHHCCV");
     </script>
+
     <!-- Icons and Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap" rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    >
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap"
+    >
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap"
+    >
 </head>
-<body>
-  <nav>
-  <div class="nav-left">
-    <ul>
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#services">Services</a></li>
-    </ul>
-  </div>
 
-  <div class="logo">
-    <a href="index.html"><img src="images/RS12.png" alt="Logo" /></a>
-  </div>
+<body id="top">
 
-  <div class="nav-right">
-    <ul>
-      <li><a href="index.html#portfolio">Portfolio</a></li>
-      <li><a href="index.html#resume">Resume</a></li>
-    </ul>
-  </div>
-</nav>
-
-    <main class="project-page">
-        <!-- Fixed Side Bull -->
-        <img src="images/FLAGCHECKER.png" class="side-gooey-bg " alt="">
-
-        <section class="project-top">
-            <div class="project-main-logo">
-                <img src="images/VELOCYTEWHITE.png" alt="Gooey Logo">
-            </div>
-        </section>
-
-        <section class="showcase-section">
-    <!-- MUST have both classes for the CSS to work -->
-    <div class="showcase-grid velocyte-grid">
-        <!-- Group 1 (Top 4 - Tall) -->
-        <div class="grid-item large" onclick="openLightbox(this)">
-            <img src="images/VEL041.png" class="img-primary" alt="">
-            <img src="images/VEL04BACK.png" class="img-hover" alt="Material View">
-        </div>
-        <div class="grid-item small-top" onclick="openLightbox(this)">
-            <img src="images/VEL01FRONT.jpg" class="img-primary" alt="">
-             <img src="images/VEL011BACK.jpg" class="img-hover" alt="Material View">
-        </div>
-        <div class="grid-item tall" onclick="openLightbox(this)">
-            <img src="images/VEL03FRONT.png" class="img-primary" alt="">
-             <img src="images/VEL03BACK.png" class="img-hover" alt="Material View">
-        </div>
-        <div class="grid-item small-bottom" onclick="openLightbox(this)">
-            <img src="images/VEL06FRONT.png" class="img-primary" alt="">
-            <img src="images/VEL06BACK.png" class="img-hover" alt="Material View">
-            
+    <nav class="minimal-nav">
+        <div class="nav-left">
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+            </ul>
         </div>
 
-        <!-- Break (Middle) -->
-        <div class="grid-item full-width" onclick="openLightbox(this)">
-            <img src="images/velocytestorefront.jpg" class="img-primary" alt="">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/NEWRSRSLOGO.png" alt="Ryan Sam logo">
+            </a>
         </div>
 
-        <!-- Group 2 (Bottom 4 - Small) -->
-        <div class="grid-item large" onclick="openLightbox(this)">
-            <img src="images/VELSPREAD.png" class="img-primary" alt="">
+        <div class="nav-right">
+            <ul>
+                <li><a href="index.html#services">Toolkit</a></li>
+                <li><a href="index.html#resume">Resume</a></li>
+            </ul>
         </div>
-        <div class="grid-item small-top" onclick="openLightbox(this)">
-            <img src="images/velshorts.jpg" class="img-primary" alt="">
-        </div>
-        <div class="grid-item tall" onclick="openLightbox(this)">
-            <img src="images/VEL011BACK.jpg" class="img-primary" alt="">
-        </div>
-        <div class="grid-item small-bottom" onclick="openLightbox(this)">
-            <img src="images/VEL011BACK.jpg" class="img-primary" alt="">
-        </div>
-    </div>
-</section>
-   <!-- 3. Info Section -->
-    <section class="brutalist-technical-grid">
+    </nav>
 
-            
+    <main class="project-page velocyte-case-study">
 
-            <!-- ROW 1: OVERVIEW & SPECS -->
+        <!-- Existing decorative checker / racing background -->
+        <img
+            src="images/FLAGCHECKER.png"
+            class="side-velocyte-bg"
+            alt=""
+            aria-hidden="true"
+        >
 
-            <div class="b-row">
+        <!-- 01. PROJECT OVERVIEW -->
+        <section
+            class="velocyte-case-panel velocyte-case-intro"
+            aria-labelledby="velocyte-overview-title"
+        >
+            <div class="velocyte-case-wrap">
 
-                <div class="b-block main-info">
+                <div class="velocyte-intro-grid">
 
-                    <span class="b-label">[ 01 ] PROJECT INFORMATION </span>
+                    <div class="velocyte-intro-copy">
 
-                    <h1 class="b-title">VELOCYTE</h1>
+                        <div class="velocyte-case-kicker">
+                            <span>01</span>
+                            <p>PROJECT OVERVIEW</p>
+                        </div>
 
-                    <h2 class="b-subtitle">APPAREL & BRANDING DESIGN</h2>
+                        <p class="velocyte-overline">APPAREL &amp; BRANDING DESIGN</p>
 
-                    <p class="b-body">
+                        <h1 id="velocyte-overview-title">
+                             PERFORMANCE STREETWEAR SYSTEM BUILT AROUND SPEED AND MOTION.
+                        </h1>
 
-                        Velocyte is a conceptual apparel project inspired by motorsport culture and modern performance streetwear. 
-                        The project focuses on custom jersey graphics, technical garment design, 
-                        and bold branding systems built around speed, movement, and performance aesthetics.
-
-                    </p>
-
-                </div>
-
-                <div class="b-block specs">
-
-                    <span class="b-label">[ 02 ] PROJECT SPECS</span>
-
-                    <div class="b-spec-list">
-
-                        <div class="b-spec-item"><strong>CLIENT</strong> <span>VELOCYTE</span></div>
-
-                        <div class="b-spec-item"><strong>CATEGORY</strong> <span>APPAREL / BRANDING</span></div>
-
-                        <div class="b-spec-item"><strong>YEAR</strong> <span>2025</span></div>
-
-                        <div class="b-spec-item"><strong>TOOLS</strong> <span>ILLUSTRATOR / PHOTOSHOP </span></div>
-
-                        <div class="b-spec-item"><strong>DIRECTION</strong> <span>MOTOSPORTS / PERFORMANCE</span></div>
+                        <p class="velocyte-intro-description">
+                            Velocyte is a conceptual motorsport apparel brand focused on
+                            technical garment design, custom jersey graphics, speed-driven
+                            visual systems, and production-ready apparel documentation.
+                            The project combines expressive brand direction with practical
+                            flats, artwork placement, front-and-back garment development,
+                            and tech-pack thinking.
+                        </p>
 
                     </div>
 
+                    <div class="velocyte-overview-logo">
+                        <img
+                            src="images/VELOCYTEWHITE.png"
+                            alt="Velocyte primary logo"
+                        >
+                    </div>
+
+                    <dl class="velocyte-project-meta">
+                        <div>
+                            <dt>CLIENT</dt>
+                            <dd>VELOCYTE</dd>
+                        </div>
+
+                        <div>
+                            <dt>CATEGORY</dt>
+                            <dd>APPAREL / BRANDING</dd>
+                        </div>
+
+                        <div>
+                            <dt>YEAR</dt>
+                            <dd>2025</dd>
+                        </div>
+
+                        <div>
+                            <dt>TOOLS</dt>
+                            <dd>ILLUSTRATOR / PHOTOSHOP</dd>
+                        </div>
+
+                        <div>
+                            <dt>DIRECTION</dt>
+                            <dd>MOTORSPORT / PERFORMANCE</dd>
+                        </div>
+                    </dl>
+
                 </div>
-
             </div>
+        </section>
 
+        <!-- 02. BRAND IDENTITY -->
+        <section
+            class="velocyte-case-panel"
+            aria-labelledby="velocyte-logo-title"
+        >
+            <div class="velocyte-case-wrap">
 
+                <header class="velocyte-case-heading">
+                    <div class="velocyte-case-kicker">
+                        <span>02</span>
+                        <p>BRAND IDENTITY</p>
+                    </div>
 
-            <!-- ROW 2: TYPE & COLOR -->
+                    <div>
+                        <p class="velocyte-overline">LOGO SYSTEM</p>
 
-            <div class="b-row split-border">
+                        <h2 id="velocyte-logo-title">
+                            A SHARP WORDMARK ENGINEERED TO FEEL FAST BEFORE IT EVEN MOVES.
+                        </h2>
+                    </div>
+                </header>
 
-                <div class="b-block typography">
+                <div class="velocyte-logo-layout">
 
-                    <span class="b-label">[ 03 ] TYPOGRAPHY</span>
+                    <div class="velocyte-logo-stage">
+                        <div class="velocyte-stage-lines" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
 
-                    <div class="b-type-container">
+                        <img
+                            src="images/VELOCYTEWHITE.png"
+                            alt="Velocyte primary wordmark"
+                        >
+                    </div>
 
+                    <div class="velocyte-logo-story">
 
-                        <img src="images/VELWHITE.png" alt="Font Alpha" class="b-type-img">
+                        <p class="velocyte-pullquote">
+                            Angled letterforms, extended terminals, and directional cuts
+                            create a wordmark that communicates acceleration and control.
+                        </p>
 
+                        <p>
+                            The identity is designed to live across jersey fronts, woven labels,
+                            patches, garment trims, retail signage, and technical documentation.
+                            Supporting motion marks extend the same geometry into patterns and
+                            apparel graphics.
+                        </p>
+
+                        <div class="velocyte-mini-marks">
+
+                            <figure>
+                                <img
+                                    src="images/VELOCYTEWHITE.png"
+                                    alt="Velocyte primary wordmark"
+                                >
+                                <figcaption>PRIMARY WORDMARK</figcaption>
+                            </figure>
+
+                            <figure>
+                                <div class="velocyte-speed-mark" aria-label="Velocyte speed mark">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <figcaption>SPEED MARK</figcaption>
+                            </figure>
+
+                        </div>
                     </div>
 
                 </div>
+            </div>
+        </section>
 
-               <div class="b-block colors">
+        <!-- 03. TYPOGRAPHY -->
+        <section
+            class="velocyte-case-panel"
+            aria-labelledby="velocyte-type-title"
+        >
+            <div class="velocyte-case-wrap">
 
-                    <span class="b-label">[ 04 ] PATTERNS</span>
+                <header class="velocyte-case-heading">
+                    <div class="velocyte-case-kicker">
+                        <span>03</span>
+                        <p>TYPOGRAPHY</p>
+                    </div>
 
-                    <div class="b-color-bars">
-                        <div class="b-bar"><span>CAMO</span></div>
-                        <div class="b-bar"><span>CAMO</span></div>
-                        <div class="b-bar"><span>CAMO</span></div>
-                    
+                    <div>
+                        <p class="velocyte-overline">DISPLAY + TECHNICAL TYPE</p>
 
+                        <h2 id="velocyte-type-title">
+                            CUSTOM CHARACTER UP FRONT. CLEAR PRODUCTION INFORMATION UNDERNEATH.
+                        </h2>
+                    </div>
+                </header>
+
+                <div class="velocyte-type-grid">
+
+                    <article class="velocyte-type-card velocyte-type-card--display">
+
+                        <div class="velocyte-type-card-heading">
+                            <span>01</span>
+
+                            <div>
+                                <p>CUSTOM DISPLAY</p>
+                                <h3>VELOCYTE DISPLAY</h3>
+                            </div>
+                        </div>
+
+                        <div class="velocyte-alpha-mask">
+                            <img
+                                src="images/VELWHITE.png"
+                                alt="Velocyte custom display alphabet"
+                            >
+                        </div>
+
+                        <p class="velocyte-type-note">
+                            Used for the primary wordmark, collection names, jersey graphics,
+                            garment statements, patches, and campaign headlines.
+                        </p>
+
+                    </article>
+
+                    <article class="velocyte-type-card velocyte-type-card--support">
+
+                        <div class="velocyte-type-card-heading">
+                            <span>02</span>
+
+                            <div>
+                                <p>SUPPORTING TYPE</p>
+                                <h3>BARLOW CONDENSED</h3>
+                            </div>
+                        </div>
+
+                        <div class="velocyte-live-type">
+                            <p class="velocyte-live-type-large">Aa</p>
+
+                            <p class="velocyte-live-type-alphabet">
+                                ABCDEFGHIJKLM<br>
+                                NOPQRSTUVWXYZ<br>
+                                0123456789
+                            </p>
+                        </div>
+
+                        <div class="velocyte-type-weights">
+                            <span>LABELS</span>
+                            <span>CALLOUTS</span>
+                            <span>MEASUREMENTS</span>
+                        </div>
+
+                        <p class="velocyte-type-note">
+                            Used for tech-pack annotations, measurement callouts,
+                            material specifications, product copy, captions, and retail information.
+                        </p>
+
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 04. MOTION LANGUAGE -->
+        <section
+            class="velocyte-case-panel"
+            aria-labelledby="velocyte-pattern-title"
+        >
+            <div class="velocyte-case-wrap">
+
+                <header class="velocyte-case-heading">
+                    <div class="velocyte-case-kicker">
+                        <span>04</span>
+                        <p>GRAPHIC SYSTEM</p>
+                    </div>
+
+                    <div>
+                        <p class="velocyte-overline">MOTION-INSPIRED PATTERNS</p>
+
+                        <h2 id="velocyte-pattern-title">
+                            A FLEXIBLE GRAPHIC LANGUAGE BUILT FROM SPEED LINES, GRID SHIFTS, AND RACING CUES.
+                        </h2>
+
+                        <div class="velocyte-pattern-statement">
+                            <p>
+                                Instead of relying on a large color palette, Velocyte builds
+                                recognition through repeatable motion systems. The graphics can
+                                scale from subtle garment panels to full jersey artwork,
+                                retail environments, and campaign backgrounds.
+                            </p>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="velocyte-pattern-grid">
+
+                    <article class="velocyte-pattern-card">
+                        <div class="velocyte-pattern-preview velocyte-pattern-preview--apex"></div>
+
+                        <div class="velocyte-pattern-copy">
+                            <span>01</span>
+                            <h3>APEX STRIPE</h3>
+                            <p>
+                                Layered diagonal bands suggest acceleration and cornering lines.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="velocyte-pattern-card">
+                        <div class="velocyte-pattern-preview velocyte-pattern-preview--grid"></div>
+
+                        <div class="velocyte-pattern-copy">
+                            <span>02</span>
+                            <h3>GRID SHIFT</h3>
+                            <p>
+                                A distorted checker system references racing flags without
+                                becoming a literal costume pattern.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="velocyte-pattern-card">
+                        <div class="velocyte-pattern-preview velocyte-pattern-preview--cut"></div>
+
+                        <div class="velocyte-pattern-copy">
+                            <span>03</span>
+                            <h3>VELOCITY CUT</h3>
+                            <p>
+                                Repeating blade-like shapes create directional movement
+                                across sleeves, side panels, and trims.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 05. APPAREL COLLECTION -->
+        <section
+            class="velocyte-case-panel"
+            aria-labelledby="velocyte-collection-title"
+        >
+            <div class="velocyte-case-wrap">
+
+                <header class="velocyte-case-heading">
+                    <div class="velocyte-case-kicker">
+                        <span>05</span>
+                        <p>APPAREL COLLECTION</p>
+                    </div>
+
+                    <div>
+                        <p class="velocyte-overline">FRONT + BACK GARMENT DEVELOPMENT</p>
+
+                        <h2 id="velocyte-collection-title">
+                            A COORDINATED COLLECTION DESIGNED ACROSS MULTIPLE GARMENT TYPES.
+                        </h2>
+                    </div>
+                </header>
+
+                <div class="velocyte-garment-grid">
+
+                    <div
+                        class="velocyte-garment-card"
+                        onclick="openLightbox(this)"
+                    >
+                        <img
+                            src="images/VEL041.png"
+                            class="img-primary"
+                            alt="Velocyte garment front"
+                        >
+
+                        <img
+                            src="images/VEL04BACK.png"
+                            class="img-hover"
+                            alt="Velocyte garment back"
+                        >
+
+                        <span>01 / JERSEY SYSTEM</span>
+                    </div>
+
+                    <div
+                        class="velocyte-garment-card"
+                        onclick="openLightbox(this)"
+                    >
+                        <img
+                            src="images/VEL01FRONT.jpg"
+                            class="img-primary"
+                            alt="Velocyte jersey front"
+                        >
+
+                        <img
+                            src="images/VEL011BACK.jpg"
+                            class="img-hover"
+                            alt="Velocyte jersey back"
+                        >
+
+                        <span>02 / PERFORMANCE TOP</span>
+                    </div>
+
+                    <div
+                        class="velocyte-garment-card"
+                        onclick="openLightbox(this)"
+                    >
+                        <img
+                            src="images/VEL03FRONT.png"
+                            class="img-primary"
+                            alt="Velocyte outerwear front"
+                        >
+
+                        <img
+                            src="images/VEL03BACK.png"
+                            class="img-hover"
+                            alt="Velocyte outerwear back"
+                        >
+
+                        <span>03 / OUTERWEAR</span>
+                    </div>
+
+                    <div
+                        class="velocyte-garment-card"
+                        onclick="openLightbox(this)"
+                    >
+                        <img
+                            src="images/VEL06FRONT.png"
+                            class="img-primary"
+                            alt="Velocyte garment front view"
+                        >
+
+                        <img
+                            src="images/VEL06BACK.png"
+                            class="img-hover"
+                            alt="Velocyte garment back view"
+                        >
+
+                        <span>04 / COLLECTION PIECE</span>
                     </div>
 
                 </div>
-
-            </div>
-    </div>
-        </section>
-
-        <section class="concept-section">
-            <h2 class="concept-title">CONCEPT WORK</h2>
-            <div class="concept-gallery">
-                <img src="images/FLATSVEL.png" alt="">
-                <img src="images/VELNAMES1.png" alt="">
-                  <img src="images/VELTECHPACK1.png" alt="">
             </div>
         </section>
+
+        <!-- 06. TECHNICAL DESIGN -->
+        <section
+            class="velocyte-case-panel"
+            aria-labelledby="velocyte-technical-title"
+        >
+            <div class="velocyte-case-wrap">
+
+                <header class="velocyte-case-heading">
+                    <div class="velocyte-case-kicker">
+                        <span>06</span>
+                        <p>TECHNICAL DESIGN</p>
+                    </div>
+
+                    <div>
+                        <p class="velocyte-overline">FLATS + TECH PACKS</p>
+
+                        <h2 id="velocyte-technical-title">
+                            DESIGN DECISIONS TRANSLATED INTO PRODUCTION-READY GARMENT INFORMATION.
+                        </h2>
+                    </div>
+                </header>
+
+                <div class="velocyte-technical-grid">
+
+                    <figure class="velocyte-technical-card">
+                        <div
+                            class="velocyte-technical-image"
+                            onclick="openLightbox(this)"
+                        >
+                            <img
+                                src="images/FLATSVEL.png"
+                                class="img-primary"
+                                alt="Velocyte technical garment flats"
+                            >
+                        </div>
+
+                        <figcaption>
+                            <span>01</span>
+
+                            <div>
+                                <h3>TECHNICAL FLATS</h3>
+                                <p>
+                                    Clean front-and-back garment drawings establish silhouette,
+                                    seam placement, panel construction, and artwork zones.
+                                </p>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="velocyte-technical-card">
+                        <div
+                            class="velocyte-technical-image"
+                            onclick="openLightbox(this)"
+                        >
+                            <img
+                                src="images/VELTECHPACK1.png"
+                                class="img-primary"
+                                alt="Velocyte apparel tech pack"
+                            >
+                        </div>
+
+                        <figcaption>
+                            <span>02</span>
+
+                            <div>
+                                <h3>TECH PACK DEVELOPMENT</h3>
+                                <p>
+                                    Artwork callouts, construction notes, measurements,
+                                    material direction, and placement information prepare
+                                    the garment for communication with production teams.
+                                </p>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                </div>
+
+                <div class="velocyte-skill-strip">
+                    <span>FRONT / BACK FLATS</span>
+                    <span>ARTWORK PLACEMENT</span>
+                    <span>MEASUREMENT CALLOUTS</span>
+                    <span>MATERIAL NOTES</span>
+                    <span>PRODUCTION COMMUNICATION</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 07. REAL-WORLD APPLICATIONS -->
+        <section
+            class="velocyte-case-panel"
+            aria-labelledby="velocyte-applications-title"
+        >
+            <div class="velocyte-case-wrap">
+
+                <header class="velocyte-case-heading">
+                    <div class="velocyte-case-kicker">
+                        <span>07</span>
+                        <p>BRAND APPLICATIONS</p>
+                    </div>
+
+                    <div>
+                        <p class="velocyte-overline">RETAIL + COLLECTION PRESENTATION</p>
+
+                        <h2 id="velocyte-applications-title">
+                            THE SYSTEM EXTENDED INTO RETAIL, PRODUCT PRESENTATION, AND COLLECTION STORYTELLING.
+                        </h2>
+                    </div>
+                </header>
+
+                <div class="velocyte-application-grid">
+
+                    <div
+                        class="velocyte-application-card velocyte-application-card--wide"
+                        onclick="openLightbox(this)"
+                    >
+                        <img
+                            src="images/velocytestorefront.jpg"
+                            class="img-primary"
+                            alt="Velocyte storefront application"
+                        >
+                    </div>
+
+                    <div
+                        class="velocyte-application-card"
+                        onclick="openLightbox(this)"
+                    >
+                        <img
+                            src="images/VELSPREAD.png"
+                            class="img-primary"
+                            alt="Velocyte apparel collection spread"
+                        >
+                    </div>
+
+                    <div
+                        class="velocyte-application-card"
+                        onclick="openLightbox(this)"
+                    >
+                        <img
+                            src="images/velshorts.jpg"
+                            class="img-primary"
+                            alt="Velocyte motorsport shorts"
+                        >
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 08. CONCEPT WORK -->
+        <section
+            class="velocyte-case-panel"
+            aria-labelledby="velocyte-concept-title"
+        >
+            <div class="velocyte-case-wrap">
+
+                <header class="velocyte-case-heading">
+                    <div class="velocyte-case-kicker">
+                        <span>08</span>
+                        <p>CONCEPT WORK</p>
+                    </div>
+
+                    <div>
+                        <p class="velocyte-overline">NAMING + DEVELOPMENT</p>
+
+                        <h2 id="velocyte-concept-title">
+                            THE EARLY NAMING, TYPOGRAPHY, AND DIRECTIONAL STUDIES BEHIND VELOCYTE.
+                        </h2>
+                    </div>
+                </header>
+
+                <div class="velocyte-concept-gallery">
+
+                    <div
+                        class="velocyte-concept-card"
+                        onclick="openLightbox(this)"
+                    >
+                        <img
+                            src="images/VELNAMES1.png"
+                            class="img-primary"
+                            alt="Velocyte naming and logo exploration"
+                        >
+                    </div>
+
+                    <div class="velocyte-concept-copy">
+                        <p class="velocyte-concept-number">01</p>
+
+                        <h3>FROM SPEED LANGUAGE TO A FLEXIBLE APPAREL SYSTEM.</h3>
+
+                        <p>
+                            Early studies tested name structure, slanted typography,
+                            motion symbols, and the balance between motorsport references
+                            and wearable streetwear. The final identity keeps the speed
+                            cues controlled enough to function across both branding
+                            and production documents.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
     </main>
 
-<footer class="brutalist-footer">
-  <div class="footer-frame">
-    <div class="footer-main">
-      <h2 class="footer-logo-text">RYAN <br>SAMKUNJU</h2>
-      <div class="footer-contact">
-        <p class="tech-label">[ CONTACT_ME ]</p>
-        <a href="mailto:your@email.com" class="footer-link">@RYANSAMKUNJUNHP</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-meta">
-        <p>VERSION: 2.1.0</p>
-        <p>&copy; 2026 ALL RIGHTS RESERVED</p>
-        <p>STATUS: OPEN_FOR_WORK</p>
-      </div>
-      <div class="project-nav-container">
-        <a href="gooey.html" class="brutalist-nav-btn">
-          <span class="arrow">←</span>
-          <span class="btn-text">PREV</span>
-        </a>
-        <a href="emberhorn.html" class="brutalist-nav-btn">
-          <span class="arrow">→</span>
-          <span class="btn-text">NEXT</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</footer>
+    <footer class="brutalist-footer">
+        <div class="footer-frame">
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox" onclick="this.style.display='none'">
-        <span class="close-lightbox">&times;</span>
-        <img id="lightbox-img" src="" alt="Full View">
+            <div class="footer-main">
+                <h2 class="footer-logo-text">RYAN<br>SAMKUNJU</h2>
+
+                <div class="footer-contact">
+                    <p class="tech-label">[ CONTACT_ME ]</p>
+
+                    <a
+                        href="mailto:your@email.com"
+                        class="footer-link"
+                    >
+                        @RYANSAMKUNJUNHP
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+
+                <div class="footer-meta">
+                    <p>VERSION: 2.1.0</p>
+                    <p>&copy; 2026 ALL RIGHTS RESERVED</p>
+                    <p>STATUS: OPEN_FOR_WORK</p>
+                </div>
+
+                <div class="project-nav-container">
+                    <a href="gooey.html" class="brutalist-nav-btn">
+                        <span class="arrow">←</span>
+                        <span class="btn-text">PREV</span>
+                    </a>
+
+                    <a href="emberhorn.html" class="brutalist-nav-btn">
+                        <span class="arrow">→</span>
+                        <span class="btn-text">NEXT</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- SIMPLE LIGHTBOX -->
+    <div
+        id="lightbox"
+        class="lightbox"
+        aria-hidden="true"
+        onclick="closeVelocyteLightbox(event)"
+    >
+        <button
+            class="close-lightbox"
+            type="button"
+            aria-label="Close lightbox"
+            onclick="closeVelocyteLightbox(event)"
+        >
+            &times;
+        </button>
+
+        <img id="lightbox-img" src="" alt="Full view">
     </div>
 
-    <!-- Lightbox Script -->
     <script>
         function openLightbox(element) {
-            const primaryImg = element.querySelector('.img-primary');
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            if (primaryImg) {
-                lightboxImg.src = primaryImg.src;
-                lightbox.style.display = 'flex';
+            const primaryImage = element.querySelector(".img-primary");
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImage = document.getElementById("lightbox-img");
+
+            if (!primaryImage || !lightbox || !lightboxImage) {
+                return;
             }
+
+            lightboxImage.src = primaryImage.src;
+            lightboxImage.alt = primaryImage.alt || "Full view";
+            lightbox.style.display = "flex";
+            lightbox.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
         }
-        document.addEventListener('keydown', (e) => {
-            if (e.key === "Escape") document.getElementById('lightbox').style.display = 'none';
+
+        function closeVelocyteLightbox(event) {
+            if (
+                event &&
+                event.target.id !== "lightbox" &&
+                !event.target.classList.contains("close-lightbox")
+            ) {
+                return;
+            }
+
+            const lightbox = document.getElementById("lightbox");
+
+            if (!lightbox) {
+                return;
+            }
+
+            lightbox.style.display = "none";
+            lightbox.setAttribute("aria-hidden", "true");
+            document.body.style.overflow = "";
+        }
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closeVelocyteLightbox();
+            }
         });
     </script>
+
 </body>
 </html>
