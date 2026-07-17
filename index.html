@@ -21,14 +21,9 @@
   gtag('config', 'G-31W8MHHCCV');
 </script>
     <script>
-        function toggleAdobe() {
-            document.getElementById("adobe-tools").classList.toggle("open");
-        }
-    </script>
-    <script>
         document.addEventListener("DOMContentLoaded", function () {
     const underDevelopmentProjects = document.querySelectorAll(
-        ".portfolio-item.is-under-development .image-link"
+        ".portfolio-item.is-under-development .portfolio-card-link"
     );
 
     const notification = document.getElementById("dev-notification");
@@ -53,7 +48,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="top">
     <!-- NAVIGATION BAR -->
     <nav class="minimal-nav">
         <div class="nav-left">
@@ -102,97 +97,303 @@
 </section>
 
     <!-- PORTFOLIO SECTION -->
-    <section id="portfolio" class="port-section">
-        <div class="portfolio-header">
+<section
+    id="portfolio"
+    class="port-section"
+    aria-labelledby="portfolio-title"
+>
+    <div class="portfolio-inner">
+
+        <div class="portfolio-title-row">
+            <div>
+                <h2 id="portfolio-title" class="portfolio-section-title">
+                    PORTFOLIO 
+                </h2>
+            </div>
+        </div>
+
+        <div class="portfolio-controls">
+
             <!-- Portfolio Filter Buttons -->
-            <div class="portfolio-filter">
-                <button data-filter="all">All</button>
-                <button data-filter="Branding">Branding</button>
-                <button data-filter="Packaging">Packaging</button>
-                <button data-filter="Animation">Animation</button>
-                <button data-filter="Illustration">Illustration</button>
-                <button data-filter="Layout">Layout</button>
-                <button data-filter="Apparel">Apparel</button>
-                <button data-filter="3D Modeling">3D Modeling</button>
+            <div
+                class="portfolio-filter"
+                role="group"
+                aria-label="Filter portfolio projects"
+            >
+                <button
+                    type="button"
+                    class="is-active"
+                    data-filter="all"
+                    aria-pressed="true"
+                >
+                    <span>[ ALL ]</span>
+                </button>
+
+                <button
+                    type="button"
+                    data-filter="Branding"
+                    aria-pressed="false"
+                >
+                    <span>[ BRANDING ]</span>
+                </button>
+
+                <button
+                    type="button"
+                    data-filter="Packaging"
+                    aria-pressed="false"
+                >
+                    <span>[ PACKAGING ]</span>
+                </button>
+
+                <button
+                    type="button"
+                    data-filter="Animation"
+                    aria-pressed="false"
+                >
+                    <span>[ ANIMATION ]</span>
+                </button>
+
+                <button
+                    type="button"
+                    data-filter="Illustration"
+                    aria-pressed="false"
+                >
+                    <span>[ ILLUSTRATION ]</span>
+                </button>
+
+                <button
+                    type="button"
+                    data-filter="Layout"
+                    aria-pressed="false"
+                >
+                    <span>[ LAYOUT ]</span>
+                </button>
+
+                <button
+                    type="button"
+                    data-filter="Apparel"
+                    aria-pressed="false"
+                >
+                    <span>[ APPAREL ]</span>
+                </button>
+
+                <button
+                    type="button"
+                    data-filter="3D Modeling"
+                    aria-pressed="false"
+                >
+                    <span>[ 3D MODELING ]</span>
+                </button>
             </div>
         </div>
-	
-       <div class="portfolio-container">
-    <!-- Project 1 -->
-    <div class="portfolio-item" data-category="Branding, Packaging">
-        <a href="gooey.html" class="image-link">
-            <div class="image-container">
-                <img src="images/gooeybannerrewr2.jpg" alt="Project 1">
-            </div>
-        </a>
-        <div class="project-details-bar">
-            <div class="details-left">GOOEY COOKIES</div>
-            <div class="details-right">BRANDING | PACKAGING</div>
+
+        <div class="portfolio-container">
+
+            <!-- GOOEY -->
+            <article
+                class="portfolio-item"
+                data-category="Branding, Packaging"
+            >
+                <a href="gooey.html" class="portfolio-card-link">
+
+                    <div class="image-container">
+                        <img
+                            src="images/gooeybannerrewr2.jpg"
+                            alt="Gooey Cookies branding and packaging project"
+                        >
+                    </div>
+
+                    <div class="portfolio-card-content">
+                        <p class="project-category">
+                            BRANDING / PACKAGING
+                        </p>
+
+                        <h3>GOOEY COOKIES</h3>
+
+                        <p class="project-summary">
+                            A warm, playful cookie identity developed across
+                            packaging, promotional content, environmental graphics,
+                            and real-world brand applications.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>BRAND IDENTITY</span>
+                            <span>PACKAGING</span>
+                            <span>CONTENT</span>
+                        </div>
+                    </div>
+
+                </a>
+            </article>
+
+            <!-- VELOCYTE -->
+            <article
+                class="portfolio-item"
+                data-category="Apparel"
+                <a href="velocyte.html" class="portfolio-card-link">
+
+                    <div class="image-container">
+                        <img
+                            src="images/VelocyteBannerRed.png"
+                            alt="Velocyte motorsport apparel project"
+                        >
+                    </div>
+
+                    <div class="portfolio-card-content">
+                        <p class="project-category">
+                            APPAREL
+                        </p>
+
+                        <h3>VELOCYTE APPAREL</h3>
+
+                        <p class="project-summary">
+                            A motorsport-inspired streetwear system featuring
+                            custom garment graphics, technical flats, tech packs,
+                            and collection presentation.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>APPAREL</span>
+                            <span>TECH PACKS</span>
+                            <span>LAYOUT</span>
+                        </div>
+                    </div>
+
+                </a>
+            </article>
+
+            <!-- EMBERHORN -->
+            <article
+                class="portfolio-item is-under-development"
+                data-category="Branding, Packaging, 3D Modeling"
+            >
+                <a href="emberhorn.html" class="portfolio-card-link">
+
+                    <div class="image-container">
+                        <img
+                            src="images/emberthumb.png"
+                            alt="Emberhorn hot sauce branding and packaging project"
+                        >
+
+                        <div class="dev-badge">
+                            UNDER DEVELOPMENT
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card-content">
+                        <p class="project-category">
+                            PACKAGING / 3D
+                        </p>
+
+                        <h3>EMBERHORN HOT SAUCE</h3>
+
+                        <p class="project-summary">
+                            A fire-driven hot sauce identity combining product
+                            packaging, bottle visualization, structural design,
+                            and cinematic campaign imagery.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>PACKAGING</span>
+                            <span>3D</span>
+                            <span>BRANDING</span>
+                        </div>
+                    </div>
+
+                </a>
+            </article>
+
+            <!-- SONIX -->
+            <article
+                class="portfolio-item is-under-development"
+                data-category="Branding, Animation, 3D Modeling"
+            >
+                <a href="sonix.html" class="portfolio-card-link">
+
+                    <div class="image-container">
+                        <img
+                            src="images/sonixbanner.png"
+                            alt="Sonix gaming peripherals product design project"
+                        >
+
+                        <div class="dev-badge">
+                            UNDER DEVELOPMENT
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card-content">
+                        <p class="project-category">
+                            PRODUCT / 3D / MOTION
+                        </p>
+
+                        <h3>SONIX GAMING PERIPHERALS</h3>
+
+                        <p class="project-summary">
+                            A futuristic gaming-hardware brand developed through
+                            product visualization, campaign assets, animation,
+                            and a scalable peripheral design system.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>3D</span>
+                            <span>MOTION</span>
+                            <span>PRODUCT DESIGN</span>
+                        </div>
+                    </div>
+
+                </a>
+            </article>
+
+            <!-- PYRO ESPORTS -->
+            <article
+                class="portfolio-item is-under-development"
+                data-category="Branding, Apparel, Animation, Illustration"
+            >
+                <a href="esports.html" class="portfolio-card-link">
+
+                    <div class="image-container">
+                        <!-- Replace this image when the final Pyro banner is ready -->
+                        <img
+                            src="images/sonixbanner.png"
+                            alt="Pyro Gaming esports identity project"
+                        >
+
+                        <div class="dev-badge">
+                            UNDER DEVELOPMENT
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card-content">
+                        <p class="project-category">
+                            ESPORTS / BRANDING
+                        </p>
+
+                        <h3>PYRO GAMING</h3>
+
+                        <p class="project-summary">
+                            A punk-inspired esports identity designed across
+                            team branding, social graphics, apparel, motion,
+                            and competitive event applications.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>BRANDING</span>
+                            <span>APPAREL</span>
+                            <span>ANIMATION</span>
+                        </div>
+                    </div>
+
+                </a>
+            </article>
+
         </div>
+
+        <p class="portfolio-empty-message" hidden>
+            No projects currently match this category.
+        </p>
+
     </div>
-
-    <!-- Project 2 -->
-    <div class="portfolio-item" data-category="Apparel">
-        <a href="velocyte.html" class="image-link">
-            <div class="image-container">
-                <img src="images/VelocyteBannerRed.png" alt="Velocity Apparel">
-            </div>
-        </a>
-        <div class="project-details-bar">
-            <div class="details-left">VELOCYTE APPAREL</div>
-            <div class="details-right">APPAREL</div>
-        </div>
-      </div>
-
-    <!-- Project 3 -->
-  <div class="portfolio-item is-under-development" data-category="Packaging, 3D Modeling">
-    <a href="emberhorn.html" class="image-link">
-        <div class="image-container">
-            <img src="images/emberthumb.png" alt="Emberhorn Hot Sauce">
-            <div class="dev-badge">UNDER DEVELOPMENT</div>
-        </div>
-    </a>
-
-    <div class="project-details-bar">
-        <div class="details-left">EMBERHORN HOT SAUCE</div>
-        <div class="details-right">
-            PACKAGING | 3D 
-        </div>
-    </div>
-</div>
-      <!-- Project 4 -->
-<div class="portfolio-item is-under-development" data-category="Branding, Animation, 3D Modeling">
-    <a href="sonix.html" class="image-link">
-        <div class="image-container">
-            <img src="images/sonixbanner.png" alt="SONIX Gaming Peripherals">
-            <div class="dev-badge">UNDER DEVELOPMENT</div>
-        </div>
-    </a>
-
-    <div class="project-details-bar">
-        <div class="details-left">SONIX GAMING PERIPHERALS</div>
-        <div class="details-right">
-            BRANDING | 3D | ANIMATION
-        </div>
-    </div>
-</div>
-<div class="portfolio-item is-under-development" data-category="Branding, Animation, 3D Modeling">
-    <a href="esports.html" class="image-link">
-        <div class="image-container">
-            <img src="images/sonixbanner.png" alt="SONIX Gaming Peripherals">
-            <div class="dev-badge">UNDER DEVELOPMENT</div>
-        </div>
-    </a>
-
-    <div class="project-details-bar">
-        <div class="details-left">ESPORTS TEAM</div>
-        <div class="details-right">
-            BRANDING | APPAREL | ANIMATION
-        </div>
-    </div>
-</div>
-</div>
-    </section>
+</section>
 
     <!-- TOOLKIT / SERVICES SECTION -->
     <section class="brutalist-master-container" id="services">
