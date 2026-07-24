@@ -2566,7 +2566,124 @@ footer {
    Mirrors the Gooey case-study framework with Emberhorn's
    own colors, typography, imagery, and visual personality.
 ========================================================= */
+.ember-logo-system-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 3rem;
+}
 
+.ember-logo-marks {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: 1px solid currentColor;
+}
+
+.ember-logo-mark {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    margin: 0;
+    padding: 2.5rem;
+    border-right: 1px solid currentColor;
+}
+
+.ember-logo-mark:last-child {
+    border-right: 0;
+}
+
+.ember-logo-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    padding: 1.5rem;
+}
+
+.ember-logo-image img {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    max-height: 230px;
+    object-fit: contain;
+}
+
+.ember-logo-mark:nth-child(2) .ember-logo-image img {
+    max-width: 320px;
+    max-height: 170px;
+}
+
+.ember-logo-mark:nth-child(3) .ember-logo-image img {
+    max-width: 220px;
+    max-height: 220px;
+}
+
+.ember-logo-mark figcaption {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid currentColor;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.ember-logo-mark figcaption span {
+    opacity: 0.55;
+}
+.ember-logo-system-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.ember-logo-statement {
+    width: 100%;
+    margin: 2rem 0 1rem;
+}
+
+.ember-logo-statement p {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    font-family: futurabold;
+    font-size: clamp(2rem, 2.5vw, 2.5rem);
+    line-height: 0.95;
+    text-align: center;
+    text-transform: uppercase;
+}
+@media (max-width: 900px) {
+
+    .ember-logo-marks {
+        grid-template-columns: 1fr;
+    }
+
+    .ember-logo-mark {
+        border-right: 0;
+        border-bottom: 1px solid currentColor;
+    }
+
+    .ember-logo-mark:last-child {
+        border-bottom: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .ember-logo-system-content {
+        gap: 2.5rem;
+    }
+
+    .ember-logo-mark {
+        padding: 1.5rem 0;
+    }
+
+    .ember-logo-image {
+        min-height: 220px;
+    }
+}
 .ember-case-study {
   --ember-charcoal: #0f0f0f;
   --ember-black: #080808;
@@ -2745,89 +2862,6 @@ footer {
 .ember-project-meta dd {
   color: #fff;
   text-align: right;
-}
-
-/* 02. Logo system */
-.ember-logo-layout {
-  display: grid;
-  grid-template-columns: 1.04fr 0.96fr;
-  min-height: 520px;
-  overflow: hidden;
-}
-
-.ember-logo-stage {
-  display: grid;
-  place-items: center;
-  min-height: 520px;
-  padding: clamp(48px, 7vw, 96px);
-  background:
-    radial-gradient(circle at 50% 48%, rgba(255, 90, 31, 0.25), transparent 55%),
-    linear-gradient(145deg, #090909, #2a0d07);
-}
-
-.ember-logo-stage img {
-  display: block;
-  width: min(82%, 500px);
-  height: auto;
-  object-fit: contain;
-}
-
-.ember-logo-story {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 520px;
-  padding: clamp(42px, 5vw, 72px);
-  background: var(--ember-cream);
-  color: var(--ember-charcoal);
-}
-
-.ember-logo-story > p {
-  max-width: 480px;
-  line-height: 1.65;
-}
-
-.ember-pullquote {
-  max-width: 430px !important;
-  margin: 0 0 24px;
-  font-family: "Bebas Neue", "Barlow Condensed", Arial, sans-serif;
-  font-size: clamp(1.9rem, 2.8vw, 3rem);
-  line-height: 1.02 !important;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-}
-
-.ember-mini-marks {
-  display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
-  gap: clamp(28px, 5vw, 60px);
-  margin-top: auto;
-  padding-top: 34px;
-}
-
-.ember-mini-marks figure {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 150px;
-  margin: 0;
-}
-
-.ember-mini-marks img {
-  display: block;
-  width: 100%;
-  height: 150px;
-  object-fit: contain;
-}
-
-.ember-mini-marks figcaption {
-  margin-top: 18px;
-  color: var(--ember-charcoal);
-  font-family: "Barlow Condensed", Arial, sans-serif;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
 }
 
 /* 03. Typography */
