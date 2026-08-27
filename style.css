@@ -66,7 +66,21 @@ img {
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+    font-family: "Montserrat Local";
+    src: url("fonts/MontserratReg.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: "Montserrat Local";
+    src: url("fonts/MontserratSemi.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+}
 p {
   font-family: 'voye', Arial, sans-serif;
 }
@@ -262,36 +276,41 @@ nav ul li a:hover::after {
   max-width: 1200px;
   margin: 0 auto;
   padding: 100px 60px;
-  border: 2px solid #fff;
   text-align: center;
 }
 
 .hero-socials-inner {
-  position: absolute;
-  top: 30px;
-  right: 40px;
-  display: flex;
-  gap: 15px;
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 18px;
 }
 
 .hero-socials-inner a {
-  color: #fff;
-  font-size: 1.2rem;
-  opacity: 0.7;
-  transition: color 0.3s ease, opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    opacity: 0.7;
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
 }
 
 .hero-socials-inner a:hover {
-  color: #ff3c00;
-  opacity: 1;
+    opacity: 1;
+    transform: translateY(-2px);
 }
 
 .hero-content-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .hero-name {
@@ -313,10 +332,10 @@ nav ul li a:hover::after {
 }
 
 .hero-line {
-  width: 100px;
-  height: 2px;
-  margin: 40px auto;
-  background: #fff;
+    width: min(740px, 80%);
+    height: 3px;
+    margin: 42px auto 36px;
+    background-color: #ffffff;
 }
 
 .hero-bio,
@@ -343,14 +362,14 @@ nav ul li a:hover::after {
     padding: 80px 24px 46px;
   }
 
-  .hero-socials-inner {
-    position: relative;
-    top: auto;
-    right: auto;
+.hero-socials-inner {
+    position: static;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    width: 100%;
-    margin-bottom: 38px;
-  }
+    gap: 14px;
+    margin-top: 18px;
+}
 
   .hero-bio,
   .hero-biotwo {
@@ -364,39 +383,100 @@ nav ul li a:hover::after {
 ========================================================= */
 .brutalist-resume-btn,
 .brutalist-btn {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  overflow: visible;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    overflow: visible;
 }
 
 .brutalist-btn {
-  padding: 25px 50px;
-  background-color: #fff;
-  color: #000;
-  border: 4px solid #fff;
-  box-shadow: 12px 12px 0 #ff1e00;
-  font-size: 24px;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: all 0.1s step-end;
+    padding: 25px 50px;
+    background-color: #fff;
+    color: #000;
+    border: 4px solid #fff;
+    box-shadow: 12px 12px 0 #ff1e00;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.1s step-end;
 }
 
 .brutalist-btn:hover {
-  transform: translate(6px, 6px);
-  box-shadow: 6px 6px 0 #ff1e00;
-  background-color: #000;
-  color: #fff;
+    transform: translate(6px, 6px);
+    box-shadow: 6px 6px 0 #ff1e00;
+    background-color: #000;
+    color: #fff;
 }
+
 
 .brutalist-btn:active,
 .brutalist-resume-btn:active {
-  transform: translate(12px, 12px);
-  box-shadow: 0 0 0 #ff1e00;
+    transform: translate(12px, 12px);
+    box-shadow: 0 0 0 #ff1e00;
+}
+/* CONTACT SECTION — compact version */
+.contact-content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    gap: 28px;
+
+    /*
+       Much smaller than .resume-content-box.
+       This prevents CONTACT ME from being pushed
+       way down by the Resume section's 150px padding.
+    */
+    padding: 35px 20px 70px;
+
+    margin: 0;
+
+    text-align: center;
 }
 
+
+.contact-content-box h4 {
+    margin: 0;
+}
+
+/* CONTACT BUTTON — same style, smaller footprint */
+.contact-btn {
+    padding: 20px 38px;
+    gap: 16px;
+    font-size: 20px;
+    box-shadow: 9px 9px 0 #ff1e00;
+}
+
+
+.contact-btn:hover {
+    transform: translate(5px, 5px);
+    box-shadow: 4px 4px 0 #ff1e00;
+}
+
+
+.contact-btn:active {
+    transform: translate(9px, 9px);
+    box-shadow: 0 0 0 #ff1e00;
+}
+
+
+@media (max-width: 768px) {
+    .contact-content-box {
+        gap: 22px;
+        padding: 70px 20px 80px;
+    }
+
+    .contact-btn {
+        padding: 18px 32px;
+        gap: 14px;
+        font-size: 18px;
+    }
+}
 .btn-arrow {
   font-size: 32px;
   font-weight: bold;
@@ -455,7 +535,92 @@ nav ul li a:hover::after {
 /* =========================================================
    PORTFOLIO — SELECTED WORK
 ========================================================= */
+.portfolio-heading {
+    max-width: 760px;
+    margin-bottom: 42px;
+}
 
+.portfolio-overline {
+    margin: 0 0 12px;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: #d32632;
+}
+
+.portfolio-section-title {
+    margin: 0;
+    font-size: clamp(48px, 6vw, 86px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    text-align: left;
+}
+
+.portfolio-heading-line {
+    width: 220px;
+    height: 2px;
+    margin: 24px 0 26px;
+    background: #ffffff;
+}
+
+.portfolio-intro {
+    max-width: 650px;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    align-items: stretch;
+}
+
+.portfolio-item {
+    min-width: 0;
+}
+
+.portfolio-card-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.portfolio-card-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.project-tags {
+    margin-top: auto;
+}
+
+@media (max-width: 1100px) {
+    .portfolio-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .portfolio-heading {
+        margin-bottom: 28px;
+    }
+
+    .portfolio-section-title {
+        font-size: clamp(44px, 14vw, 64px);
+    }
+
+    .portfolio-intro {
+        font-size: 16px;
+    }
+
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+}
 .port-section {
     position: relative;
     padding: clamp(80px, 9vw, 145px) 0;
@@ -490,22 +655,6 @@ nav ul li a:hover::after {
 }
 
 /* Filters and view-all link */
-
-.portfolio-controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 30px;
-    margin-bottom: 34px;
-}
-
-.portfolio-filter {
-    display: flex;
-    flex: 1;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
 .portfolio-filter button {
     position: relative;
     min-height: 48px;
@@ -697,20 +846,6 @@ nav ul li a:hover::after {
     margin-left: 8px;
     color: #c62931;
     content: "•";
-}
-
-/* Empty filter result */
-
-.portfolio-empty-message {
-    margin: 38px 0 0;
-    padding: 28px;
-
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: rgba(255, 255, 255, 0.62);
-
-    font-family: GothamBlack, "Open Sans", sans-serif;
-    text-align: center;
-    text-transform: uppercase;
 }
 
 /* Responsive */
@@ -921,95 +1056,146 @@ nav ul li a:hover::after {
   list-style: none;
 }
 
+/* =========================================================
+   FREELANCE PROCESS
+========================================================= */
+
 .section-divider {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 0;
-  margin: 5px 0;
-  border-top: 6px solid #fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0;
+    margin: 5px 0;
+    border-top: 6px solid #fff;
 }
 
 .divider-label {
-  position: absolute;
-  top: -20px;
-  padding: 5px 20px;
-  background: #fff;
-  color: #000;
-  font-size: 24px;
-  font-weight: 900;
-  text-transform: uppercase;
+    position: absolute;
+    top: -20px;
+    padding: 5px 20px;
+    background: #fff;
+    color: #000;
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
 .process-wrapper {
-  padding: 60px 40px;
+    width: 100%;
+    margin: 0;
+    padding: 80px 45px 70px;
 }
 
 .about-cards__row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 70px 1fr 70px 1fr;
+    align-items: start;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .about-card {
-  flex: 1;
-  color: #fff;
-  text-align: center;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+
+    color: #fff;
+    text-align: center;
 }
 
 .about-card__icon {
-  display: flex;
-  justify-content: center;
-  height: 80px;
-  margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 80px;
+    margin: 0 0 20px;
 }
 
 .about-card__icon img {
-  max-width: 80px;
-  max-height: 80px;
-  filter: brightness(0) invert(1);
+    display: block;
+    max-width: 80px;
+    max-height: 80px;
+
+    filter: brightness(0) invert(1);
 }
 
 .about-card__title {
-  margin-bottom: 10px;
-  font-size: 24px;
-  line-height: 1;
+    margin: 0 0 10px;
+
+    font-size: 24px;
+    line-height: 1;
 }
 
 .about-card__text {
-  max-width: 200px;
-  margin: 0 auto;
-  font-size: 13px;
-  opacity: 0.8;
+    max-width: 200px;
+    margin: 0 auto;
+
+    font-size: 13px;
+    line-height: 1.55;
+    opacity: 0.8;
+}
+
+.process-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 70px;
+    height: 80px;
+
+    margin: 0;
+    padding: 0;
 }
 
 .process-arrow img {
-  width: 40px;
-  margin-top: 20px;
-  filter: brightness(0) invert(1);
+    display: block;
+
+    width: 40px;
+    height: auto;
+
+    margin: 0;
+    padding: 0;
+
+    filter: brightness(0) invert(1);
 }
 
-@media (max-width: 900px) {
-  .master-title {
-    top: -20px;
-    font-size: 30px;
-  }
+/* =========================================================
+   PROCESS — MOBILE ONLY
+========================================================= */
 
-  .about-cards__row {
-    flex-direction: column;
-    align-items: center;
-  }
+@media (max-width: 650px) {
 
-  .process-arrow {
-    padding: 20px 0;
-    transform: rotate(90deg);
-  }
+    .process-wrapper {
+        padding: 60px 20px;
+    }
 
-  .section-divider {
-    margin-top: 40px;
-  }
+    .about-cards__row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .about-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .process-arrow {
+        width: 70px;
+        height: 50px;
+
+        transform: rotate(90deg);
+    }
+
+    .section-divider {
+        margin-top: 40px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1049,20 +1235,31 @@ nav ul li a:hover::after {
 ========================================================= */
 
 .resume-content-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  gap: 35px;
-  padding: 150px 20px;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 35px;
+    padding: 150px 20px;
+    text-align: center;
 }
+
 
 .resume-content-box h4 {
-  margin: 0;
+    margin: 0;
 }
+@media (max-width: 768px) {
 
+    .resume-content-box {
+        gap: 26px;
+        padding: 100px 20px;
+    }
+
+    .resume-content-box h4 {
+        font-size: 3rem;
+    }
+}
 .resume-file-info {
   margin: 0;
   color: rgba(255, 255, 255, 0.45);
@@ -1070,18 +1267,6 @@ nav ul li a:hover::after {
   font-size: 14px;
   letter-spacing: 1px;
 }
-
-@media (max-width: 768px) {
-  .resume-content-box {
-    gap: 26px;
-    padding: 100px 20px;
-  }
-
-  .resume-content-box h4 {
-    font-size: 3rem;
-  }
-}
-
 /* =========================================================
    FOOTER / SCROLL BUTTONS
 ========================================================= */
@@ -1671,6 +1856,2666 @@ footer {
         grid-row: span 1;
         aspect-ratio: 1 / 1;
     }
+}
+/* =========================================================
+   VERDANT CASE STUDY
+   The introduction follows the same structure as Gooey.
+   Everything after it is package and production focused.
+========================================================= */
+
+.verdant-case-study {
+    font-family: "Montserrat Local", sans-serif;
+
+    --verdant-white: #f6f3ed;
+    --verdant-muted: rgba(246, 243, 237, 0.62);
+    --verdant-line: rgba(246, 243, 237, 0.22);
+    --verdant-surface: #0c0e0c;
+    --verdant-surface-light: #121512;
+
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    isolation: isolate;
+
+    color: var(--verdant-white);
+
+    background:
+        url("images/blacktexture.jpg")
+        center top / cover fixed;
+}
+
+
+.verdant-case-study,
+.verdant-case-study * {
+    box-sizing: border-box;
+    font-family: "Montserrat Local", sans-serif;
+}
+
+
+.verdant-case-study img {
+    max-width: 100%;
+}
+
+
+.verdant-wrap {
+    width: min(1240px, calc(100% - 64px));
+    margin: 0 auto;
+}
+
+
+.verdant-panel {
+    position: relative;
+    z-index: 1;
+
+    padding: clamp(90px, 9vw, 132px) 0;
+}
+
+
+.verdant-case-study h1,
+.verdant-case-study h2,
+.verdant-case-study h3,
+.verdant-case-study p,
+.verdant-case-study span,
+.verdant-case-study dt,
+.verdant-case-study dd,
+.verdant-case-study figcaption {
+    color: inherit;
+}
+
+
+.verdant-case-study h1,
+.verdant-case-study h2,
+.verdant-case-study h3,
+.verdant-case-study h4,
+.verdant-case-study h5,
+.verdant-case-study h6 {
+    font-family: "Montserrat Local", sans-serif;
+    font-weight: 600;
+}
+
+
+.verdant-case-study p {
+    font-family: "Montserrat Local", sans-serif;
+    font-weight: 400;
+}
+
+
+
+/* =========================================================
+   SHARED SECTION LABELS
+========================================================= */
+
+.verdant-section-label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+.verdant-section-label span {
+    flex: 0 0 40px;
+
+    display: grid;
+
+    width: 40px;
+    height: 40px;
+
+    place-items: center;
+
+    border: 1px solid rgba(246, 243, 237, 0.72);
+    border-radius: 50%;
+
+    font-family: "Montserrat Local", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+
+.verdant-section-label p,
+.verdant-overline {
+    margin: 0;
+
+    font-family: "Montserrat Local", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.2;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+
+.verdant-overline {
+    color: var(--verdant-muted);
+}
+
+
+
+/* =========================================================
+   01 — PROJECT OVERVIEW
+========================================================= */
+
+.verdant-intro {
+    position: relative;
+
+    min-height: 100svh;
+
+    display: flex;
+    align-items: center;
+
+    padding:
+        clamp(100px, 12vh, 145px)
+        0
+        clamp(85px, 10vh, 120px);
+
+    overflow: visible;
+
+    color: var(--verdant-white);
+
+    border-bottom: none;
+}
+
+
+.verdant-intro .verdant-wrap {
+    position: relative;
+    z-index: 2;
+
+    width: min(1120px, calc(100% - 64px));
+}
+
+
+.verdant-intro-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.12fr)
+        minmax(360px, 0.72fr);
+
+    gap: clamp(74px, 8vw, 132px);
+
+    align-items: end;
+}
+
+
+.verdant-intro-copy,
+.verdant-intro-side {
+    position: relative;
+    z-index: 2;
+
+    min-width: 0;
+}
+
+
+.verdant-intro .verdant-section-label {
+    margin-bottom: clamp(64px, 8vh, 82px);
+}
+
+
+.verdant-intro .verdant-overline {
+    margin-bottom: 24px;
+}
+
+
+.verdant-intro h1 {
+    max-width: 680px;
+
+    margin: 0;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: clamp(44px, 3.75vw, 68px);
+    font-weight: 600;
+
+    line-height: 0.98;
+
+    letter-spacing: -0.035em;
+
+    text-transform: uppercase;
+}
+
+
+.verdant-intro h1 span {
+    display: block;
+}
+
+
+.verdant-description {
+    max-width: 670px;
+
+    margin:
+        clamp(36px, 4.6vh, 50px)
+        0
+        0;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: clamp(15px, 1.05vw, 17px);
+    font-weight: 400;
+
+    line-height: 1.75;
+}
+
+
+.verdant-intro-side {
+    width: 100%;
+    max-width: 430px;
+
+    justify-self: end;
+
+    padding-bottom: 4px;
+}
+
+
+.verdant-primary-logo {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+
+    margin-bottom: clamp(62px, 8vh, 82px);
+}
+
+
+.verdant-primary-logo img {
+    display: block;
+
+    width: min(100%, 330px);
+    height: auto;
+}
+
+
+.verdant-project-meta {
+    width: 100%;
+
+    margin: 0;
+}
+
+
+.verdant-project-meta > div {
+    min-height: 57px;
+
+    display: grid;
+
+    grid-template-columns:
+        106px
+        minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 20px;
+
+    border-top: 1px solid var(--verdant-line);
+}
+
+
+.verdant-project-meta > div:last-child {
+    border-bottom: 1px solid var(--verdant-line);
+}
+
+
+.verdant-project-meta dt,
+.verdant-project-meta dd {
+    margin: 0;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    line-height: 1.1;
+
+    letter-spacing: 0.035em;
+
+    text-transform: uppercase;
+}
+
+
+.verdant-project-meta dt {
+    color: var(--verdant-muted);
+}
+
+
+.verdant-project-meta dd {
+    text-align: right;
+}
+
+
+.verdant-leaf-background {
+    position: absolute;
+    z-index: 0;
+
+    left: -270px;
+    bottom: -125px;
+
+    width: clamp(520px, 42vw, 720px);
+    height: auto;
+
+    opacity: 0.52;
+
+    pointer-events: none;
+    user-select: none;
+}
+
+
+
+/* =========================================================
+   PACKAGE SECTION HEADERS
+========================================================= */
+
+.verdant-heading {
+    width: min(100%, 1080px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin:
+        0
+        auto
+        clamp(64px, 7vw, 92px);
+
+    text-align: center;
+}
+
+
+.verdant-heading .verdant-section-label {
+    justify-content: center;
+
+    margin:
+        0
+        0
+        clamp(38px, 4vw, 54px);
+}
+
+
+.verdant-heading-copy {
+    width: 100%;
+    max-width: 1040px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.verdant-heading-copy .verdant-overline {
+    margin: 0 0 22px;
+
+    text-align: center;
+}
+
+
+.verdant-heading h2 {
+    width: 100%;
+    max-width: 930px;
+
+    margin: 0 auto;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: clamp(48px, 5.25vw, 84px);
+    font-weight: 600;
+
+    line-height: 0.94;
+
+    letter-spacing: -0.025em;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    text-wrap: balance;
+}
+
+
+.verdant-heading-copy > p:last-child {
+    width: min(100%, 760px);
+
+    margin: 34px auto 0;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 15px;
+    font-weight: 400;
+
+    line-height: 1.75;
+
+    text-align: center;
+
+    color: rgba(246, 243, 237, 0.78);
+}
+
+
+
+/* =========================================================
+   PACKAGE IMAGE SYSTEM
+========================================================= */
+
+.verdant-gallery {
+    display: grid;
+    gap: 4px;
+}
+
+
+.verdant-gallery--applications {
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+}
+
+
+.verdant-media {
+    position: relative;
+
+    min-height: 360px;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(246, 243, 237, 0.08);
+
+    background:
+        var(--verdant-surface-light);
+}
+
+
+.verdant-media--large {
+    grid-row: span 2;
+
+    min-height: 760px;
+}
+.verdant-media--portrait {
+    background: #000;
+    overflow: hidden;
+}
+
+/* Override the normal gallery image crop ONLY for this card */
+.verdant-media--portrait img {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    object-fit: contain;
+    object-position: center center;
+
+    transform: none;
+}
+
+.verdant-media--wide {
+    grid-column: 1 / -1;
+
+    min-height: 500px;
+}
+
+
+.verdant-media img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 450ms ease;
+}
+
+
+.verdant-media:hover img {
+    transform: scale(1.02);
+}
+
+
+.verdant-media figcaption {
+    position: absolute;
+
+    right: 20px;
+    bottom: 17px;
+    left: 20px;
+
+    z-index: 2;
+
+    padding-top: 13px;
+
+    border-top:
+        1px solid
+        rgba(246, 243, 237, 0.42);
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+
+
+/* =========================================================
+   TECHNICAL SPECIFICATIONS
+========================================================= */
+
+.verdant-specification-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 1px;
+
+    border: 1px solid var(--verdant-line);
+
+    background: var(--verdant-line);
+}
+
+
+.verdant-specification-grid article {
+    min-height: 265px;
+
+    padding: clamp(28px, 3vw, 38px);
+
+    background: var(--verdant-surface);
+}
+
+
+.verdant-specification-grid article > span {
+    display: block;
+
+    margin-bottom: 64px;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+.verdant-specification-grid h3 {
+    margin: 0 0 15px;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 25px;
+    font-weight: 600;
+
+    letter-spacing: 0.035em;
+
+    text-transform: uppercase;
+}
+
+
+.verdant-specification-grid p {
+    margin: 0;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 13px;
+    font-weight: 400;
+
+    line-height: 1.72;
+
+    color:
+        rgba(246, 243, 237, 0.74);
+}
+
+
+
+/* =========================================================
+   PACKAGE COLLECTION
+========================================================= */
+
+.verdant-fragrance-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+
+    margin: 0;
+}
+
+
+.verdant-fragrance-card {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    border: 1px solid var(--verdant-line);
+}
+
+
+.verdant-fragrance-card img {
+    display: block;
+
+    width: 100%;
+    height: 560px;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.verdant-fragrance-card:nth-child(1) img {
+    object-position: center 66%;
+}
+
+
+.verdant-fragrance-card:nth-child(2) img {
+    object-position: center 68%;
+}
+
+
+.verdant-fragrance-card:nth-child(3) img {
+    object-position: center 68%;
+}
+
+
+.verdant-fragrance-card > div {
+    padding: 25px;
+
+    margin: 0;
+}
+
+
+.verdant-fragrance-card p,
+.verdant-fragrance-card span {
+    margin: 0;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    line-height: 1.3;
+
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+}
+
+
+.verdant-fragrance-card p {
+    margin-bottom: 24px;
+
+    color: var(--verdant-muted);
+}
+
+
+.verdant-fragrance-card h3 {
+    margin: 0 0 12px;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 27px;
+    font-weight: 600;
+
+    letter-spacing: 0.025em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   PACKAGE COLLECTION — IPAD / TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .verdant-fragrance-grid {
+        grid-template-columns: 1fr;
+
+        gap: 32px;
+    }
+
+
+    .verdant-fragrance-card img,
+    .verdant-fragrance-card:nth-child(1) img,
+    .verdant-fragrance-card:nth-child(2) img,
+    .verdant-fragrance-card:nth-child(3) img {
+        width: 100%;
+        height: auto;
+        max-width: none;
+
+        object-fit: unset;
+        object-position: center;
+    }
+
+
+    .verdant-fragrance-card > div {
+        padding: 28px;
+    }
+
+}
+
+
+/* =========================================================
+   PACKAGE COLLECTION — MOBILE
+========================================================= */
+
+@media (max-width: 720px) {
+
+    .verdant-fragrance-grid {
+        grid-template-columns: 1fr;
+
+        gap: 24px;
+    }
+
+
+    .verdant-fragrance-card > div {
+        padding: 24px 20px 26px;
+    }
+
+
+    .verdant-fragrance-card p {
+        margin-bottom: 20px;
+    }
+
+
+    .verdant-fragrance-card h3 {
+        font-size: clamp(24px, 7vw, 27px);
+    }
+
+}
+
+
+/* =========================================================
+   BOTTLE SIZE COLLECTION
+========================================================= */
+
+.verdant-size-block {
+    width: 100%;
+}
+
+
+.verdant-size-block + .verdant-size-block {
+    margin-top: clamp(100px, 11vw, 170px);
+}
+
+
+
+/* =========================================================
+   SIZE INTRODUCTION
+========================================================= */
+
+.verdant-size-heading {
+    width: min(100%, 840px);
+
+    margin:
+        0
+        auto
+        clamp(42px, 5vw, 68px);
+
+    text-align: center;
+}
+
+
+.verdant-size-kicker {
+    margin: 0 0 16px;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+
+    color: var(--verdant-muted);
+}
+
+
+.verdant-size-heading h3 {
+    margin: 0;
+
+    font-size: clamp(34px, 4vw, 58px);
+    font-weight: 600;
+
+    line-height: 1;
+
+    letter-spacing: -0.035em;
+
+    text-transform: uppercase;
+}
+
+
+.verdant-size-description {
+    width: min(100%, 690px);
+
+    margin: 26px auto 0;
+
+    font-size: 15px;
+    font-weight: 400;
+
+    line-height: 1.75;
+
+    color:
+        rgba(246, 243, 237, 0.78);
+}
+
+
+
+/* =========================================================
+   MAIN IMAGE FOR EACH BOTTLE SIZE
+========================================================= */
+
+.verdant-size-hero {
+    position: relative;
+
+    width: 100%;
+
+    margin: 0 0 22px;
+
+    overflow: hidden;
+}
+
+
+.verdant-size-hero img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+.verdant-size-hero figcaption {
+    position: absolute;
+
+    right: 20px;
+    bottom: 17px;
+    left: 20px;
+
+    padding-top: 13px;
+
+    border-top:
+        1px solid
+        rgba(246, 243, 237, 0.42);
+
+    font-size: 9px;
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+
+
+/* =========================================================
+   FRONT AND PROFILE VIEWS
+========================================================= */
+
+.verdant-gallery--size-views {
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+.verdant-gallery--size-views .verdant-media {
+    min-height: 480px;
+}
+
+
+
+/* =========================================================
+   FRAGRANCE PACKAGE VARIATIONS
+========================================================= */
+.verdant-package-section .verdant-section-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    width: 100%;
+}
+.verdant-package-variations {
+    margin-top:
+        clamp(110px, 12vw, 180px);
+}
+
+
+.verdant-package-variations-heading {
+    width: min(100%, 900px);
+
+    margin:
+        0
+        auto
+        clamp(50px, 6vw, 78px);
+
+    text-align: center;
+}
+
+
+.verdant-package-variations-heading .verdant-overline {
+    margin-bottom: 20px;
+}
+
+
+.verdant-package-variations-heading h3 {
+    margin: 0;
+
+    font-size: clamp(36px, 4.2vw, 64px);
+    font-weight: 600;
+
+    line-height: 1;
+
+    letter-spacing: -0.035em;
+
+    text-transform: uppercase;
+}
+
+
+.verdant-package-variations-heading > p:last-child {
+    width: min(100%, 720px);
+
+    margin: 28px auto 0;
+
+    font-size: 15px;
+    font-weight: 400;
+
+    line-height: 1.75;
+
+    color:
+        rgba(246, 243, 237, 0.78);
+}
+
+
+
+/* =========================================================
+   VERDANT TECHNICAL ARTWORK
+========================================================= */
+
+.verdant-technical-gallery {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: clamp(54px, 6vw, 84px);
+
+    margin-top: 56px;
+}
+
+
+/*
+    Structural dielines and applied carton artwork use the same
+    technical presentation frame.
+
+    No button or JavaScript wrapper is required.
+*/
+
+.verdant-media--technical {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 0;
+
+    margin: 0;
+
+    padding: clamp(18px, 2.2vw, 30px);
+
+    overflow: hidden;
+
+    background: #f1f0e9;
+
+    border:
+        1px solid
+        rgba(21, 23, 21, 0.08);
+}
+
+
+/*
+    Direct child image selector overrides the normal
+    .verdant-media image system above.
+*/
+
+.verdant-media--technical > img {
+    display: block;
+
+    width: 100%;
+    height: 620px;
+
+    margin: 0 auto;
+    padding: 0;
+
+    object-fit: contain;
+    object-position: center;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+.verdant-media--technical:hover > img {
+    transform: scale(1.015);
+
+    opacity: 0.94;
+}
+
+
+/*
+    Caption is part of the normal document flow instead of being
+    positioned over the technical artwork.
+*/
+
+.verdant-media--technical figcaption {
+    position: static;
+
+    width: 100%;
+
+    margin: 18px 0 0;
+
+    padding: 12px 0 0;
+
+    border-top:
+        1px solid
+        rgba(21, 23, 21, 0.28);
+
+    color: #151715;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+}
+
+
+
+/* =========================================================
+   TECHNICAL ARTWORK — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .verdant-technical-gallery {
+        gap: 40px;
+
+        margin-top: 42px;
+    }
+
+
+    .verdant-media--technical {
+        padding: 16px;
+    }
+
+
+    .verdant-media--technical > img {
+        height: 520px;
+    }
+
+}
+
+
+
+/* =========================================================
+   GENERAL TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .verdant-gallery--size-views {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+
+/* =========================================================
+   BOTTLE COLLECTION — MOBILE
+========================================================= */
+
+@media (max-width: 720px) {
+
+    .verdant-size-block + .verdant-size-block {
+        margin-top: 90px;
+    }
+
+
+    .verdant-size-heading {
+        margin-bottom: 38px;
+    }
+
+
+    .verdant-size-heading h3 {
+        font-size: clamp(32px, 9vw, 46px);
+    }
+
+
+    .verdant-size-description {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    .verdant-gallery--size-views {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    .verdant-gallery--size-views .verdant-media {
+        min-height: 410px;
+    }
+
+
+    .verdant-package-variations {
+        margin-top: 90px;
+    }
+
+
+    .verdant-package-variations-heading {
+        margin-bottom: 42px;
+    }
+
+
+    .verdant-package-variations-heading h3 {
+        font-size: clamp(32px, 9vw, 48px);
+    }
+
+
+    .verdant-package-variations-heading > p:last-child {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+}
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .verdant-intro {
+        min-height: auto;
+    }
+
+
+    .verdant-intro-grid {
+        grid-template-columns: 1fr;
+
+        gap: 86px;
+
+        align-items: start;
+    }
+
+
+    .verdant-intro-copy {
+        max-width: 790px;
+    }
+
+
+    .verdant-intro-side {
+        width: min(100%, 760px);
+
+        max-width: none;
+
+        justify-self: start;
+    }
+
+
+    .verdant-primary-logo {
+        justify-content: flex-start;
+    }
+
+
+    .verdant-heading {
+        width: min(100%, 900px);
+    }
+
+
+    .verdant-heading h2 {
+        max-width: 850px;
+    }
+
+
+    .verdant-heading-copy > p:last-child {
+        max-width: 700px;
+    }
+
+
+    .verdant-fragrance-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Keep the technical specification cards in their 3-column grid on iPad/tablet. */
+    .verdant-specification-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+
+    .verdant-specification-grid article {
+        min-height: 230px;
+    }
+
+
+    .verdant-specification-grid article > span {
+        margin-bottom: 44px;
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 720px) {
+
+    .verdant-case-study {
+        background-attachment: scroll;
+    }
+
+
+    .verdant-wrap,
+    .verdant-intro .verdant-wrap {
+        width: min(100% - 32px, 1240px);
+    }
+
+
+    .verdant-panel {
+        padding: 76px 0;
+    }
+
+
+    .verdant-intro {
+        padding: 122px 0 78px;
+    }
+
+
+    .verdant-intro-grid {
+        gap: 68px;
+    }
+
+
+    .verdant-intro .verdant-section-label {
+        margin-bottom: 52px;
+    }
+
+
+    .verdant-intro h1 {
+        max-width: 100%;
+
+        font-size: clamp(47px, 13.4vw, 68px);
+
+        line-height: 0.93;
+    }
+
+
+    .verdant-description {
+        margin-top: 34px;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    .verdant-primary-logo {
+        justify-content: center;
+
+        margin-bottom: 52px;
+    }
+
+
+    .verdant-primary-logo img {
+        width: min(100%, 320px);
+    }
+
+
+    .verdant-project-meta > div {
+        min-height: 58px;
+
+        grid-template-columns:
+            92px
+            minmax(0, 1fr);
+
+        gap: 14px;
+    }
+
+
+    .verdant-project-meta dt,
+    .verdant-project-meta dd {
+        font-size: 10px;
+    }
+
+
+    .verdant-project-meta dd {
+        overflow-wrap: anywhere;
+    }
+
+
+    .verdant-leaf-background {
+        left: -205px;
+        bottom: 210px;
+
+        width: 430px;
+
+        opacity: 0.34;
+    }
+
+
+    .verdant-heading {
+        width: 100%;
+
+        margin-bottom: 52px;
+    }
+
+
+    .verdant-heading .verdant-section-label {
+        margin-bottom: 34px;
+    }
+
+
+    .verdant-heading-copy .verdant-overline {
+        margin-bottom: 18px;
+    }
+
+
+    .verdant-heading h2 {
+        max-width: 100%;
+
+        font-size: clamp(43px, 12vw, 63px);
+    }
+
+
+    .verdant-heading-copy > p:last-child {
+        margin-top: 28px;
+
+        font-size: 14px;
+    }
+
+
+    .verdant-gallery--applications {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* Preserve grid spans on iPad/tablet instead of flattening every media item. */
+    .verdant-media,
+    .verdant-media--large,
+    .verdant-media--wide {
+        min-height: 410px;
+
+        margin: 0;
+    }
+
+
+    .verdant-media--technical {
+        min-height: 0;
+
+        margin: 0;
+    }
+
+
+    .verdant-media--technical > img {
+        height: 390px;
+    }
+
+}
+
+
+
+/* =========================================================
+   TRUE MOBILE — STACK ONLY WHERE SPACE ACTUALLY REQUIRES IT
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .verdant-specification-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .verdant-gallery--size-views,
+    .verdant-gallery--applications {
+        grid-template-columns: 1fr;
+    }
+
+
+    .verdant-media,
+    .verdant-media--large,
+    .verdant-media--wide {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+
+    .verdant-specification-grid article {
+        min-height: 210px;
+    }
+
+
+    .verdant-specification-grid article > span {
+        margin-bottom: 36px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .verdant-media--technical > img {
+        height: 320px;
+    }
+
+
+    .verdant-section-label {
+        gap: 11px;
+    }
+
+
+    .verdant-section-label span {
+        flex-basis: 36px;
+
+        width: 36px;
+        height: 36px;
+
+        font-size: 9px;
+    }
+
+
+    .verdant-section-label p,
+    .verdant-overline {
+        font-size: 9px;
+    }
+
+
+    .verdant-project-meta > div {
+        grid-template-columns:
+            78px
+            minmax(0, 1fr);
+
+        gap: 10px;
+    }
+
+
+    .verdant-project-meta dt,
+    .verdant-project-meta dd {
+        font-size: 9px;
+    }
+
+
+    .verdant-media,
+    .verdant-media--large,
+    .verdant-media--wide {
+        min-height: 360px;
+    }
+
+
+    .verdant-media--technical {
+        min-height: 0;
+    }
+
+}
+
+/* =========================================================
+   OSMO CASE STUDY
+========================================================= */
+
+.osmo-case-study {
+    font-family: "Montserrat Local", sans-serif;
+
+    --osmo-white: #f6f3ed;
+    --osmo-muted: rgba(246, 243, 237, 0.62);
+    --osmo-line: rgba(246, 243, 237, 0.22);
+    --osmo-surface: #0c0e0c;
+    --osmo-surface-light: #121512;
+
+    position: relative;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    isolation: isolate;
+
+    color: var(--osmo-white);
+
+    background:
+        url("images/blacktexture.jpg")
+        center top / cover fixed;
+}
+
+
+.osmo-case-study,
+.osmo-case-study * {
+    box-sizing: border-box;
+
+    font-family: "Montserrat Local", sans-serif;
+}
+
+
+.osmo-case-study img {
+    max-width: 100%;
+}
+
+
+.osmo-wrap {
+    width: min(1240px, calc(100% - 64px));
+
+    margin: 0 auto;
+}
+
+
+.osmo-panel {
+    position: relative;
+
+    z-index: 1;
+
+    padding: clamp(90px, 9vw, 132px) 0;
+}
+
+
+.osmo-case-study h1,
+.osmo-case-study h2,
+.osmo-case-study h3,
+.osmo-case-study p,
+.osmo-case-study span,
+.osmo-case-study dt,
+.osmo-case-study dd,
+.osmo-case-study figcaption {
+    color: inherit;
+}
+
+
+.osmo-case-study h1,
+.osmo-case-study h2,
+.osmo-case-study h3 {
+    font-family: "Montserrat Local", sans-serif;
+
+    font-weight: 600;
+}
+
+
+.osmo-case-study p {
+    font-family: "Montserrat Local", sans-serif;
+
+    font-weight: 400;
+}
+
+
+
+/* =========================================================
+   SHARED SECTION LABEL
+========================================================= */
+
+.osmo-section-label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.osmo-section-label span {
+    flex: 0 0 40px;
+
+    display: grid;
+
+    width: 40px;
+    height: 40px;
+
+    place-items: center;
+
+    border: 1px solid rgba(246, 243, 237, 0.72);
+
+    border-radius: 50%;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    line-height: 1;
+}
+
+
+.osmo-section-label p {
+    margin: 0;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+.osmo-gallery-section-label {
+    grid-column: 1 / -1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    margin: 0 0 28px;
+
+    text-align: center;
+}
+
+.osmo-gallery-section-label span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    margin-bottom: 12px;
+
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+ font-family: "Montserrat Local", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+
+    color: #fff;
+}
+
+.osmo-gallery-section-label p {
+    margin: 0;
+     font-family: "Montserrat Local", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+
+    letter-spacing: 0.08em;
+
+    color: #fff;
+}
+
+
+/* =========================================================
+   01 — PROJECT OVERVIEW
+========================================================= */
+
+.osmo-intro {
+    position: relative;
+
+    min-height: 100svh;
+
+    display: flex;
+
+    align-items: center;
+
+    padding:
+        clamp(100px, 12vh, 145px)
+        0
+        clamp(85px, 10vh, 120px);
+
+    overflow: visible;
+
+    color: var(--osmo-white);
+
+    border-bottom: none;
+}
+
+
+.osmo-intro .osmo-wrap {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1120px, calc(100% - 64px));
+}
+
+
+.osmo-intro-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.12fr)
+        minmax(360px, 0.72fr);
+
+    gap: clamp(74px, 8vw, 132px);
+
+    align-items: end;
+}
+
+
+.osmo-intro-copy,
+.osmo-intro-side {
+    position: relative;
+
+    z-index: 2;
+
+    min-width: 0;
+}
+
+
+.osmo-intro .osmo-section-label {
+    margin-bottom: clamp(64px, 8vh, 82px);
+}
+
+
+.osmo-intro h1 {
+    max-width: 680px;
+
+    margin: 0;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: clamp(44px, 3.75vw, 68px);
+
+    font-weight: 600;
+
+    line-height: 0.98;
+
+    letter-spacing: -0.035em;
+
+    text-transform: uppercase;
+}
+
+
+.osmo-intro h1 span {
+    display: block;
+}
+
+
+.osmo-description {
+    max-width: 670px;
+
+    margin:
+        clamp(36px, 4.6vh, 50px)
+        0
+        0;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: clamp(15px, 1.05vw, 17px);
+
+    font-weight: 400;
+
+    line-height: 1.75;
+}
+
+
+
+/* =========================================================
+   PROJECT INFORMATION
+========================================================= */
+
+.osmo-intro-side {
+    width: 100%;
+
+    max-width: 430px;
+
+    justify-self: end;
+
+    padding-bottom: 4px;
+}
+
+
+.osmo-primary-logo {
+    display: flex;
+
+    justify-content: center;
+
+    width: 100%;
+
+    margin-bottom: clamp(62px, 8vh, 82px);
+}
+
+
+.osmo-primary-logo img {
+    display: block;
+
+    width: min(100%, 330px);
+
+    height: auto;
+}
+
+
+.osmo-project-meta {
+    width: 100%;
+
+    margin: 0;
+}
+
+
+.osmo-project-meta > div {
+    min-height: 57px;
+
+    display: grid;
+
+    grid-template-columns:
+        106px
+        minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 20px;
+
+    border-top: 1px solid var(--osmo-line);
+}
+
+
+.osmo-project-meta > div:last-child {
+    border-bottom: 1px solid var(--osmo-line);
+}
+
+
+.osmo-project-meta dt,
+.osmo-project-meta dd {
+    margin: 0;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    line-height: 1.1;
+
+    letter-spacing: 0.035em;
+
+    text-transform: uppercase;
+}
+
+
+.osmo-project-meta dt {
+    color: var(--osmo-muted);
+}
+
+
+.osmo-project-meta dd {
+    text-align: right;
+}
+
+/* =========================================================
+   OSMO SIZE / PRODUCT VIEW GALLERY
+========================================================= */
+
+.osmo-gallery--size-views {
+    width: min(1500px, calc(100% - 40px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 28px;
+    row-gap: 40px;
+}
+
+.osmo-gallery--size-views .osmo-media {
+     position: relative;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: transparent;
+    border: none;
+}
+
+
+.osmo-gallery--size-views .osmo-media img {
+    display: block;
+
+    width: 100%;
+    max-width: none;
+    height: 450px;
+
+    margin: 0;
+    object-fit: contain;
+    object-position: center;
+
+    transition: transform 0.35s ease;
+}
+
+
+.osmo-gallery--size-views .osmo-media:hover img {
+    transform: scale(1.02);
+}
+
+
+.osmo-gallery--size-views .osmo-media figcaption {
+    position: static;
+
+    width: 100%;
+
+    margin: 0px 0 0;
+
+    padding-top: 10px;
+
+    border-top: 1px solid var(--osmo-line);
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.14em;
+
+    text-align: left;
+    text-transform: uppercase;
+
+    color: var(--osmo-muted);
+}
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .osmo-gallery--size-views {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+    }
+
+
+    .osmo-gallery--size-views .osmo-media img {
+        max-width: 320px;
+        height: 320px;
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .osmo-gallery--size-views {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+
+    .osmo-gallery--size-views .osmo-media img {
+        max-width: 300px;
+        height: 300px;
+    }
+
+}
+
+/* =========================================================
+   SHARED SECTION HEADINGS
+========================================================= */
+
+.osmo-heading {
+    width: min(100%, 1080px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    margin:
+        0
+        auto
+        clamp(64px, 7vw, 92px);
+
+    text-align: center;
+}
+
+
+.osmo-heading .osmo-section-label {
+    justify-content: center;
+
+    margin:
+        0
+        0
+        clamp(38px, 4vw, 54px);
+}
+
+
+.osmo-heading-copy {
+    width: 100%;
+
+    max-width: 1040px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.osmo-heading h2 {
+    width: 100%;
+
+    max-width: 930px;
+
+    margin: 0 auto;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: clamp(48px, 5.25vw, 84px);
+
+    font-weight: 600;
+
+    line-height: 0.94;
+
+    letter-spacing: -0.025em;
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+    text-wrap: balance;
+}
+
+
+.osmo-heading-copy > p:last-child {
+    width: min(100%, 760px);
+
+    margin: 34px auto 0;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+    line-height: 1.75;
+
+    text-align: center;
+
+    color: rgba(246, 243, 237, 0.78);
+}
+
+
+
+/* =========================================================
+   04 — DIELINE & PRODUCTION
+========================================================= */
+
+.osmo-production-section {
+    position: relative;
+}
+
+
+
+/* =========================================================
+   PRODUCTION SPECIFICATIONS
+========================================================= */
+
+.osmo-specification-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 1px;
+
+    border: 1px solid var(--osmo-line);
+
+    background: var(--osmo-line);
+}
+
+
+.osmo-specification-grid article {
+    min-height: 265px;
+
+    padding: clamp(28px, 3vw, 38px);
+
+    background: var(--osmo-surface);
+}
+
+
+.osmo-specification-grid article > span {
+    display: block;
+
+    margin-bottom: 64px;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    line-height: 1;
+}
+
+
+.osmo-specification-grid h3 {
+    margin: 0 0 15px;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+    line-height: 1.1;
+
+    letter-spacing: 0.035em;
+
+    text-transform: uppercase;
+}
+
+
+.osmo-specification-grid p {
+    margin: 0;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 400;
+
+    line-height: 1.72;
+
+    color: rgba(246, 243, 237, 0.74);
+}
+
+
+
+/* =========================================================
+   TECHNICAL DIELINE GALLERY
+========================================================= */
+
+.osmo-technical-gallery {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: clamp(54px, 6vw, 84px);
+
+    margin-top: 56px;
+}
+
+
+
+/* =========================================================
+   TECHNICAL DIELINE CARD
+========================================================= */
+/* =========================================================
+   DUAL TECHNICAL IMAGE
+========================================================= */
+
+.osmo-media--dual {
+    padding: clamp(18px, 2.2vw, 30px);
+}
+
+.osmo-dual-images {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(20px, 3vw, 40px);
+    align-items: start;
+}
+
+.osmo-dual-image {
+    min-width: 0;
+}
+
+.osmo-dual-image img {
+    display: block;
+    width: 100%;
+    height: 580px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.osmo-dual-image span {
+    display: block;
+    margin-top: 12px;
+
+    font-family: "Montserrat Local", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.14em;
+
+    color: #151715;
+
+    text-transform: uppercase;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 720px) {
+
+    .osmo-dual-images {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .osmo-dual-image img {
+        height: 390px;
+    }
+
+}
+.osmo-media--technical {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 0;
+
+    margin: 0;
+
+    padding: clamp(18px, 2.2vw, 30px);
+
+    overflow: hidden;
+
+    background: #f1f0e9;
+
+    border: 1px solid rgba(21, 23, 21, 0.08);
+}
+
+
+.osmo-media--technical > img {
+    display: block;
+
+    width: 100%;
+
+    height: 620px;
+
+    margin: 0 auto;
+
+    padding: 0;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+.osmo-media--technical:hover > img {
+    transform: scale(1.015);
+
+    opacity: 0.94;
+}
+
+
+.osmo-media--technical figcaption {
+    position: static;
+
+    width: 100%;
+
+    margin: 18px 0 0;
+
+    padding: 12px 0 0;
+
+    border-top: 1px solid rgba(21, 23, 21, 0.28);
+
+    color: #151715;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+}
+
+
+
+/* =========================================================
+   TABLET — 1050PX
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .osmo-intro {
+        min-height: auto;
+    }
+
+
+    .osmo-intro-grid {
+        grid-template-columns: 1fr;
+
+        gap: 86px;
+
+        align-items: start;
+    }
+
+
+    .osmo-intro-copy {
+        max-width: 790px;
+    }
+
+
+    .osmo-intro-side {
+        width: min(100%, 760px);
+
+        max-width: none;
+
+        justify-self: start;
+    }
+
+
+    .osmo-primary-logo {
+        justify-content: flex-start;
+    }
+
+
+    .osmo-heading {
+        width: min(100%, 900px);
+    }
+
+
+    .osmo-heading h2 {
+        max-width: 850px;
+    }
+
+
+    .osmo-heading-copy > p:last-child {
+        max-width: 700px;
+    }
+
+
+    .osmo-specification-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    .osmo-specification-grid article {
+        min-height: 230px;
+    }
+
+
+    .osmo-specification-grid article > span {
+        margin-bottom: 44px;
+    }
+
+}
+
+
+
+/* =========================================================
+   TABLET — TECHNICAL DIELINES
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .osmo-technical-gallery {
+        gap: 40px;
+
+        margin-top: 42px;
+    }
+
+
+    .osmo-media--technical {
+        padding: 16px;
+    }
+
+
+    .osmo-media--technical > img {
+        height: 520px;
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE — 720PX
+========================================================= */
+
+@media (max-width: 720px) {
+
+    .osmo-case-study {
+        background-attachment: scroll;
+    }
+
+
+    .osmo-wrap,
+    .osmo-intro .osmo-wrap {
+        width: min(100% - 32px, 1240px);
+    }
+
+
+    .osmo-panel {
+        padding: 76px 0;
+    }
+
+
+    /* PROJECT OVERVIEW */
+
+    .osmo-intro {
+        padding: 122px 0 78px;
+    }
+
+
+    .osmo-intro-grid {
+        gap: 68px;
+    }
+
+
+    .osmo-intro .osmo-section-label {
+        margin-bottom: 52px;
+    }
+
+
+    .osmo-intro h1 {
+        max-width: 100%;
+
+        font-size: clamp(47px, 13.4vw, 68px);
+
+        line-height: 0.93;
+    }
+
+
+    .osmo-description {
+        margin-top: 34px;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    /* PROJECT INFORMATION */
+
+    .osmo-primary-logo {
+        justify-content: center;
+
+        margin-bottom: 52px;
+    }
+
+
+    .osmo-primary-logo img {
+        width: min(100%, 320px);
+    }
+
+
+    .osmo-project-meta > div {
+        min-height: 58px;
+
+        grid-template-columns:
+            92px
+            minmax(0, 1fr);
+
+        gap: 14px;
+    }
+
+
+    .osmo-project-meta dt,
+    .osmo-project-meta dd {
+        font-size: 10px;
+    }
+
+
+    .osmo-project-meta dd {
+        overflow-wrap: anywhere;
+    }
+
+
+    /* SECTION HEADINGS */
+
+    .osmo-heading {
+        width: 100%;
+
+        margin-bottom: 52px;
+    }
+
+
+    .osmo-heading .osmo-section-label {
+        margin-bottom: 34px;
+    }
+
+
+    .osmo-heading h2 {
+        max-width: 100%;
+
+        font-size: clamp(43px, 12vw, 63px);
+    }
+
+
+    .osmo-heading-copy > p:last-child {
+        margin-top: 28px;
+
+        font-size: 14px;
+    }
+
+
+    /* TECHNICAL DIELINES */
+
+    .osmo-media--technical {
+        min-height: 0;
+
+        margin: 0;
+    }
+
+
+    .osmo-media--technical > img {
+        height: 390px;
+    }
+
+}
+
+
+
+/* =========================================================
+   TRUE MOBILE — 600PX
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .osmo-specification-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .osmo-specification-grid article {
+        min-height: 210px;
+    }
+
+
+    .osmo-specification-grid article > span {
+        margin-bottom: 36px;
+    }
+
+}
+
+
+
+/* =========================================================
+   VERY SMALL SCREENS — 430PX
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .osmo-section-label {
+        gap: 11px;
+    }
+
+
+    .osmo-section-label span {
+        flex-basis: 36px;
+
+        width: 36px;
+
+        height: 36px;
+
+        font-size: 9px;
+    }
+
+
+    .osmo-section-label p {
+        font-size: 9px;
+    }
+
+
+    .osmo-project-meta > div {
+        grid-template-columns:
+            78px
+            minmax(0, 1fr);
+
+        gap: 10px;
+    }
+
+
+    .osmo-project-meta dt,
+    .osmo-project-meta dd {
+        font-size: 9px;
+    }
+
+
+    .osmo-media--technical {
+        min-height: 0;
+    }
+
+
+    .osmo-media--technical > img {
+        height: 320px;
+    }
+
 }
 
 /* =========================================================
