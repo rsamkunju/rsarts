@@ -3836,9 +3836,173 @@ footer {
 
     color: var(--osmo-muted);
 }
+/* =====================================================
+   03 — PACKAGING IN CONTEXT
+===================================================== */
+
+.osmo-context-section {
+    width: min(1500px, calc(100% - 40px));
+    margin: 0 auto;
+
+    /* SPACE BETWEEN SECTION 02 AND SECTION 03 */
+    padding-top: 150px;
+
+    /* SPACE BETWEEN SECTION 03 AND SECTION 04 */
+    padding-bottom: 170px;
+}
 
 
+/* =====================================================
+   SECTION 03 HEADING
+===================================================== */
 
+.osmo-context-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    margin: 0 0 55px;
+
+    text-align: center;
+}
+
+
+.osmo-context-heading span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    margin-bottom: 12px;
+
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+
+    font-family: "Montserrat Local", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+
+    color: #fff;
+}
+
+
+.osmo-context-heading p {
+    margin: 0;
+
+    font-family: "Montserrat Local", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+
+    letter-spacing: 0.08em;
+
+    color: #fff;
+}
+
+
+/* =====================================================
+   CONTEXT IMAGE GRID
+===================================================== */
+
+.osmo-context-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    column-gap: 32px;
+    row-gap: 40px;
+
+    width: 100%;
+}
+
+
+/* =====================================================
+   CONTEXT MEDIA
+===================================================== */
+
+.osmo-context-media {
+    position: relative;
+
+    min-width: 0;
+
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+    border: none;
+}
+
+
+.osmo-context-media img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.35s ease;
+}
+
+
+.osmo-context-media:hover img {
+    transform: scale(1.01);
+}
+
+
+/* =====================================================
+   CONTEXT CAPTIONS
+===================================================== */
+
+.osmo-context-media figcaption {
+    width: 100%;
+
+    margin: 0;
+    padding-top: 12px;
+
+    border-top: 1px solid var(--osmo-line);
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.14em;
+
+    text-align: left;
+    text-transform: uppercase;
+
+    color: var(--osmo-muted);
+}
+
+@media (max-width: 768px) {
+
+    .osmo-context-section {
+        width: min(100% - 28px, 1500px);
+
+        padding-top: 100px;
+        padding-bottom: 120px;
+    }
+
+    .osmo-context-heading {
+        margin-bottom: 36px;
+    }
+
+    .osmo-context-grid {
+        grid-template-columns: 1fr;
+        row-gap: 42px;
+    }
+
+}
 /* =========================================================
    TABLET
 ========================================================= */
@@ -4051,6 +4215,46 @@ footer {
 }
 
 
+.osmo-gallery--context {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 28px;
+    row-gap: 22px;
+
+    /* SPACE AWAY FROM PRODUCT GALLERY ABOVE */
+    margin-top: 150px;
+
+    /* SPACE BEFORE NEXT SECTION */
+    margin-bottom: 170px;
+}
+
+
+/* SECTION TITLE */
+.osmo-gallery--context .osmo-gallery-section-label {
+    grid-column: 1 / -1;
+    margin-bottom: 34px;
+}
+
+
+/* CONTEXT IMAGES */
+.osmo-gallery--context .osmo-media {
+    margin: 0;
+    width: 100%;
+}
+
+
+.osmo-gallery--context .osmo-media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* CAPTIONS */
+.osmo-gallery--context .osmo-media figcaption {
+    margin-top: 12px;
+}
 
 /* =========================================================
    TECHNICAL DIELINE GALLERY
