@@ -8129,7 +8129,1408 @@ footer {
   .sonix-retail-card,
   .sonix-retail-card--wide { min-height: 300px; }
 }
+/* =========================================================
+   WINE CASE STUDY
+========================================================= */
 
+.wine-case-study {
+    font-family: "Montserrat Local", sans-serif;
+
+    --wine-white: #f6f3ed;
+    --wine-muted: rgba(246, 243, 237, 0.62);
+    --wine-line: rgba(246, 243, 237, 0.22);
+    --wine-surface: #0c0e0c;
+    --wine-surface-light: #121512;
+
+    position: relative;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    isolation: isolate;
+
+    color: var(--wine-white);
+
+    background:
+        url("images/blacktexture.jpg")
+        center top / cover fixed;
+}
+
+
+.wine-case-study,
+.wine-case-study * {
+    box-sizing: border-box;
+
+    font-family: "Montserrat Local", sans-serif;
+}
+
+
+.wine-case-study img {
+    max-width: 100%;
+}
+
+
+.wine-wrap {
+    width: min(1240px, calc(100% - 64px));
+
+    margin: 0 auto;
+}
+
+
+.wine-panel {
+    position: relative;
+
+    z-index: 1;
+
+    padding: clamp(90px, 9vw, 132px) 0;
+}
+
+
+.wine-case-study h1,
+.wine-case-study h2,
+.wine-case-study h3,
+.wine-case-study p,
+.wine-case-study span,
+.wine-case-study dt,
+.wine-case-study dd,
+.wine-case-study figcaption {
+    color: inherit;
+}
+
+
+.wine-case-study h1,
+.wine-case-study h2,
+.wine-case-study h3 {
+    font-family: "Montserrat Local", sans-serif;
+
+    font-weight: 600;
+}
+
+
+.wine-case-study p {
+    font-family: "Montserrat Local", sans-serif;
+
+    font-weight: 400;
+}
+
+
+
+/* =========================================================
+   SHARED SECTION LABEL
+========================================================= */
+
+.wine-section-label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.wine-section-label span {
+    flex: 0 0 40px;
+
+    display: grid;
+
+    width: 40px;
+    height: 40px;
+
+    place-items: center;
+
+    border: 1px solid rgba(246, 243, 237, 0.72);
+
+    border-radius: 50%;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    line-height: 1;
+}
+
+
+.wine-section-label p {
+    margin: 0;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+.wine-gallery-section-label {
+    grid-column: 1 / -1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    margin: 0 0 28px;
+
+    text-align: center;
+}
+
+.wine-gallery-section-label span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    margin-bottom: 12px;
+
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+ font-family: "Montserrat Local", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+
+    color: #fff;
+}
+
+.wine-gallery-section-label p {
+    margin: 0;
+     font-family: "Montserrat Local", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+
+    letter-spacing: 0.08em;
+
+    color: #fff;
+}
+
+
+/* =========================================================
+   01 — PROJECT OVERVIEW
+========================================================= */
+
+.wine-intro {
+    position: relative;
+
+    min-height: 100svh;
+
+    display: flex;
+
+    align-items: center;
+
+    padding:
+        clamp(100px, 12vh, 145px)
+        0
+        clamp(85px, 10vh, 120px);
+
+    overflow: visible;
+
+    color: var(--wine-white);
+
+    border-bottom: none;
+}
+
+
+.wine-intro .wine-wrap {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1120px, calc(100% - 64px));
+}
+
+
+.wine-intro-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.12fr)
+        minmax(360px, 0.72fr);
+
+    gap: clamp(74px, 8vw, 132px);
+
+    align-items: end;
+}
+
+
+.wine-intro-copy,
+.wine-intro-side {
+    position: relative;
+
+    z-index: 2;
+
+    min-width: 0;
+}
+
+
+.wine-intro .wine-section-label {
+    margin-bottom: clamp(64px, 8vh, 82px);
+}
+
+
+.wine-intro h1 {
+    max-width: 680px;
+
+    margin: 0;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: clamp(44px, 3.75vw, 68px);
+
+    font-weight: 600;
+
+    line-height: 0.98;
+
+    letter-spacing: -0.035em;
+
+    text-transform: uppercase;
+}
+
+
+.wine-intro h1 span {
+    display: block;
+}
+
+
+.wine-description {
+    max-width: 670px;
+
+    margin:
+        clamp(36px, 4.6vh, 50px)
+        0
+        0;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: clamp(15px, 1.05vw, 17px);
+
+    font-weight: 400;
+
+    line-height: 1.75;
+}
+
+
+
+/* =========================================================
+   PROJECT INFORMATION
+========================================================= */
+
+.wine-intro-side {
+    width: 100%;
+
+    max-width: 430px;
+
+    justify-self: end;
+
+    padding-bottom: 4px;
+}
+
+
+.wine-primary-logo {
+    display: flex;
+
+    justify-content: center;
+
+    width: 100%;
+
+    margin-bottom: clamp(62px, 8vh, 82px);
+}
+
+
+.wine-primary-logo img {
+    display: block;
+
+    width: min(100%, 330px);
+
+    height: auto;
+}
+
+
+.wine-project-meta {
+    width: 100%;
+
+    margin: 0;
+}
+
+
+.wine-project-meta > div {
+    min-height: 57px;
+
+    display: grid;
+
+    grid-template-columns:
+        106px
+        minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 20px;
+
+    border-top: 1px solid var(--wine-line);
+}
+
+
+.wine-project-meta > div:last-child {
+    border-bottom: 1px solid var(--wine-line);
+}
+
+
+.wine-project-meta dt,
+.wine-project-meta dd {
+    margin: 0;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    line-height: 1.1;
+
+    letter-spacing: 0.035em;
+
+    text-transform: uppercase;
+}
+
+
+.wine-project-meta dt {
+    color: var(--wine-muted);
+}
+
+
+.wine-project-meta dd {
+    text-align: right;
+}
+
+/* =========================================================
+   WINE SIZE / PRODUCT VIEW GALLERY
+========================================================= */
+
+.wine-gallery--size-views {
+    width: min(1500px, calc(100% - 40px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 28px;
+    row-gap: 40px;
+}
+
+.wine-gallery--size-views .wine-media {
+     position: relative;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: transparent;
+    border: none;
+}
+
+
+.wine-gallery--size-views .wine-media img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height:auto;
+
+    margin: 0;
+    object-fit: contain;
+    object-position: center;
+
+    transition: transform 0.35s ease;
+}
+
+
+.wine-gallery--size-views .wine-media:hover img {
+    transform: scale(1.02);
+}
+
+
+.wine-gallery--size-views .wine-media figcaption {
+    position: static;
+
+    width: 100%;
+
+    margin: 0px 0 0;
+
+    padding-top: 10px;
+
+    border-top: 1px solid var(--wine-line);
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.14em;
+
+    text-align: left;
+    text-transform: uppercase;
+
+    color: var(--wine-muted);
+}
+/* =====================================================
+   03 — PACKAGING IN CONTEXT
+===================================================== */
+
+.wine-context-section {
+    width: min(1500px, calc(100% - 40px));
+    margin: 0 auto;
+
+    /* SPACE BETWEEN SECTION 02 AND SECTION 03 */
+    padding-top: 150px;
+
+    /* SPACE BETWEEN SECTION 03 AND SECTION 04 */
+    padding-bottom: 170px;
+}
+
+
+/* =====================================================
+   SECTION 03 HEADING
+===================================================== */
+
+.wine-context-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    margin: 0 0 55px;
+
+    text-align: center;
+}
+
+
+.wine-context-heading span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    margin-bottom: 12px;
+
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+
+    font-family: "Montserrat Local", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+
+    color: #fff;
+}
+
+
+.wine-context-heading p {
+    margin: 0;
+
+    font-family: "Montserrat Local", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+
+    letter-spacing: 0.08em;
+
+    color: #fff;
+}
+
+
+/* =====================================================
+   CONTEXT IMAGE GRID
+===================================================== */
+
+.wine-context-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.wine-context-media--hero {
+    grid-column: 1 / -1;
+}
+
+.wine-context-media img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* =====================================================
+   CONTEXT MEDIA
+===================================================== */
+
+.wine-context-media {
+    position: relative;
+
+    min-width: 0;
+
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+    border: none;
+}
+
+
+.wine-context-media img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.35s ease;
+}
+
+
+.wine-context-media:hover img {
+    transform: scale(1.01);
+}
+
+
+/* =====================================================
+   CONTEXT CAPTIONS
+===================================================== */
+
+.wine-context-media figcaption {
+    width: 100%;
+
+    margin: 0;
+    padding-top: 12px;
+
+    border-top: 1px solid var(--wine-line);
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.14em;
+
+    text-align: left;
+    text-transform: uppercase;
+
+    color: var(--wine-muted);
+}
+
+@media (max-width: 768px) {
+
+    .wine-context-section {
+        width: min(100% - 28px, 1500px);
+
+        padding-top: 100px;
+        padding-bottom: 120px;
+    }
+
+    .wine-context-heading {
+        margin-bottom: 36px;
+    }
+
+    .wine-context-grid {
+        grid-template-columns: 1fr;
+        row-gap: 42px;
+    }
+
+}
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .wine-gallery--size-views {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+    }
+
+
+    .wine-gallery--size-views .wine-media img {
+        max-width: 320px;
+        height: 320px;
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .wine-gallery--size-views {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+
+    .wine-gallery--size-views .wine-media img {
+        max-width: 300px;
+        height: 300px;
+    }
+
+}
+
+/* =========================================================
+   SHARED SECTION HEADINGS
+========================================================= */
+
+.wine-heading {
+    width: min(100%, 1080px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    margin:
+        0
+        auto
+        clamp(64px, 7vw, 92px);
+
+    text-align: center;
+}
+
+
+.wine-heading .wine-section-label {
+    justify-content: center;
+
+    margin:
+        0
+        0
+        clamp(38px, 4vw, 54px);
+}
+
+
+.wine-heading-copy {
+    width: 100%;
+
+    max-width: 1040px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.wine-heading h2 {
+    width: 100%;
+
+    max-width: 930px;
+
+    margin: 0 auto;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: clamp(48px, 5.25vw, 84px);
+
+    font-weight: 600;
+
+    line-height: 0.94;
+
+    letter-spacing: -0.025em;
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+    text-wrap: balance;
+}
+
+
+.wine-heading-copy > p:last-child {
+    width: min(100%, 760px);
+
+    margin: 34px auto 0;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+    line-height: 1.75;
+
+    text-align: center;
+
+    color: rgba(246, 243, 237, 0.78);
+}
+
+
+
+/* =========================================================
+   04 — DIELINE & PRODUCTION
+========================================================= */
+
+.wine-production-section {
+    position: relative;
+}
+
+
+
+/* =========================================================
+   PRODUCTION SPECIFICATIONS
+========================================================= */
+
+.wine-specification-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 1px;
+
+    border: 1px solid var(--wine-line);
+
+    background: var(--wine-line);
+}
+
+
+.wine-specification-grid article {
+    min-height: 265px;
+
+    padding: clamp(28px, 3vw, 38px);
+
+    background: var(--wine-surface);
+}
+
+
+.wine-specification-grid article > span {
+    display: block;
+
+    margin-bottom: 64px;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    line-height: 1;
+}
+
+
+.wine-specification-grid h3 {
+    margin: 0 0 15px;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+    line-height: 1.1;
+
+    letter-spacing: 0.035em;
+
+    text-transform: uppercase;
+}
+
+
+.wine-specification-grid p {
+    margin: 0;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 400;
+
+    line-height: 1.72;
+
+    color: rgba(246, 243, 237, 0.74);
+}
+
+
+.wine-gallery--context {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 28px;
+    row-gap: 22px;
+
+    /* SPACE AWAY FROM PRODUCT GALLERY ABOVE */
+    margin-top: 150px;
+
+    /* SPACE BEFORE NEXT SECTION */
+    margin-bottom: 170px;
+}
+
+
+/* SECTION TITLE */
+.wine-gallery--context .wine-gallery-section-label {
+    grid-column: 1 / -1;
+    margin-bottom: 34px;
+}
+
+
+/* CONTEXT IMAGES */
+.wine-gallery--context .wine-media {
+    margin: 0;
+    width: 100%;
+}
+
+
+.wine-gallery--context .wine-media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* CAPTIONS */
+.wine-gallery--context .wine-media figcaption {
+    margin-top: 12px;
+}
+
+/* =========================================================
+   TECHNICAL DIELINE GALLERY
+========================================================= */
+
+.wine-technical-gallery {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: clamp(54px, 6vw, 84px);
+
+    margin-top: 56px;
+}
+
+
+
+/* =========================================================
+   TECHNICAL DIELINE CARD
+========================================================= */
+/* =========================================================
+   DUAL TECHNICAL IMAGE
+========================================================= */
+
+.wine-media--dual {
+    padding: clamp(18px, 2.2vw, 30px);
+}
+
+.wine-dual-images {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(20px, 3vw, 40px);
+    align-items: start;
+}
+
+.wine-dual-image {
+    min-width: 0;
+}
+
+.wine-dual-image img {
+    display: block;
+    width: 100%;
+    height: 580px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.wine-dual-image span {
+    display: block;
+    margin-top: 12px;
+
+    font-family: "Montserrat Local", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.14em;
+
+    color: #151715;
+
+    text-transform: uppercase;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 720px) {
+
+    .wine-dual-images {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .wine-dual-image img {
+        height: 390px;
+    }
+
+}
+.wine-media--technical {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 0;
+
+    margin: 0;
+
+    padding: clamp(18px, 2.2vw, 30px);
+
+    overflow: hidden;
+
+    background: #f1f0e9;
+
+    border: 1px solid rgba(21, 23, 21, 0.08);
+}
+
+
+.wine-media--technical > img {
+    display: block;
+
+    width: 100%;
+
+    height: 620px;
+
+    margin: 0 auto;
+
+    padding: 0;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+.wine-media--technical:hover > img {
+    transform: scale(1.015);
+
+    opacity: 0.94;
+}
+
+
+.wine-media--technical figcaption {
+    position: static;
+
+    width: 100%;
+
+    margin: 18px 0 0;
+
+    padding: 12px 0 0;
+
+    border-top: 1px solid rgba(21, 23, 21, 0.28);
+
+    color: #151715;
+
+    font-family: "Montserrat Local", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+}
+
+
+
+/* =========================================================
+   TABLET — 1050PX
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .wine-intro {
+        min-height: auto;
+    }
+
+
+    .wine-intro-grid {
+        grid-template-columns: 1fr;
+
+        gap: 86px;
+
+        align-items: start;
+    }
+
+
+    .wine-intro-copy {
+        max-width: 790px;
+    }
+
+
+    .wine-intro-side {
+        width: min(100%, 760px);
+
+        max-width: none;
+
+        justify-self: start;
+    }
+
+
+    .wine-primary-logo {
+        justify-content: flex-start;
+    }
+
+
+    .wine-heading {
+        width: min(100%, 900px);
+    }
+
+
+    .wine-heading h2 {
+        max-width: 850px;
+    }
+
+
+    .wine-heading-copy > p:last-child {
+        max-width: 700px;
+    }
+
+
+    .wine-specification-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    .wine-specification-grid article {
+        min-height: 230px;
+    }
+
+
+    .wine-specification-grid article > span {
+        margin-bottom: 44px;
+    }
+
+}
+
+
+
+/* =========================================================
+   TABLET — TECHNICAL DIELINES
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .wine-technical-gallery {
+        gap: 40px;
+
+        margin-top: 42px;
+    }
+
+
+    .wine-media--technical {
+        padding: 16px;
+    }
+
+
+    .wine-media--technical > img {
+        height: 520px;
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE — 720PX
+========================================================= */
+
+@media (max-width: 720px) {
+
+    .wine-case-study {
+        background-attachment: scroll;
+    }
+
+
+    .wine-wrap,
+    .wine-intro .wine-wrap {
+        width: min(100% - 32px, 1240px);
+    }
+
+
+    .wine-panel {
+        padding: 76px 0;
+    }
+
+
+    /* PROJECT OVERVIEW */
+
+    .wine-intro {
+        padding: 122px 0 78px;
+    }
+
+
+    .wine-intro-grid {
+        gap: 68px;
+    }
+
+
+    .wine-intro .wine-section-label {
+        margin-bottom: 52px;
+    }
+
+
+    .wine-intro h1 {
+        max-width: 100%;
+
+        font-size: clamp(47px, 13.4vw, 68px);
+
+        line-height: 0.93;
+    }
+
+
+    .wine-description {
+        margin-top: 34px;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    /* PROJECT INFORMATION */
+
+    .wine-primary-logo {
+        justify-content: center;
+
+        margin-bottom: 52px;
+    }
+
+
+    .wine-primary-logo img {
+        width: min(100%, 320px);
+    }
+
+
+    .wine-project-meta > div {
+        min-height: 58px;
+
+        grid-template-columns:
+            92px
+            minmax(0, 1fr);
+
+        gap: 14px;
+    }
+
+
+    .wine-project-meta dt,
+    .wine-project-meta dd {
+        font-size: 10px;
+    }
+
+
+    .wine-project-meta dd {
+        overflow-wrap: anywhere;
+    }
+
+
+    /* SECTION HEADINGS */
+
+    .wine-heading {
+        width: 100%;
+
+        margin-bottom: 52px;
+    }
+
+
+    .wine-heading .wine-section-label {
+        margin-bottom: 34px;
+    }
+
+
+    .wine-heading h2 {
+        max-width: 100%;
+
+        font-size: clamp(43px, 12vw, 63px);
+    }
+
+
+    .wine-heading-copy > p:last-child {
+        margin-top: 28px;
+
+        font-size: 14px;
+    }
+
+
+    /* TECHNICAL DIELINES */
+
+    .wine-media--technical {
+        min-height: 0;
+
+        margin: 0;
+    }
+
+
+    .wine-media--technical > img {
+        height: 390px;
+    }
+
+}
+
+
+
+/* =========================================================
+   TRUE MOBILE — 600PX
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .wine-specification-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .wine-specification-grid article {
+        min-height: 210px;
+    }
+
+
+    .wine-specification-grid article > span {
+        margin-bottom: 36px;
+    }
+
+}
+
+
+
+/* =========================================================
+   VERY SMALL SCREENS — 430PX
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .wine-section-label {
+        gap: 11px;
+    }
+
+
+    .wine-section-label span {
+        flex-basis: 36px;
+
+        width: 36px;
+
+        height: 36px;
+
+        font-size: 9px;
+    }
+
+
+    .wine-section-label p {
+        font-size: 9px;
+    }
+
+
+    .wine-project-meta > div {
+        grid-template-columns:
+            78px
+            minmax(0, 1fr);
+
+        gap: 10px;
+    }
+
+
+    .wine-project-meta dt,
+    .wine-project-meta dd {
+        font-size: 9px;
+    }
+
+
+    .wine-media--technical {
+        min-height: 0;
+    }
+
+
+    .wine-media--technical > img {
+        height: 320px;
+    }
+
+}
+/* =========================================================
+   MOBILE — WINE PRODUCT GALLERY FIX
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .wine-gallery--size-views {
+        width: 100%;
+        max-width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 36px;
+
+        margin: 0 auto;
+        padding: 0 18px;
+    }
+
+
+    .wine-gallery--size-views .wine-media {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        overflow: visible;
+    }
+
+
+    .wine-gallery--size-views .wine-media img {
+        display: block;
+
+        width: auto;
+        max-width: 100%;
+        height: auto;
+
+        margin: 0 auto;
+
+        object-fit: contain;
+        object-position: center;
+    }
+
+
+    .wine-gallery--size-views .wine-media figcaption {
+        width: 100%;
+
+        margin: 10px 0 0;
+        padding: 0;
+
+        border-top: none;
+
+        text-align: center;
+
+        font-size: 9px;
+        line-height: 1.3;
+        letter-spacing: 0.14em;
+    }
+
+}
 /* =========================================================
    LIGHTBOX
 ========================================================= */
