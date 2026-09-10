@@ -8214,8 +8214,56 @@ footer {
     font-weight: 400;
 }
 
+/* =========================================================
+   CHATEAU ROYALE — BRAND DEVELOPMENT
+   Prevent technical-gallery hover effects from affecting
+   the label-development images.
+========================================================= */
 
+.wine-label-gallery .wine-media,
+.wine-label-gallery .wine-media:hover {
+    transform: none !important;
+    translate: none !important;
+    scale: 1 !important;
+}
 
+.wine-label-gallery .wine-media img,
+.wine-label-gallery .wine-media:hover img {
+    transform: none !important;
+    translate: none !important;
+    scale: 1 !important;
+}
+
+.wine-label-gallery .wine-media::before,
+.wine-label-gallery .wine-media::after {
+    transform: none !important;
+}
+/* CHÂTEAU ROYALE — FINAL LABEL PAIR */
+
+.wine-label-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    align-items: start;
+}
+
+.wine-label-pair .wine-media {
+    margin: 0;
+}
+
+.wine-label-pair .wine-media img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Stack on smaller screens */
+@media (max-width: 768px) {
+    .wine-label-pair {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+}
 /* =========================================================
    SHARED SECTION LABEL
 ========================================================= */
@@ -8519,7 +8567,7 @@ footer {
     width: min(1500px, calc(100% - 40px));
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 28px;
     row-gap: 40px;
 }
@@ -8758,7 +8806,7 @@ footer {
 @media (max-width: 900px) {
 
     .wine-gallery--size-views {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(1, minmax(0, 1fr));
         gap: 28px;
     }
 
@@ -8825,11 +8873,9 @@ footer {
 
 .wine-heading-copy {
     width: 100%;
-
     max-width: 1040px;
-
     margin: 0 auto;
-
+    margin-bottom: 10px;
     text-align: center;
 }
 
