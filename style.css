@@ -8156,7 +8156,21 @@ footer {
         url("images/blacktexture.jpg")
         center top / cover fixed;
 }
+.wine-background {
+    position: absolute;
+    z-index: 0;
 
+    left: -245px;
+    bottom: -100px;
+
+    width: clamp(520px, 30vw, 720px);
+    height: auto;
+
+    opacity: 0.52;
+
+    pointer-events: none;
+    user-select: none;
+}
 
 .wine-case-study,
 .wine-case-study * {
@@ -8756,7 +8770,21 @@ footer {
 /* =====================================================
    CONTEXT CAPTIONS
 ===================================================== */
+.wine-material-list {
+    margin: 20px 0 0;
+    padding: 0;
+    list-style: none;
+}
 
+.wine-material-list li {
+    margin-bottom: 14px;
+    line-height: 1.6;
+}
+
+.wine-material-list strong {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
 .wine-context-media figcaption {
     width: 100%;
 
@@ -8922,7 +8950,34 @@ footer {
 
     color: rgba(246, 243, 237, 0.78);
 }
+.wine-gallery-row--three {
+    grid-column: 1 / -1; /* span the FULL wine gallery width */
 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    width: 100%;
+    margin-top: 32px;
+}
+
+.wine-gallery-row--three .wine-media {
+    width: 100%;
+    margin: 0;
+}
+
+.wine-gallery-row--three .wine-media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: none;
+}
+
+@media (max-width: 900px) {
+    .wine-gallery-row--three {
+        grid-template-columns: 1fr;
+    }
+}
 
 
 /* =========================================================
@@ -9321,7 +9376,14 @@ footer {
         padding: 76px 0;
     }
 
+ .wine-background {
+        left: -105px;
+        bottom: 10px;
 
+        width: 430px;
+
+        opacity: 0.34;
+    }
     /* PROJECT OVERVIEW */
 
     .wine-intro {
