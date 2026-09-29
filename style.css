@@ -5806,12 +5806,15 @@ footer {
 .positive-case-kicker {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 14px;
+    width: 100%;
     margin-bottom: clamp(34px, 5vw, 62px);
     color: var(--positive-white);
     font-family: "Barlow Condensed", Arial, sans-serif;
     font-weight: 700;
     letter-spacing: 0.15em;
+    text-align: center;
     text-transform: uppercase;
 }
 
